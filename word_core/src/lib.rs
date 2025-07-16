@@ -33,7 +33,7 @@ pub fn guess_to_hints_unchecked(answer: &[u8], guess: &[u8]) -> Vec<Hint> {
         })
         .collect();
 
-    // Count how many of each char are present in the incorrect tiles of the answer
+    // Count how many of each character are present in the incorrect tiles of the answer
     let missed_counts: HashMap<u8, u8> = answer
         .iter()
         .zip(hints.iter())
@@ -41,12 +41,12 @@ pub fn guess_to_hints_unchecked(answer: &[u8], guess: &[u8]) -> Vec<Hint> {
             Hint::Correct => None,
             _ => Some(*answer_char),
         })
-        .fold(HashMap::new(), |mut map, char| {
-            *map.entry(char).or_insert(0) += 1;
+        .fold(HashMap::new(), |mut map, chr| {
+            *map.entry(chr).or_insert(0) += 1;
             map
         });
 
-    // Precompute indicies of each incorrect char in guess
+    // Precompute indicies of each incorrect character in guess
     let guess_char_inds: HashMap<u8, Vec<usize>> = guess
         .iter()
         .zip(hints.iter())
@@ -55,12 +55,12 @@ pub fn guess_to_hints_unchecked(answer: &[u8], guess: &[u8]) -> Vec<Hint> {
             Hint::Correct => None,
             _ => Some((i, *answer_char)),
         })
-        .fold(HashMap::new(), |mut map, (ind, char)| {
-            map.entry(char).or_default().push(ind);
+        .fold(HashMap::new(), |mut map, (ind, chr)| {
+            map.entry(chr).or_default().push(ind);
             map
         });
 
-    // For every missed answer char that was in the guess, set the first N to Elsewhere
+    // For every missed answer character that was in the guess, set the first N to Elsewhere
     for (answer_char, num_missed) in missed_counts.into_iter() {
         if let Some(inds) = guess_char_inds.get(&answer_char) {
             let num_elsewhere = min(num_missed as usize, inds.len());

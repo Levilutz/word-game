@@ -1,5 +1,6 @@
 pub mod column;
 pub mod word;
+pub mod word_search;
 
 use std::{cmp::min, collections::HashMap};
 

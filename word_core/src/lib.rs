@@ -129,25 +129,24 @@ pub fn clue_to_query<const WORD_SIZE: usize>(
     Query::And(sub_queries)
 }
 
-/// Given a guess and an answer represented as u8 vecs, compute the set of hints.
-///
-/// This fn will panic if the answer is shorter than the guess.
-pub fn guess_to_hints_unchecked(answer: &[u8], guess: &[u8]) -> Vec<Hint> {
-    // Start by marking all the green tiles
-    let mut hints: Vec<Hint> = guess
-        .iter()
-        .enumerate()
-        .map(|(i, guess_char)| {
-            if answer[i] == *guess_char {
-                Hint::Correct
-            } else {
-                Hint::Nowhere
-            }
-        })
-        .collect();
+/// Given a guess and an answer, compute the set of hints.
+pub fn guess_to_hints<const WORD_SIZE: usize>(
+    answer: Word<WORD_SIZE>,
+    guess: Word<WORD_SIZE>,
+) -> [Hint; WORD_SIZE] {
+    // Initialize with Nowhere hints
+    let mut hints = [Hint::Nowhere; WORD_SIZE];
+
+    // Start by marking all the correct tiles
+    guess.0.iter().enumerate().for_each(|(i, guess_char)| {
+        if answer.0[i] == *guess_char {
+            hints[i] = Hint::Correct
+        }
+    });
 
     // Count how many of each character are present in the incorrect tiles of the answer
     let missed_counts: HashMap<u8, u8> = answer
+        .0
         .iter()
         .zip(hints.iter())
         .filter_map(|(answer_char, hint)| match hint {
@@ -161,6 +160,7 @@ pub fn guess_to_hints_unchecked(answer: &[u8], guess: &[u8]) -> Vec<Hint> {
 
     // Precompute indicies of each incorrect character in guess
     let guess_char_inds: HashMap<u8, Vec<usize>> = guess
+        .0
         .iter()
         .zip(hints.iter())
         .enumerate()
@@ -191,48 +191,60 @@ mod tests {
     use super::*;
     use Hint::{Correct, Elsewhere, Nowhere};
 
+    fn assert_hints<const WORD_SIZE: usize>(answer: &str, guess: &str, hints: [Hint; WORD_SIZE]) {
+        assert_eq!(
+            guess_to_hints(Word::from_str(answer), Word::from_str(guess)),
+            hints
+        );
+    }
+
     #[test]
     fn test_no_matches() {
-        assert_eq!(guess_to_hints_unchecked(&[0; 5], &[1; 5]), vec![Nowhere; 5]);
+        assert_hints("aaaaa", "bbbbb", [Nowhere; 5]);
     }
 
     #[test]
     fn test_alternating_correct() {
-        assert_eq!(
-            guess_to_hints_unchecked(&[0, 1, 0, 1, 0], &[0, 2, 0, 2, 0]),
-            vec![Correct, Nowhere, Correct, Nowhere, Correct]
+        assert_hints(
+            "ababa",
+            "acaca",
+            [Correct, Nowhere, Correct, Nowhere, Correct],
         );
     }
 
     #[test]
     fn test_elsewhere_simple() {
-        assert_eq!(
-            guess_to_hints_unchecked(&[0, 0, 1, 0, 0], &[2, 1, 2, 2, 2]),
-            vec![Nowhere, Elsewhere, Nowhere, Nowhere, Nowhere]
+        assert_hints(
+            "aabaa",
+            "cbccc",
+            [Nowhere, Elsewhere, Nowhere, Nowhere, Nowhere],
         );
     }
 
     #[test]
     fn test_elsewhere_and_correct() {
-        assert_eq!(
-            guess_to_hints_unchecked(&[0, 1, 0, 1, 0], &[2, 2, 1, 1, 2]),
-            vec![Nowhere, Nowhere, Elsewhere, Correct, Nowhere]
+        assert_hints(
+            "ababa",
+            "ccbbc",
+            [Nowhere, Nowhere, Elsewhere, Correct, Nowhere],
         );
     }
 
     #[test]
     fn test_multiple_elsewhere_and_correct() {
-        assert_eq!(
-            guess_to_hints_unchecked(&[0, 0, 1, 1, 1], &[1, 1, 1, 2, 2]),
-            vec![Elsewhere, Elsewhere, Correct, Nowhere, Nowhere]
+        assert_hints(
+            "aabbb",
+            "bbbcc",
+            [Elsewhere, Elsewhere, Correct, Nowhere, Nowhere],
         );
     }
 
     #[test]
     fn test_many_elsewhere_and_correct() {
-        assert_eq!(
-            guess_to_hints_unchecked(&[0, 0, 1, 0, 1], &[1, 1, 1, 2, 2]),
-            vec![Elsewhere, Nowhere, Correct, Nowhere, Nowhere]
+        assert_hints(
+            "aabab",
+            "bbbcc",
+            [Elsewhere, Nowhere, Correct, Nowhere, Nowhere],
         );
     }
 

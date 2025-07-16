@@ -1,7 +1,7 @@
 use crate::column::Column;
 use crate::word::Word;
 
-#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum Query {
     /// Filter for words that contain any instances of `chr`
     Contains { chr: u8 },

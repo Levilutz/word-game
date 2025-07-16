@@ -2,9 +2,14 @@ pub mod column;
 pub mod word;
 pub mod word_search;
 
-use std::{cmp::min, collections::HashMap};
+use std::{
+    cmp::min,
+    collections::{HashMap, HashSet},
+};
 
-#[derive(Debug, Clone, Copy, Eq, PartialEq, PartialOrd, Ord)]
+use crate::{word::Word, word_search::Query};
+
+#[derive(Debug, Clone, Copy, Eq, PartialEq, PartialOrd, Ord, Hash)]
 pub enum Hint {
     /// The submitted character is correct
     Correct,
@@ -14,6 +19,114 @@ pub enum Hint {
 
     /// The submitted character is not present in the word
     Nowhere,
+}
+
+pub fn clue_to_query<const WORD_SIZE: usize>(
+    guess: Word<WORD_SIZE>,
+    hints: [Hint; WORD_SIZE],
+) -> Query {
+    let mut sub_queries = vec![];
+
+    // Collect into tuples of (ind, guess_char, hint) for convenience
+    let clues: Vec<(usize, u8, Hint)> = guess
+        .0
+        .iter()
+        .zip(hints.iter())
+        .enumerate()
+        .map(|(ind, (guess_char, hint))| (ind, *guess_char, *hint))
+        .collect();
+
+    // Add queries for all Correct hints
+    sub_queries.extend(
+        clues
+            .iter()
+            .filter(|(_ind, _guess_char, hint)| *hint == Hint::Correct)
+            .map(|(ind, guess_char, _hint)| Query::Match {
+                ind: *ind,
+                chr: *guess_char,
+            }),
+    );
+
+    // Add queries for all Nowhere hints
+    sub_queries.extend(
+        clues
+            .iter()
+            .filter(|(_ind, _guess_char, hint)| *hint == Hint::Nowhere)
+            .map(|(_ind, guess_char, _hint)| Query::Count {
+                count: 0,
+                chr: *guess_char,
+            }),
+    );
+
+    // Add exclusion queries for all Elsewhere hints
+    sub_queries.extend(
+        clues
+            .iter()
+            .filter(|(_ind, _guess_char, hint)| *hint == Hint::Elsewhere)
+            .map(|(ind, guess_char, _hint)| {
+                Query::Not(Box::new(Query::Match {
+                    ind: *ind,
+                    chr: *guess_char,
+                }))
+            }),
+    );
+
+    // Get every char affected by a Elsewhere hint
+    let elsewhere_chars: HashSet<u8> = clues
+        .iter()
+        .filter(|(_ind, _guess_char, hint)| *hint == Hint::Elsewhere)
+        .map(|(_ind, guess_char, _hint)| *guess_char)
+        .collect();
+
+    // Add additional facts derivable from elsewhere hints
+    for elsewhere_char in elsewhere_chars {
+        // Count how many of each hint affected this char
+        let (mut num_correct, mut num_elsewhere, mut num_nowhere) = (0, 0, 0);
+        for (_ind, guess_char, hint) in &clues {
+            if *guess_char != elsewhere_char {
+                continue;
+            }
+            match hint {
+                Hint::Correct => num_correct += 1,
+                Hint::Elsewhere => num_elsewhere += 1,
+                Hint::Nowhere => num_nowhere += 1,
+            }
+        }
+
+        if num_nowhere > 0 {
+            // If some showed as Nowhere, we know exactly how many of this char are present
+            sub_queries.push(Query::Count {
+                count: num_correct + num_elsewhere,
+                chr: elsewhere_char,
+            });
+        } else {
+            // In this case we have a lower bound on the number of this char that are present
+            let min_present = num_correct + num_elsewhere;
+
+            // Compute an upper bound as well. Not strictly necessary for correctness,
+            // but a tighter upper bound will improve performance.
+            // This could be improved further by e.g. considering min_present of other
+            // loop rounds, context from other guesses on the same board, etc.
+            let num_other_char_present = clues
+                .iter()
+                .filter(|(_ind, guess_char, hint)| {
+                    *hint != Hint::Nowhere && *guess_char != elsewhere_char
+                })
+                .count();
+            let max_present = WORD_SIZE - num_other_char_present;
+
+            sub_queries.push(Query::Or(
+                (min_present..=max_present)
+                    .map(|num_present| Query::Count {
+                        count: num_present,
+                        chr: elsewhere_char,
+                    })
+                    .collect(),
+            ))
+        }
+    }
+
+    Query::And(sub_queries)
 }
 
 /// Given a guess and an answer represented as u8 vecs, compute the set of hints.
@@ -121,5 +234,31 @@ mod tests {
             guess_to_hints_unchecked(&[0, 0, 1, 0, 1], &[1, 1, 1, 2, 2]),
             vec![Elsewhere, Nowhere, Correct, Nowhere, Nowhere]
         );
+    }
+
+    #[test]
+    fn test_query_has_all_facts() {
+        let guess: Word<5> = Word::from_str("board");
+        let hints = [Correct, Nowhere, Elsewhere, Elsewhere, Correct];
+        let query = clue_to_query(guess, hints);
+        let Query::And(sub_queries) = query else {
+            panic!("non-And returned");
+        };
+
+        // Ensure all expected facts exist in the sub-queries
+        // println!("{:#?}", sub_queries);
+        assert!(sub_queries.contains(&Query::Match { ind: 0, chr: 1 }));
+        assert!(sub_queries.contains(&Query::Match { ind: 4, chr: 3 }));
+        assert!(sub_queries.contains(&Query::Count { count: 0, chr: 14 }));
+        assert!(sub_queries.contains(&Query::Not(Box::new(Query::Match { ind: 2, chr: 0 }))));
+        assert!(sub_queries.contains(&Query::Not(Box::new(Query::Match { ind: 3, chr: 17 }))));
+        assert!(sub_queries.contains(&Query::Or(vec![
+            Query::Count { count: 1, chr: 0 },
+            Query::Count { count: 2, chr: 0 }
+        ])));
+        assert!(sub_queries.contains(&Query::Or(vec![
+            Query::Count { count: 1, chr: 17 },
+            Query::Count { count: 2, chr: 17 }
+        ])));
     }
 }

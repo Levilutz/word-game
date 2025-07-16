@@ -1,4 +1,5 @@
-mod column;
+pub mod column;
+pub mod word;
 
 use std::{cmp::min, collections::HashMap};
 

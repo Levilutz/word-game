@@ -1,3 +1,5 @@
+mod column;
+
 use std::{cmp::min, collections::HashMap};
 
 #[derive(Debug, Clone, Copy, Eq, PartialEq, PartialOrd, Ord)]

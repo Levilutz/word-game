@@ -65,7 +65,17 @@ fn main() {
             assert_eq!(
                 dumb_set,
                 smart_set,
-                "mismatch!\nguess:  {}\nhints:  {}\nanswer: {}\n<- dumb output ->\n{}\n<- smart output ->\n{}\n<- smart query ->\n{:#?}\n<- end ->",
+                "mismatch!
+guess:  {}
+hints:  {}
+answer: {}
+<- dumb output ->
+{}
+<- smart output ->
+{}
+<- smart query ->
+{:#?}
+<- end ->",
                 *guess,
                 hints
                     .iter()

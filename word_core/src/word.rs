@@ -1,6 +1,6 @@
 use std::fmt::Display;
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct Word<const WORD_SIZE: usize>(pub [u8; WORD_SIZE]);
 
 impl<const WORD_SIZE: usize> Word<WORD_SIZE> {

@@ -1,4 +1,5 @@
 pub mod column;
+pub mod dumb_word_search;
 pub mod hint;
 pub mod word;
 pub mod word_search;

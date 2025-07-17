@@ -52,7 +52,7 @@ pub fn clue_to_query<const WORD_SIZE: usize>(
         clues
             .iter()
             .filter(|(_ind, _guess_char, hint)| *hint == Hint::Nowhere)
-            .map(|(_ind, guess_char, _hint)| Query::Count {
+            .map(|(_ind, guess_char, _hint)| Query::CountExact {
                 count: 0,
                 chr: *guess_char,
             }),
@@ -95,7 +95,7 @@ pub fn clue_to_query<const WORD_SIZE: usize>(
 
         if num_nowhere > 0 {
             // If some showed as Nowhere, we know exactly how many of this char are present
-            sub_queries.push(Query::Count {
+            sub_queries.push(Query::CountExact {
                 count: num_correct + num_elsewhere,
                 chr: elsewhere_char,
             });
@@ -117,7 +117,7 @@ pub fn clue_to_query<const WORD_SIZE: usize>(
 
             sub_queries.push(Query::Or(
                 (min_present..=max_present)
-                    .map(|num_present| Query::Count {
+                    .map(|num_present| Query::CountExact {
                         count: num_present,
                         chr: elsewhere_char,
                     })
@@ -261,16 +261,16 @@ mod tests {
         // println!("{:#?}", sub_queries);
         assert!(sub_queries.contains(&Query::Match { ind: 0, chr: 1 }));
         assert!(sub_queries.contains(&Query::Match { ind: 4, chr: 3 }));
-        assert!(sub_queries.contains(&Query::Count { count: 0, chr: 14 }));
+        assert!(sub_queries.contains(&Query::CountExact { count: 0, chr: 14 }));
         assert!(sub_queries.contains(&Query::Not(Box::new(Query::Match { ind: 2, chr: 0 }))));
         assert!(sub_queries.contains(&Query::Not(Box::new(Query::Match { ind: 3, chr: 17 }))));
         assert!(sub_queries.contains(&Query::Or(vec![
-            Query::Count { count: 1, chr: 0 },
-            Query::Count { count: 2, chr: 0 }
+            Query::CountExact { count: 1, chr: 0 },
+            Query::CountExact { count: 2, chr: 0 }
         ])));
         assert!(sub_queries.contains(&Query::Or(vec![
-            Query::Count { count: 1, chr: 17 },
-            Query::Count { count: 2, chr: 17 }
+            Query::CountExact { count: 1, chr: 17 },
+            Query::CountExact { count: 2, chr: 17 }
         ])));
     }
 }

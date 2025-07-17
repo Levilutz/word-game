@@ -10,7 +10,7 @@ pub enum Query {
     Match { ind: usize, chr: u8 },
 
     /// Filter for words that contain exactly `count` instances of `chr`
-    Count { count: usize, chr: u8 },
+    CountExact { count: usize, chr: u8 },
 
     /// Filter for words that do not satisfy the child query
     Not(Box<Query>),
@@ -66,14 +66,15 @@ impl<const WORD_SIZE: usize, const ALPHABET_SIZE: u8> SearchableWords<WORD_SIZE,
     /// Evaluate the query and produce an output column that represents a mask over rows.
     pub fn eval_query(&self, query: Query) -> Column {
         match query {
-            Query::Contains { chr } => {
-                self.eval_query(Query::Not(Box::new(Query::Count { count: 0, chr: chr })))
-            }
+            Query::Contains { chr } => self.eval_query(Query::Not(Box::new(Query::CountExact {
+                count: 0,
+                chr: chr,
+            }))),
             Query::Match { ind, chr } => {
                 let target_col = ALPHABET_SIZE as usize * ind + chr as usize;
                 self.columns[target_col].clone()
             }
-            Query::Count { count, chr } => {
+            Query::CountExact { count, chr } => {
                 let target_col = (ALPHABET_SIZE as usize * WORD_SIZE as usize)
                     + ((WORD_SIZE as usize + 1) * chr as usize)
                     + count;
@@ -189,22 +190,22 @@ mod tests {
     fn test_query_count() {
         assert_query_result_and_inverse::<3, 26>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
-            Query::Count { count: 0, chr: 0 },
+            Query::CountExact { count: 0, chr: 0 },
             &["bbc", "cbc"],
         );
         assert_query_result_and_inverse::<3, 26>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
-            Query::Count { count: 1, chr: 0 },
+            Query::CountExact { count: 1, chr: 0 },
             &["abc", "bca"],
         );
         assert_query_result_and_inverse::<3, 26>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
-            Query::Count { count: 2, chr: 0 },
+            Query::CountExact { count: 2, chr: 0 },
             &["baa", "aac"],
         );
         assert_query_result_and_inverse::<3, 26>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
-            Query::Count { count: 3, chr: 0 },
+            Query::CountExact { count: 3, chr: 0 },
             &["aaa"],
         );
     }

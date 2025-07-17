@@ -99,48 +99,33 @@ pub fn guess_to_hints<const WORD_SIZE: usize>(
     // Initialize with Nowhere hints
     let mut hints = [Hint::Nowhere; WORD_SIZE];
 
-    // Start by marking all the correct tiles
-    guess.0.iter().enumerate().for_each(|(i, guess_char)| {
-        if answer.0[i] == *guess_char {
-            hints[i] = Hint::Correct
+    // For every character in the answer that the guess missed, how many were missed
+    let mut missed_answer_char_counts: HashMap<u8, usize> = HashMap::new();
+
+    // For every character in the guess that was missed, which inds contain it
+    let mut incorrect_guess_char_inds: HashMap<u8, Vec<usize>> = HashMap::new();
+
+    for ind in 0..WORD_SIZE {
+        let answer_char = answer.0[ind];
+        let guess_char = guess.0[ind];
+
+        if answer_char == guess_char {
+            hints[ind] = Hint::Correct
+        } else {
+            *missed_answer_char_counts.entry(answer_char).or_insert(0) += 1;
+            incorrect_guess_char_inds
+                .entry(guess_char)
+                .or_default()
+                .push(ind);
         }
-    });
-
-    // Count how many of each character are present in the incorrect tiles of the answer
-    let missed_counts: HashMap<u8, u8> = answer
-        .0
-        .iter()
-        .zip(hints.iter())
-        .filter_map(|(answer_char, hint)| match hint {
-            Hint::Correct => None,
-            _ => Some(*answer_char),
-        })
-        .fold(HashMap::new(), |mut map, chr| {
-            *map.entry(chr).or_insert(0) += 1;
-            map
-        });
-
-    // Precompute indicies of each incorrect character in guess
-    let guess_char_inds: HashMap<u8, Vec<usize>> = guess
-        .0
-        .iter()
-        .zip(hints.iter())
-        .enumerate()
-        .filter_map(|(i, (answer_char, hint))| match hint {
-            Hint::Correct => None,
-            _ => Some((i, *answer_char)),
-        })
-        .fold(HashMap::new(), |mut map, (ind, chr)| {
-            map.entry(chr).or_default().push(ind);
-            map
-        });
+    }
 
     // For every missed answer character that was in the guess, set the first N to Elsewhere
-    for (answer_char, num_missed) in missed_counts.into_iter() {
-        if let Some(inds) = guess_char_inds.get(&answer_char) {
-            let num_elsewhere = min(num_missed as usize, inds.len());
-            for ind in &inds[0..num_elsewhere] {
-                hints[*ind] = Hint::Elsewhere
+    for (answer_char, num_missed) in missed_answer_char_counts.into_iter() {
+        if let Some(guess_inds) = incorrect_guess_char_inds.get(&answer_char) {
+            let num_missed_to_show = min(num_missed, guess_inds.len());
+            for guess_ind in &guess_inds[0..num_missed_to_show] {
+                hints[*guess_ind] = Hint::Elsewhere
             }
         }
     }

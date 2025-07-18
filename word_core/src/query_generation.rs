@@ -8,7 +8,7 @@ pub fn clue_to_query<const WORD_SIZE: usize>(
 ) -> Query {
     let mut sub_queries = vec![];
 
-    let mut elsewhere_chars: HashSet<u8> = HashSet::new();
+    let mut incorrect_chars: HashSet<u8> = HashSet::new();
     let mut num_per_char_by_hint: HashMap<(u8, Hint), usize> = HashMap::new();
 
     for ind in 0..WORD_SIZE {
@@ -23,34 +23,37 @@ pub fn clue_to_query<const WORD_SIZE: usize>(
                 chr: guess_chr,
             }),
             Hint::Elsewhere => {
-                elsewhere_chars.insert(guess_chr);
+                incorrect_chars.insert(guess_chr);
                 sub_queries.push(Query::Not(Box::new(Query::Match {
                     ind,
                     chr: guess_chr,
                 })))
             }
-            Hint::Nowhere => sub_queries.push(Query::CountExact {
-                count: 0,
-                chr: guess_chr,
-            }),
+            Hint::Nowhere => {
+                incorrect_chars.insert(guess_chr);
+                sub_queries.push(Query::Not(Box::new(Query::Match {
+                    ind: ind,
+                    chr: guess_chr,
+                })))
+            }
         }
     }
 
     // Add additional facts derivable from elsewhere hints
-    for elsewhere_char in elsewhere_chars {
+    for incorrect_char in incorrect_chars {
         // Get how many of each hint affected this char
         let num_correct = num_per_char_by_hint
-            .get(&(elsewhere_char, Hint::Correct))
+            .get(&(incorrect_char, Hint::Correct))
             .cloned()
             .unwrap_or(0);
 
         let num_elsewhere = num_per_char_by_hint
-            .get(&(elsewhere_char, Hint::Elsewhere))
+            .get(&(incorrect_char, Hint::Elsewhere))
             .cloned()
             .unwrap_or(0);
 
         let num_nowhere = num_per_char_by_hint
-            .get(&(elsewhere_char, Hint::Nowhere))
+            .get(&(incorrect_char, Hint::Nowhere))
             .cloned()
             .unwrap_or(0);
 
@@ -58,13 +61,13 @@ pub fn clue_to_query<const WORD_SIZE: usize>(
             // If some showed as Nowhere, we know exactly how many of this char are present
             sub_queries.push(Query::CountExact {
                 count: num_correct + num_elsewhere,
-                chr: elsewhere_char,
+                chr: incorrect_char,
             });
-        } else {
+        } else if num_elsewhere > 0 {
             // In this case we have a lower bound on the number of this char that are present
             sub_queries.push(Query::CountAtLeast {
                 count: num_correct + num_elsewhere,
-                chr: elsewhere_char,
+                chr: incorrect_char,
             });
         }
     }

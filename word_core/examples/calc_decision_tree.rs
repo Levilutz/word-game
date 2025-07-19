@@ -24,6 +24,6 @@ fn main() {
     let possible_answers: SearchableWords<WORD_SIZE, 26> = SearchableWords::build(words.clone());
     let (decision_tree, est_cost) = compute_node_aggressive(&words, possible_answers, 0, 4, false)
         .expect("failed to compute top-level result");
-    println!("{:#?}", decision_tree);
+    println!("{}", serde_json::to_string_pretty(&decision_tree).unwrap());
     println!("est cost: {}", est_cost);
 }

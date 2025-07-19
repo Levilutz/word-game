@@ -1,5 +1,7 @@
 use std::{collections::HashMap, f64::INFINITY};
 
+use serde::{Deserialize, Serialize};
+
 use crate::{
     column::Column, hint::WordHint, query_generation::clue_to_query, word::Word,
     word_search::SearchableWords,
@@ -9,15 +11,11 @@ use crate::{
 const ALPHABET_SIZE: u8 = 26;
 
 /// A node in the output decision tree
-#[derive(Debug, Clone)]
-pub enum TreeNode<const WORD_SIZE: usize> {
-    Answer {
-        answer: Word<WORD_SIZE, ALPHABET_SIZE>,
-    },
-    Decision {
-        should_enter: Word<WORD_SIZE, ALPHABET_SIZE>,
-        next: HashMap<WordHint<WORD_SIZE>, TreeNode<WORD_SIZE>>,
-    },
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct TreeNode<const WORD_SIZE: usize> {
+    should_enter: Word<WORD_SIZE, ALPHABET_SIZE>,
+    #[serde(skip_serializing_if = "HashMap::is_empty", default)]
+    next: HashMap<WordHint<WORD_SIZE>, TreeNode<WORD_SIZE>>,
 }
 
 pub fn compute_node_aggressive<const WORD_SIZE: usize>(
@@ -37,7 +35,13 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
                 prefix, answer, 1.0
             );
         }
-        return Some((TreeNode::Answer { answer }, 1.0));
+        return Some((
+            TreeNode {
+                should_enter: answer,
+                next: HashMap::new(),
+            },
+            1.0,
+        ));
     }
     // Shortcut - if only two options left, just guess one of them
     if possible_answers.len() == 2 {
@@ -51,12 +55,13 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
             );
         }
         return Some((
-            TreeNode::Decision {
+            TreeNode {
                 should_enter: possible_answer_a,
                 next: HashMap::from([(
                     WordHint::from_guess_and_answer(&possible_answer_a, &possible_answer_b),
-                    TreeNode::Answer {
-                        answer: possible_answer_b,
+                    TreeNode {
+                        should_enter: possible_answer_b,
+                        next: HashMap::new(),
                     },
                 )]),
             },
@@ -172,7 +177,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
         );
     }
     Some((
-        TreeNode::Decision {
+        TreeNode {
             should_enter: best_guess,
             next: best_guess_decision_tree,
         },

@@ -21,7 +21,7 @@ fn main() {
     println!("loaded {} words", words.len());
 
     let possible_answers: SearchableWords<WORD_SIZE, 26> = SearchableWords::build(words.clone());
-    let (decision_tree, avg_perf) = compute_node_aggressive(&words, possible_answers, 0, true);
+    let (decision_tree, est_cost) = compute_node_aggressive(&words, possible_answers, 0, true);
     println!("{:#?}", decision_tree);
-    println!("avg perf: {}", avg_perf);
+    println!("est cost: {}", est_cost);
 }

@@ -106,7 +106,7 @@ impl<const WORD_SIZE: usize> WordHint<WORD_SIZE> {
             match self.0[ind] {
                 CharHint::Correct => out.push("\x1b[42m".to_string()),
                 CharHint::Elsewhere => out.push("\x1b[43m".to_string()),
-                CharHint::Nowhere => out.push("\x1b[40m".to_string()),
+                CharHint::Nowhere => out.push("\x1b[41m".to_string()),
             }
             out.push(format!("{}", (b'A' + guess.0[ind]) as char));
             out.push("\x1b[0m".to_string())

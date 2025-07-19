@@ -1,0 +1,184 @@
+{
+  "should_enter": "ONE",
+  "next": {
+    "~XX": {
+      "should_enter": "TWO",
+      "next": {
+        "X~√": {
+          "should_enter": "WHO"
+        },
+        "√X~": {
+          "should_enter": "TOP"
+        },
+        "XX~": {
+          "should_enter": "FOR",
+          "next": {
+            "X√X": {
+              "should_enter": "YOU"
+            }
+          }
+        },
+        "X~~": {
+          "should_enter": "HOW"
+        }
+      }
+    },
+    "X√~": {
+      "should_enter": "END"
+    },
+    "XX~": {
+      "should_enter": "SET",
+      "next": {
+        "√√X": {
+          "should_enter": "SEX"
+        },
+        "X√X": {
+          "should_enter": "HER",
+          "next": {
+            "X√√": {
+              "should_enter": "PER"
+            },
+            "X√X": {
+              "should_enter": "WEB"
+            }
+          }
+        },
+        "X√√": {
+          "should_enter": "GET"
+        }
+      }
+    },
+    "~~X": {
+      "should_enter": "NOT",
+      "next": {
+        "√√X": {
+          "should_enter": "NOW"
+        }
+      }
+    },
+    "X~X": {
+      "should_enter": "CAN",
+      "next": {
+        "X√√": {
+          "should_enter": "JAN"
+        }
+      }
+    },
+    "√XX": {
+      "should_enter": "OUR",
+      "next": {
+        "√√X": {
+          "should_enter": "OUT"
+        },
+        "√XX": {
+          "should_enter": "OFF"
+        }
+      }
+    },
+    "XXX": {
+      "should_enter": "HAD",
+      "next": {
+        "√√X": {
+          "should_enter": "HAS"
+        },
+        "XX√": {
+          "should_enter": "DID",
+          "next": {
+            "√X√": {
+              "should_enter": "DVD"
+            }
+          }
+        },
+        "√XX": {
+          "should_enter": "HIS",
+          "next": {
+            "√√X": {
+              "should_enter": "HIM"
+            }
+          }
+        },
+        "X~√": {
+          "should_enter": "ADD"
+        },
+        "X√~": {
+          "should_enter": "DAY"
+        },
+        "X√X": {
+          "should_enter": "WAY",
+          "next": {
+            "~√X": {
+              "should_enter": "LAW"
+            },
+            "X√X": {
+              "should_enter": "MAP",
+              "next": {
+                "X√X": {
+                  "should_enter": "CAR"
+                }
+              }
+            },
+            "X√√": {
+              "should_enter": "MAY"
+            },
+            "√√X": {
+              "should_enter": "WAS"
+            }
+          }
+        },
+        "X~X": {
+          "should_enter": "ALL",
+          "next": {
+            "√XX": {
+              "should_enter": "ART"
+            }
+          }
+        },
+        "XXX": {
+          "should_enter": "BUT",
+          "next": {
+            "√√X": {
+              "should_enter": "BUY"
+            },
+            "XX~": {
+              "should_enter": "ITS"
+            },
+            "√XX": {
+              "should_enter": "BIG"
+            }
+          }
+        }
+      }
+    },
+    "√~X": {
+      "should_enter": "OWN"
+    },
+    "X√X": {
+      "should_enter": "AND",
+      "next": {
+        "√√X": {
+          "should_enter": "ANY"
+        }
+      }
+    },
+    "XX√": {
+      "should_enter": "SHE",
+      "next": {
+        "~X√": {
+          "should_enter": "USE"
+        },
+        "XX√": {
+          "should_enter": "ARE"
+        },
+        "X√√": {
+          "should_enter": "THE"
+        },
+        "√X√": {
+          "should_enter": "SEE"
+        }
+      }
+    },
+    "X~~": {
+      "should_enter": "NEW"
+    }
+  }
+}

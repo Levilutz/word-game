@@ -1,5 +1,7 @@
 use std::{cmp::min, collections::HashMap, fmt::Display};
 
+use serde::{Deserialize, Serialize, Serializer, de::Visitor};
+
 use crate::word::Word;
 
 /// A hint for a single character.
@@ -139,6 +141,41 @@ impl<const WORD_SIZE: usize> From<&str> for WordHint<WORD_SIZE> {
     }
 }
 
+impl<const WORD_SIZE: usize> Serialize for WordHint<WORD_SIZE> {
+    fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+    where
+        S: Serializer,
+    {
+        serializer.serialize_str(&format!("{}", self))
+    }
+}
+
+struct WordHintVisitor<const WORD_SIZE: usize>;
+
+impl<'de, const WORD_SIZE: usize> Visitor<'de> for WordHintVisitor<WORD_SIZE> {
+    type Value = WordHint<WORD_SIZE>;
+
+    fn expecting(&self, formatter: &mut std::fmt::Formatter) -> std::fmt::Result {
+        formatter.write_str("a set of character hints")
+    }
+
+    fn visit_str<E>(self, v: &str) -> Result<Self::Value, E>
+    where
+        E: serde::de::Error,
+    {
+        Ok(WordHint::from(v))
+    }
+}
+
+impl<'de, const WORD_SIZE: usize> Deserialize<'de> for WordHint<WORD_SIZE> {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        deserializer.deserialize_str(WordHintVisitor::<WORD_SIZE>)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -245,5 +282,39 @@ mod tests {
                 WordHint::from("XXX"),
             ]
         )
+    }
+
+    #[test]
+    fn test_serialize() {
+        assert_eq!(
+            serde_json::to_string(&WordHint::<5>::from("√~X√~")).unwrap(),
+            "\"√~X√~\""
+        );
+    }
+
+    #[test]
+    fn test_deserialize() {
+        let result: WordHint<5> = serde_json::from_str("\"√~X√~\"").unwrap();
+        assert_eq!(result, WordHint::<5>::from("√~X√~"),);
+    }
+
+    #[test]
+    fn test_serde() {
+        let original = WordHint::<5>::from("X~X√~");
+        let json = serde_json::to_string(&original).unwrap();
+        let reconstructed = serde_json::from_str(&json).unwrap();
+        assert_eq!(original, reconstructed);
+    }
+
+    #[test]
+    fn test_serde_as_map_key() {
+        let original: HashMap<WordHint<5>, u64> = HashMap::from([
+            (WordHint::from("X~X√~"), 5),
+            (WordHint::from("~√~√X"), 3),
+            (WordHint::from("√√√√√"), 1),
+        ]);
+        let json = serde_json::to_string(&original).unwrap();
+        let reconstructed = serde_json::from_str(&json).unwrap();
+        assert_eq!(original, reconstructed);
     }
 }

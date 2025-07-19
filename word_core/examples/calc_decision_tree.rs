@@ -3,8 +3,9 @@ use std::{env::args, fs};
 use word_core::{decision_tree::compute_node_aggressive, word::Word, word_search::SearchableWords};
 
 const WORD_SIZE: usize = 3;
+const ALPHABET_SIZE: u8 = 26;
 
-fn load_words() -> Vec<Word<WORD_SIZE>> {
+fn load_words() -> Vec<Word<WORD_SIZE, ALPHABET_SIZE>> {
     let file_path = args()
         .nth(1)
         .expect("Must supply word list file as first arg");

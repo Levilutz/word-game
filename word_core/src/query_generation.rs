@@ -6,8 +6,8 @@ use crate::{
     word_search::Query,
 };
 
-pub fn clue_to_query<const WORD_SIZE: usize>(
-    guess: Word<WORD_SIZE>,
+pub fn clue_to_query<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
+    guess: Word<WORD_SIZE, ALPHABET_SIZE>,
     word_hint: WordHint<WORD_SIZE>,
 ) -> Query {
     let mut sub_queries = vec![];
@@ -88,7 +88,7 @@ mod tests {
     #[test]
     fn test_query_has_all_facts() {
         // Guess is board, answer is bread
-        let guess: Word<5> = Word::from_str("board");
+        let guess: Word<5, 26> = Word::from_str("board");
         let word_hint = WordHint::from("√X~~√");
         let query = clue_to_query(guess, word_hint);
         let Query::And(sub_queries) = query else {

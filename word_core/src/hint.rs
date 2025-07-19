@@ -44,7 +44,10 @@ pub struct WordHint<const WORD_SIZE: usize>(pub [CharHint; WORD_SIZE]);
 
 impl<const WORD_SIZE: usize> WordHint<WORD_SIZE> {
     /// Determine what hints should be shown for a given guess and a given answer
-    pub fn from_guess_and_answer(guess: &Word<WORD_SIZE>, answer: &Word<WORD_SIZE>) -> Self {
+    pub fn from_guess_and_answer<const ALPHABET_SIZE: u8>(
+        guess: &Word<WORD_SIZE, ALPHABET_SIZE>,
+        answer: &Word<WORD_SIZE, ALPHABET_SIZE>,
+    ) -> Self {
         // Initialize with Nowhere hints
         let mut char_hints = [CharHint::Nowhere; WORD_SIZE];
 
@@ -102,7 +105,10 @@ impl<const WORD_SIZE: usize> WordHint<WORD_SIZE> {
     }
 
     /// Color a guess word based on this hint
-    pub fn color_guess(&self, guess: &Word<WORD_SIZE>) -> String {
+    pub fn color_guess<const ALPHABET_SIZE: u8>(
+        &self,
+        guess: &Word<WORD_SIZE, ALPHABET_SIZE>,
+    ) -> String {
         let mut out: Vec<String> = vec![];
         for ind in 0..WORD_SIZE {
             match self.0[ind] {
@@ -183,7 +189,7 @@ mod tests {
     fn assert_word_hint<const WORD_SIZE: usize>(answer: &str, guess: &str, word_hint: &str) {
         let word_hint: WordHint<WORD_SIZE> = WordHint::from(word_hint);
         assert_eq!(
-            WordHint::from_guess_and_answer(&Word::from_str(guess), &Word::from_str(answer)),
+            WordHint::from_guess_and_answer::<26>(&Word::from_str(guess), &Word::from_str(answer)),
             word_hint,
         )
     }

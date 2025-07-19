@@ -23,13 +23,13 @@ pub enum Query {
 }
 
 pub struct SearchableWords<const WORD_SIZE: usize, const ALPHABET_SIZE: u8> {
-    words: Vec<Word<WORD_SIZE>>,
+    words: Vec<Word<WORD_SIZE, ALPHABET_SIZE>>,
     columns: Vec<Column>,
 }
 
 impl<const WORD_SIZE: usize, const ALPHABET_SIZE: u8> SearchableWords<WORD_SIZE, ALPHABET_SIZE> {
     /// Given a set of words and an alphabet size, build a search table of word data.
-    pub fn build(words: Vec<Word<WORD_SIZE>>) -> Self {
+    pub fn build(words: Vec<Word<WORD_SIZE, ALPHABET_SIZE>>) -> Self {
         let num_cols = (ALPHABET_SIZE as usize) * WORD_SIZE * 3;
         let mut columns = Vec::with_capacity(num_cols);
 
@@ -118,7 +118,7 @@ impl<const WORD_SIZE: usize, const ALPHABET_SIZE: u8> SearchableWords<WORD_SIZE,
     }
 
     /// Given a mask over rows, extract the words filtered by that mask.
-    pub fn filter_words(&self, mask: &Column) -> Vec<Word<WORD_SIZE>> {
+    pub fn filter_words(&self, mask: &Column) -> Vec<Word<WORD_SIZE, ALPHABET_SIZE>> {
         mask.true_inds()
             .into_iter()
             .map(|ind| self.words[ind])
@@ -135,7 +135,7 @@ impl<const WORD_SIZE: usize, const ALPHABET_SIZE: u8> SearchableWords<WORD_SIZE,
     }
 
     /// Get a reference to the words contained in this data structure.
-    pub fn words(&self) -> &[Word<WORD_SIZE>] {
+    pub fn words(&self) -> &[Word<WORD_SIZE, ALPHABET_SIZE>] {
         &self.words
     }
 
@@ -153,17 +153,16 @@ mod tests {
         a.iter().copied().filter(|item| !b.contains(item)).collect()
     }
 
-    fn words_from_strs<const WORD_SIZE: usize>(words: &[&str]) -> Vec<Word<WORD_SIZE>> {
+    fn words_from_strs<const WORD_SIZE: usize>(words: &[&str]) -> Vec<Word<WORD_SIZE, 26>> {
         words.iter().map(|word| Word::from_str(word)).collect()
     }
 
-    fn assert_query_result<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
+    fn assert_query_result<const WORD_SIZE: usize>(
         words: &[&str],
         query: Query,
         expected: &[&str],
     ) {
-        let words: SearchableWords<WORD_SIZE, ALPHABET_SIZE> =
-            SearchableWords::build(words_from_strs(words));
+        let words: SearchableWords<WORD_SIZE, 26> = SearchableWords::build(words_from_strs(words));
         // println!("{:#?}", words.columns.iter().map(|col| col.to_bools()).collect::<Vec<Vec<bool>>>());
         let mask = words.eval_query(query);
         let result = words.filter_words(&mask);
@@ -182,13 +181,13 @@ mod tests {
         );
     }
 
-    fn assert_query_result_and_inverse<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
+    fn assert_query_result_and_inverse<const WORD_SIZE: usize>(
         words: &[&'static str],
         query: Query,
         expected: &[&'static str],
     ) {
-        assert_query_result::<WORD_SIZE, ALPHABET_SIZE>(words, query.clone(), expected);
-        assert_query_result::<WORD_SIZE, ALPHABET_SIZE>(
+        assert_query_result::<WORD_SIZE>(words, query.clone(), expected);
+        assert_query_result::<WORD_SIZE>(
             words,
             Query::Not(Box::new(query)),
             &set_subtract(words, expected),
@@ -197,7 +196,7 @@ mod tests {
 
     #[test]
     fn test_query_match() {
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["foo", "bar", "baz"],
             Query::Match { ind: 1, chr: 0 },
             &["bar", "baz"],
@@ -206,22 +205,22 @@ mod tests {
 
     #[test]
     fn test_query_count_exact() {
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
             Query::CountExact { count: 0, chr: 0 },
             &["bbc", "cbc"],
         );
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
             Query::CountExact { count: 1, chr: 0 },
             &["abc", "bca"],
         );
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
             Query::CountExact { count: 2, chr: 0 },
             &["baa", "aac"],
         );
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
             Query::CountExact { count: 3, chr: 0 },
             &["aaa"],
@@ -230,22 +229,22 @@ mod tests {
 
     #[test]
     fn test_query_count_at_least() {
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
             Query::CountAtLeast { count: 0, chr: 0 },
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
         );
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
             Query::CountAtLeast { count: 1, chr: 0 },
             &["abc", "bca", "baa", "aac", "aaa"],
         );
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
             Query::CountAtLeast { count: 2, chr: 0 },
             &["baa", "aac", "aaa"],
         );
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["bbc", "cbc", "abc", "bca", "baa", "aac", "aaa"],
             Query::CountAtLeast { count: 3, chr: 0 },
             &["aaa"],
@@ -254,7 +253,7 @@ mod tests {
 
     #[test]
     fn test_query_and_group() {
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["foo", "bar", "baz", "biz", "buz"],
             Query::And(vec![
                 Query::Match { ind: 1, chr: 0 },
@@ -266,7 +265,7 @@ mod tests {
 
     #[test]
     fn test_query_or_group() {
-        assert_query_result_and_inverse::<3, 26>(
+        assert_query_result_and_inverse::<3>(
             &["foo", "bar", "baz", "biz", "buz"],
             Query::Or(vec![
                 Query::Match { ind: 1, chr: 0 },
@@ -279,7 +278,7 @@ mod tests {
     #[test]
     fn test_query_realistic() {
         // Realistic query for when the answer is 'bread' and the guess was 'board'
-        assert_query_result_and_inverse::<5, 26>(
+        assert_query_result_and_inverse::<5>(
             &[
                 "badly", "basic", "basis", "beach", "begin", "being", "below", "bench", "bible",
                 "birth", "black", "blade", "blame", "blind", "block", "blood", "board", "brain",

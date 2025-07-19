@@ -5,20 +5,23 @@ use crate::{
     word_search::SearchableWords,
 };
 
+/// Must use const alphabet size to satisfy serde traits constrained to 26
+const ALPHABET_SIZE: u8 = 26;
+
 /// A node in the output decision tree
 #[derive(Debug, Clone)]
 pub enum TreeNode<const WORD_SIZE: usize> {
     Answer {
-        answer: Word<WORD_SIZE>,
+        answer: Word<WORD_SIZE, ALPHABET_SIZE>,
     },
     Decision {
-        should_enter: Word<WORD_SIZE>,
+        should_enter: Word<WORD_SIZE, ALPHABET_SIZE>,
         next: HashMap<WordHint<WORD_SIZE>, TreeNode<WORD_SIZE>>,
     },
 }
 
-pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
-    allowed_guesses: &[Word<WORD_SIZE>],
+pub fn compute_node_aggressive<const WORD_SIZE: usize>(
+    allowed_guesses: &[Word<WORD_SIZE, ALPHABET_SIZE>],
     possible_answers: SearchableWords<WORD_SIZE, ALPHABET_SIZE>,
     depth: u64,
     max_depth: u64,
@@ -61,7 +64,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
         ));
     }
     let mut best: Option<(
-        Word<WORD_SIZE>,
+        Word<WORD_SIZE, ALPHABET_SIZE>,
         HashMap<WordHint<WORD_SIZE>, TreeNode<WORD_SIZE>>,
         f64,
     )> = None;
@@ -77,7 +80,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
         if do_print {
             println!("{}evaluating guess \x1b[1m{}\x1b[0m", prefix, guess)
         }
-        let child_allowed_guesses: Vec<Word<WORD_SIZE>> = allowed_guesses
+        let child_allowed_guesses: Vec<Word<WORD_SIZE, ALPHABET_SIZE>> = allowed_guesses
             .iter()
             .filter(|allowed_guess| *allowed_guess != guess)
             .cloned()

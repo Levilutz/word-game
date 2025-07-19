@@ -1,10 +1,10 @@
 use crate::{hint::WordHint, word::Word};
 
-pub fn dumb_search_words<const WORD_SIZE: usize>(
-    words: &[Word<WORD_SIZE>],
-    guess: Word<WORD_SIZE>,
+pub fn dumb_search_words<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
+    words: &[Word<WORD_SIZE, ALPHABET_SIZE>],
+    guess: Word<WORD_SIZE, ALPHABET_SIZE>,
     word_hint: WordHint<WORD_SIZE>,
-) -> Vec<Word<WORD_SIZE>> {
+) -> Vec<Word<WORD_SIZE, ALPHABET_SIZE>> {
     words
         .iter()
         .filter_map(|word| {
@@ -33,7 +33,7 @@ mod tests {
             &words
                 .iter()
                 .map(|word| Word::from_str(word))
-                .collect::<Vec<Word<5>>>(),
+                .collect::<Vec<Word<5, 26>>>(),
             Word::from_str("board"),
             WordHint::from("√X~~√"),
         );

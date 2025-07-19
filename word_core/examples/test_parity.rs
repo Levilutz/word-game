@@ -6,8 +6,9 @@ use word_core::{
 };
 
 const WORD_SIZE: usize = 5;
+const ALPHABET_SIZE: u8 = 26;
 
-fn load_words() -> Vec<Word<WORD_SIZE>> {
+fn load_words() -> Vec<Word<WORD_SIZE, ALPHABET_SIZE>> {
     let file_path = args()
         .nth(1)
         .expect("Must supply word list file as first arg");
@@ -55,8 +56,10 @@ fn main() {
                 smart_search.filter_words(&smart_search.eval_query(query.clone()));
 
             // Compare results
-            let dumb_set: HashSet<Word<WORD_SIZE>> = possible_answers_dumb.into_iter().collect();
-            let smart_set: HashSet<Word<WORD_SIZE>> = possible_answers_smart.into_iter().collect();
+            let dumb_set: HashSet<Word<WORD_SIZE, ALPHABET_SIZE>> =
+                possible_answers_dumb.into_iter().collect();
+            let smart_set: HashSet<Word<WORD_SIZE, ALPHABET_SIZE>> =
+                possible_answers_smart.into_iter().collect();
 
             assert_eq!(
                 dumb_set,

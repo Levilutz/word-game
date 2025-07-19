@@ -1,9 +1,9 @@
 use std::fmt::Display;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
-pub struct Word<const WORD_SIZE: usize>(pub [u8; WORD_SIZE]);
+pub struct Word<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(pub [u8; WORD_SIZE]);
 
-impl<const WORD_SIZE: usize> Word<WORD_SIZE> {
+impl<const WORD_SIZE: usize, const ALPHABET_SIZE: u8> Word<WORD_SIZE, ALPHABET_SIZE> {
     /// Convert from the given raw string. Panics if invalid.
     pub fn from_str(raw: &str) -> Self {
         assert_eq!(raw.bytes().len(), WORD_SIZE);
@@ -22,7 +22,7 @@ impl<const WORD_SIZE: usize> Word<WORD_SIZE> {
     }
 }
 
-impl<const WORD_SIZE: usize> Display for Word<WORD_SIZE> {
+impl<const WORD_SIZE: usize> Display for Word<WORD_SIZE, 26> {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         for chr in self.0 {
             write!(f, "{}", (b'A' + chr) as char)?;

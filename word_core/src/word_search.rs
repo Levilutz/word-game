@@ -133,6 +133,16 @@ impl<const WORD_SIZE: usize, const ALPHABET_SIZE: u8> SearchableWords<WORD_SIZE,
             columns: self.columns.iter().map(|col| col.filter(&inds)).collect(),
         }
     }
+
+    /// Get a reference to the words contained in this data structure.
+    pub fn words(&self) -> &[Word<WORD_SIZE>] {
+        &self.words
+    }
+
+    /// Get the number of possible answers in this set.
+    pub fn len(&self) -> usize {
+        self.words.len()
+    }
 }
 
 #[cfg(test)]

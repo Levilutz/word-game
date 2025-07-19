@@ -56,6 +56,25 @@ pub fn guess_to_hints<const WORD_SIZE: usize>(
     hints
 }
 
+/// Generate all possible hints
+pub fn all_hints<const WORD_SIZE: usize>() -> Vec<[Hint; WORD_SIZE]> {
+    (0..3usize.pow(WORD_SIZE as u32))
+        .map(|ind| {
+            let mut ind = ind;
+            let mut hint = [Hint::Correct; WORD_SIZE];
+            for digit in 0..WORD_SIZE {
+                hint[digit] = match ind % 3 {
+                    0 => Hint::Correct,
+                    1 => Hint::Elsewhere,
+                    _ => Hint::Nowhere,
+                };
+                ind /= 3;
+            }
+            hint
+        })
+        .collect()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -116,5 +135,64 @@ mod tests {
             "bbbcc",
             [Elsewhere, Nowhere, Correct, Nowhere, Nowhere],
         );
+    }
+
+    #[test]
+    fn test_all_hints_1() {
+        assert_eq!(all_hints(), vec![[Correct], [Elsewhere], [Nowhere],])
+    }
+
+    #[test]
+    fn test_all_hints_2() {
+        assert_eq!(
+            all_hints(),
+            vec![
+                [Correct, Correct],
+                [Elsewhere, Correct],
+                [Nowhere, Correct],
+                [Correct, Elsewhere],
+                [Elsewhere, Elsewhere],
+                [Nowhere, Elsewhere],
+                [Correct, Nowhere],
+                [Elsewhere, Nowhere],
+                [Nowhere, Nowhere]
+            ]
+        )
+    }
+
+    #[test]
+    fn test_all_hints_3() {
+        assert_eq!(
+            all_hints(),
+            vec![
+                [Correct, Correct, Correct],
+                [Elsewhere, Correct, Correct],
+                [Nowhere, Correct, Correct],
+                [Correct, Elsewhere, Correct],
+                [Elsewhere, Elsewhere, Correct],
+                [Nowhere, Elsewhere, Correct],
+                [Correct, Nowhere, Correct],
+                [Elsewhere, Nowhere, Correct],
+                [Nowhere, Nowhere, Correct],
+                [Correct, Correct, Elsewhere],
+                [Elsewhere, Correct, Elsewhere],
+                [Nowhere, Correct, Elsewhere],
+                [Correct, Elsewhere, Elsewhere],
+                [Elsewhere, Elsewhere, Elsewhere],
+                [Nowhere, Elsewhere, Elsewhere],
+                [Correct, Nowhere, Elsewhere],
+                [Elsewhere, Nowhere, Elsewhere],
+                [Nowhere, Nowhere, Elsewhere],
+                [Correct, Correct, Nowhere],
+                [Elsewhere, Correct, Nowhere],
+                [Nowhere, Correct, Nowhere],
+                [Correct, Elsewhere, Nowhere],
+                [Elsewhere, Elsewhere, Nowhere],
+                [Nowhere, Elsewhere, Nowhere],
+                [Correct, Nowhere, Nowhere],
+                [Elsewhere, Nowhere, Nowhere],
+                [Nowhere, Nowhere, Nowhere]
+            ]
+        )
     }
 }

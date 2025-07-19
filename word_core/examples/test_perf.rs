@@ -1,7 +1,7 @@
 use std::{cmp::min, env::args, fs, time::Instant};
 
 use word_core::{
-    dumb_word_search::dumb_search_words, hint::guess_to_hints, query_generation::clue_to_query,
+    dumb_word_search::dumb_search_words, hint::WordHint, query_generation::clue_to_query,
     word::Word, word_search::SearchableWords,
 };
 
@@ -52,10 +52,10 @@ fn main() {
                 );
             }
 
-            let hints = guess_to_hints(*answer, *guess);
+            let word_hint = WordHint::from_guess_and_answer(guess, answer);
 
             // Get possible answers via dumb search
-            dumb_search_words(&words, *guess, hints);
+            dumb_search_words(&words, *guess, word_hint);
             i += 1;
         }
     }
@@ -88,10 +88,10 @@ fn main() {
                 );
             }
 
-            let hints = guess_to_hints(*answer, *guess);
+            let word_hint = WordHint::from_guess_and_answer(guess, answer);
 
             // Get possible answers via smart search
-            let query = clue_to_query(*guess, hints);
+            let query = clue_to_query(*guess, word_hint);
             smart_search.filter_words(&smart_search.eval_query(query.clone()));
             i += 1;
         }

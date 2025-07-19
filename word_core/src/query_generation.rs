@@ -1,39 +1,45 @@
 use std::collections::{HashMap, HashSet};
 
-use crate::{hint::Hint, word::Word, word_search::Query};
+use crate::{
+    hint::{CharHint, WordHint},
+    word::Word,
+    word_search::Query,
+};
 
 pub fn clue_to_query<const WORD_SIZE: usize>(
     guess: Word<WORD_SIZE>,
-    hints: [Hint; WORD_SIZE],
+    word_hint: WordHint<WORD_SIZE>,
 ) -> Query {
     let mut sub_queries = vec![];
 
     let mut incorrect_chars: HashSet<u8> = HashSet::new();
-    let mut num_per_char_by_hint: HashMap<(u8, Hint), usize> = HashMap::new();
+    let mut num_per_char_by_hint: HashMap<(u8, CharHint), usize> = HashMap::new();
 
     for ind in 0..WORD_SIZE {
-        let guess_chr = guess.0[ind];
-        let hint = hints[ind];
+        let guess_char = guess.0[ind];
+        let char_hint = word_hint.0[ind];
 
-        *num_per_char_by_hint.entry((guess_chr, hint)).or_insert(0) += 1;
+        *num_per_char_by_hint
+            .entry((guess_char, char_hint))
+            .or_insert(0) += 1;
 
-        match hint {
-            Hint::Correct => sub_queries.push(Query::Match {
+        match char_hint {
+            CharHint::Correct => sub_queries.push(Query::Match {
                 ind,
-                chr: guess_chr,
+                chr: guess_char,
             }),
-            Hint::Elsewhere => {
-                incorrect_chars.insert(guess_chr);
+            CharHint::Elsewhere => {
+                incorrect_chars.insert(guess_char);
                 sub_queries.push(Query::Not(Box::new(Query::Match {
                     ind,
-                    chr: guess_chr,
+                    chr: guess_char,
                 })))
             }
-            Hint::Nowhere => {
-                incorrect_chars.insert(guess_chr);
+            CharHint::Nowhere => {
+                incorrect_chars.insert(guess_char);
                 sub_queries.push(Query::Not(Box::new(Query::Match {
                     ind: ind,
-                    chr: guess_chr,
+                    chr: guess_char,
                 })))
             }
         }
@@ -43,17 +49,17 @@ pub fn clue_to_query<const WORD_SIZE: usize>(
     for incorrect_char in incorrect_chars {
         // Get how many of each hint affected this char
         let num_correct = num_per_char_by_hint
-            .get(&(incorrect_char, Hint::Correct))
+            .get(&(incorrect_char, CharHint::Correct))
             .cloned()
             .unwrap_or(0);
 
         let num_elsewhere = num_per_char_by_hint
-            .get(&(incorrect_char, Hint::Elsewhere))
+            .get(&(incorrect_char, CharHint::Elsewhere))
             .cloned()
             .unwrap_or(0);
 
         let num_nowhere = num_per_char_by_hint
-            .get(&(incorrect_char, Hint::Nowhere))
+            .get(&(incorrect_char, CharHint::Nowhere))
             .cloned()
             .unwrap_or(0);
 
@@ -78,14 +84,13 @@ pub fn clue_to_query<const WORD_SIZE: usize>(
 #[cfg(test)]
 mod tests {
     use super::*;
-    use Hint::{Correct, Elsewhere, Nowhere};
 
     #[test]
     fn test_query_has_all_facts() {
         // Guess is board, answer is bread
         let guess: Word<5> = Word::from_str("board");
-        let hints = [Correct, Nowhere, Elsewhere, Elsewhere, Correct];
-        let query = clue_to_query(guess, hints);
+        let word_hint = WordHint::from("√X~~√");
+        let query = clue_to_query(guess, word_hint);
         let Query::And(sub_queries) = query else {
             panic!("non-And returned");
         };

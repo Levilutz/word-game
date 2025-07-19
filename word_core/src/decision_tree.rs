@@ -1,10 +1,7 @@
 use std::{collections::HashMap, f64::INFINITY};
 
 use crate::{
-    column::Column,
-    hint::{Hint, all_hints, fmt_clue},
-    query_generation::clue_to_query,
-    word::Word,
+    column::Column, hint::WordHint, query_generation::clue_to_query, word::Word,
     word_search::SearchableWords,
 };
 
@@ -16,7 +13,7 @@ pub enum TreeNode<const WORD_SIZE: usize> {
     },
     Decision {
         should_enter: Word<WORD_SIZE>,
-        next: HashMap<[Hint; WORD_SIZE], TreeNode<WORD_SIZE>>,
+        next: HashMap<WordHint<WORD_SIZE>, TreeNode<WORD_SIZE>>,
     },
 }
 
@@ -37,7 +34,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
     }
     let mut best: Option<(
         Word<WORD_SIZE>,
-        HashMap<[Hint; WORD_SIZE], TreeNode<WORD_SIZE>>,
+        HashMap<WordHint<WORD_SIZE>, TreeNode<WORD_SIZE>>,
         f64,
     )> = None;
     for guess in allowed_guesses {
@@ -49,11 +46,11 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
             .filter(|allowed_guess| *allowed_guess != guess)
             .cloned()
             .collect();
-        let mut guess_decision_tree: HashMap<[Hint; WORD_SIZE], TreeNode<WORD_SIZE>> =
+        let mut guess_decision_tree: HashMap<WordHint<WORD_SIZE>, TreeNode<WORD_SIZE>> =
             HashMap::new();
         let mut guess_avg_perf = 0.0;
-        for hints in all_hints::<WORD_SIZE>() {
-            let mask = possible_answers.eval_query(clue_to_query(*guess, hints));
+        for word_hint in WordHint::all_possible() {
+            let mask = possible_answers.eval_query(clue_to_query(*guess, word_hint));
             let num_answers_giving_this_hint = mask.count_true();
             if num_answers_giving_this_hint == 0 {
                 continue;
@@ -67,7 +64,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
                 println!(
                     "{}{} could come from {} answers - {}",
                     prefix,
-                    fmt_clue(guess, &hints),
+                    word_hint.color_guess(guess),
                     num_answers_giving_this_hint,
                     possible_answers
                         .filter_words(&mask)
@@ -93,7 +90,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
             };
             guess_avg_perf += (child_est_guesses + 1.0) * num_answers_giving_this_hint as f64
                 / possible_answers.len() as f64;
-            guess_decision_tree.insert(hints, child_node);
+            guess_decision_tree.insert(word_hint, child_node);
         }
         if guess_avg_perf == INFINITY {
             continue;

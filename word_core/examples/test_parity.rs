@@ -1,14 +1,8 @@
 use std::{collections::HashSet, env::args, fs, time::Instant};
 
 use word_core::{
-    dumb_word_search::dumb_search_words,
-    hint::{
-        Hint::{Correct, Elsewhere, Nowhere},
-        guess_to_hints,
-    },
-    query_generation::clue_to_query,
-    word::Word,
-    word_search::SearchableWords,
+    dumb_word_search::dumb_search_words, hint::WordHint, query_generation::clue_to_query,
+    word::Word, word_search::SearchableWords,
 };
 
 fn load_words() -> Vec<Word<5>> {
@@ -48,13 +42,13 @@ fn main() {
                 );
             }
 
-            let hints = guess_to_hints(*answer, *guess);
+            let word_hint = WordHint::from_guess_and_answer(guess, answer);
 
             // Get possible answers via dumb search
-            let possible_answers_dumb = dumb_search_words(&words, *guess, hints);
+            let possible_answers_dumb = dumb_search_words(&words, *guess, word_hint);
 
             // Get possible answers via smart search
-            let query = clue_to_query(*guess, hints);
+            let query = clue_to_query(*guess, word_hint);
             let possible_answers_smart =
                 smart_search.filter_words(&smart_search.eval_query(query.clone()));
 
@@ -76,16 +70,8 @@ answer: {}
 <- smart query ->
 {:#?}
 <- end ->",
-                *guess,
-                hints
-                    .iter()
-                    .map(|hint| match hint {
-                        Correct => "√",
-                        Elsewhere => "~",
-                        Nowhere => ".",
-                    })
-                    .collect::<Vec<&str>>()
-                    .join(""),
+                word_hint.color_guess(guess),
+                word_hint,
                 *answer,
                 dumb_set
                     .iter()

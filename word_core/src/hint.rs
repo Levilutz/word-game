@@ -2,8 +2,9 @@ use std::{cmp::min, collections::HashMap, fmt::Display};
 
 use crate::word::Word;
 
+/// A hint for a single character.
 #[derive(Debug, Clone, Copy, Eq, PartialEq, PartialOrd, Ord, Hash)]
-pub enum Hint {
+pub enum CharHint {
     /// The submitted character is correct
     Correct,
 
@@ -14,183 +15,193 @@ pub enum Hint {
     Nowhere,
 }
 
-impl Display for Hint {
+impl Display for CharHint {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            Hint::Correct => write!(f, "√"),
-            Hint::Elsewhere => write!(f, "~"),
-            Hint::Nowhere => write!(f, "X"),
+            CharHint::Correct => write!(f, "√"),
+            CharHint::Elsewhere => write!(f, "~"),
+            CharHint::Nowhere => write!(f, "X"),
         }
     }
 }
 
-pub fn fmt_hints<const WORD_SIZE: usize>(hints: &[Hint; WORD_SIZE]) -> String {
-    hints
-        .iter()
-        .map(|hint| format!("{}", hint))
-        .collect::<Vec<String>>()
-        .join("")
-}
-
-pub fn fmt_clue<const WORD_SIZE: usize>(
-    guess: &Word<WORD_SIZE>,
-    hints: &[Hint; WORD_SIZE],
-) -> String {
-    let mut out: Vec<String> = vec![];
-    for ind in 0..WORD_SIZE {
-        match hints[ind] {
-            Hint::Correct => out.push("\x1b[42m".to_string()),
-            Hint::Elsewhere => out.push("\x1b[43m".to_string()),
-            Hint::Nowhere => out.push("\x1b[40m".to_string()),
-        }
-        out.push(format!("{}", (b'A' + guess.0[ind]) as char));
-        out.push("\x1b[0m".to_string())
-    }
-    out.join("")
-}
-
-/// Given a guess and an answer, compute the set of hints.
-pub fn guess_to_hints<const WORD_SIZE: usize>(
-    answer: Word<WORD_SIZE>,
-    guess: Word<WORD_SIZE>,
-) -> [Hint; WORD_SIZE] {
-    // Initialize with Nowhere hints
-    let mut hints = [Hint::Nowhere; WORD_SIZE];
-
-    // For every character in the answer that the guess missed, how many were missed
-    let mut missed_answer_char_counts: HashMap<u8, usize> = HashMap::new();
-
-    // For every character in the guess that was missed, which inds contain it
-    let mut incorrect_guess_char_inds: HashMap<u8, Vec<usize>> = HashMap::new();
-
-    for ind in 0..WORD_SIZE {
-        let answer_char = answer.0[ind];
-        let guess_char = guess.0[ind];
-
-        if answer_char == guess_char {
-            hints[ind] = Hint::Correct
-        } else {
-            *missed_answer_char_counts.entry(answer_char).or_insert(0) += 1;
-            incorrect_guess_char_inds
-                .entry(guess_char)
-                .or_default()
-                .push(ind);
+impl From<char> for CharHint {
+    fn from(value: char) -> Self {
+        match value {
+            '√' => Self::Correct,
+            '~' => Self::Elsewhere,
+            'X' | 'x' => Self::Nowhere,
+            _ => panic!("Invalid char for CharHint: {}", value),
         }
     }
+}
 
-    // For every missed answer character that was in the guess, set the first N to Elsewhere
-    for (answer_char, num_missed) in missed_answer_char_counts.into_iter() {
-        if let Some(guess_inds) = incorrect_guess_char_inds.get(&answer_char) {
-            let num_missed_to_show = min(num_missed, guess_inds.len());
-            for guess_ind in &guess_inds[0..num_missed_to_show] {
-                hints[*guess_ind] = Hint::Elsewhere
+/// A hint for a whole word.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+pub struct WordHint<const WORD_SIZE: usize>(pub [CharHint; WORD_SIZE]);
+
+impl<const WORD_SIZE: usize> WordHint<WORD_SIZE> {
+    /// Determine what hints should be shown for a given guess and a given answer
+    pub fn from_guess_and_answer(guess: &Word<WORD_SIZE>, answer: &Word<WORD_SIZE>) -> Self {
+        // Initialize with Nowhere hints
+        let mut char_hints = [CharHint::Nowhere; WORD_SIZE];
+
+        // For every character in the answer that the guess missed, how many were missed
+        let mut missed_answer_char_counts: HashMap<u8, usize> = HashMap::new();
+
+        // For every character in the guess that was missed, which inds contain it
+        let mut incorrect_guess_char_inds: HashMap<u8, Vec<usize>> = HashMap::new();
+
+        for ind in 0..WORD_SIZE {
+            let answer_char = answer.0[ind];
+            let guess_char = guess.0[ind];
+
+            if answer_char == guess_char {
+                char_hints[ind] = CharHint::Correct
+            } else {
+                *missed_answer_char_counts.entry(answer_char).or_insert(0) += 1;
+                incorrect_guess_char_inds
+                    .entry(guess_char)
+                    .or_default()
+                    .push(ind);
             }
         }
+
+        // For every missed answer character that was in the guess, set the first N to Elsewhere
+        for (answer_char, num_missed) in missed_answer_char_counts.into_iter() {
+            if let Some(guess_inds) = incorrect_guess_char_inds.get(&answer_char) {
+                let num_missed_to_show = min(num_missed, guess_inds.len());
+                for guess_ind in &guess_inds[0..num_missed_to_show] {
+                    char_hints[*guess_ind] = CharHint::Elsewhere
+                }
+            }
+        }
+
+        Self(char_hints)
     }
 
-    hints
+    /// Get all possible hints for this word size
+    pub fn all_possible() -> Vec<Self> {
+        (0..3usize.pow(WORD_SIZE as u32))
+            .map(|ind| {
+                let mut ind = ind;
+                let mut char_hints = [CharHint::Correct; WORD_SIZE];
+                for digit in 0..WORD_SIZE {
+                    char_hints[digit] = match ind % 3 {
+                        0 => CharHint::Correct,
+                        1 => CharHint::Elsewhere,
+                        _ => CharHint::Nowhere,
+                    };
+                    ind /= 3;
+                }
+                Self(char_hints)
+            })
+            .collect()
+    }
+
+    /// Color a guess word based on this hint
+    pub fn color_guess(&self, guess: &Word<WORD_SIZE>) -> String {
+        let mut out: Vec<String> = vec![];
+        for ind in 0..WORD_SIZE {
+            match self.0[ind] {
+                CharHint::Correct => out.push("\x1b[42m".to_string()),
+                CharHint::Elsewhere => out.push("\x1b[43m".to_string()),
+                CharHint::Nowhere => out.push("\x1b[40m".to_string()),
+            }
+            out.push(format!("{}", (b'A' + guess.0[ind]) as char));
+            out.push("\x1b[0m".to_string())
+        }
+        out.join("")
+    }
 }
 
-/// Generate all possible hints
-pub fn all_hints<const WORD_SIZE: usize>() -> Vec<[Hint; WORD_SIZE]> {
-    (0..3usize.pow(WORD_SIZE as u32))
-        .map(|ind| {
-            let mut ind = ind;
-            let mut hint = [Hint::Correct; WORD_SIZE];
-            for digit in 0..WORD_SIZE {
-                hint[digit] = match ind % 3 {
-                    0 => Hint::Correct,
-                    1 => Hint::Elsewhere,
-                    _ => Hint::Nowhere,
-                };
-                ind /= 3;
-            }
-            hint
-        })
-        .collect()
+impl<const WORD_SIZE: usize> Display for WordHint<WORD_SIZE> {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        for hint in self.0 {
+            hint.fmt(f)?
+        }
+        Ok(())
+    }
+}
+
+impl<const WORD_SIZE: usize> From<&str> for WordHint<WORD_SIZE> {
+    fn from(value: &str) -> Self {
+        let mut char_hints = [CharHint::Correct; WORD_SIZE];
+        for (ind, char_value) in value.chars().enumerate() {
+            char_hints[ind] = CharHint::from(char_value)
+        }
+        Self(char_hints)
+    }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
-    use Hint::{Correct, Elsewhere, Nowhere};
 
-    fn assert_hints<const WORD_SIZE: usize>(answer: &str, guess: &str, hints: [Hint; WORD_SIZE]) {
+    fn assert_word_hint<const WORD_SIZE: usize>(answer: &str, guess: &str, word_hint: &str) {
+        let word_hint: WordHint<WORD_SIZE> = WordHint::from(word_hint);
         assert_eq!(
-            guess_to_hints(Word::from_str(answer), Word::from_str(guess)),
-            hints
-        );
+            WordHint::from_guess_and_answer(&Word::from_str(guess), &Word::from_str(answer)),
+            word_hint,
+        )
     }
 
     #[test]
     fn test_no_matches() {
-        assert_hints("aaaaa", "bbbbb", [Nowhere; 5]);
+        assert_word_hint::<5>("aaaaa", "bbbbb", "xxxxx");
     }
 
     #[test]
     fn test_alternating_correct() {
-        assert_hints(
-            "ababa",
-            "acaca",
-            [Correct, Nowhere, Correct, Nowhere, Correct],
-        );
+        assert_word_hint::<5>("ababa", "acaca", "√X√X√");
     }
 
     #[test]
     fn test_elsewhere_simple() {
-        assert_hints(
-            "aabaa",
-            "cbccc",
-            [Nowhere, Elsewhere, Nowhere, Nowhere, Nowhere],
-        );
+        assert_word_hint::<5>("aabaa", "cbccc", "X~XXX");
     }
 
     #[test]
     fn test_elsewhere_and_correct() {
-        assert_hints(
-            "ababa",
-            "ccbbc",
-            [Nowhere, Nowhere, Elsewhere, Correct, Nowhere],
-        );
+        assert_word_hint::<5>("ababa", "ccbbc", "XX~√X");
     }
 
     #[test]
     fn test_multiple_elsewhere_and_correct() {
-        assert_hints(
-            "aabbb",
-            "bbbcc",
-            [Elsewhere, Elsewhere, Correct, Nowhere, Nowhere],
-        );
+        assert_word_hint::<5>("aabbb", "bbbcc", "~~√XX");
     }
 
     #[test]
     fn test_many_elsewhere_and_correct() {
-        assert_hints(
-            "aabab",
-            "bbbcc",
-            [Elsewhere, Nowhere, Correct, Nowhere, Nowhere],
-        );
+        assert_word_hint::<5>("aabab", "bbbcc", "~X√XX");
     }
 
     #[test]
     fn test_all_hints_1() {
-        assert_eq!(all_hints(), vec![[Correct], [Elsewhere], [Nowhere],])
+        assert_eq!(
+            WordHint::<1>::all_possible(),
+            vec![
+                WordHint::from("√"),
+                WordHint::from("~"),
+                WordHint::from("X")
+            ]
+        );
     }
 
     #[test]
     fn test_all_hints_2() {
         assert_eq!(
-            all_hints(),
+            WordHint::<2>::all_possible(),
             vec![
-                [Correct, Correct],
-                [Elsewhere, Correct],
-                [Nowhere, Correct],
-                [Correct, Elsewhere],
-                [Elsewhere, Elsewhere],
-                [Nowhere, Elsewhere],
-                [Correct, Nowhere],
-                [Elsewhere, Nowhere],
-                [Nowhere, Nowhere]
+                WordHint::from("√√"),
+                WordHint::from("~√"),
+                WordHint::from("X√"),
+                WordHint::from("√~"),
+                WordHint::from("~~"),
+                WordHint::from("X~"),
+                WordHint::from("√X"),
+                WordHint::from("~X"),
+                WordHint::from("XX"),
             ]
         )
     }
@@ -198,35 +209,35 @@ mod tests {
     #[test]
     fn test_all_hints_3() {
         assert_eq!(
-            all_hints(),
+            WordHint::<3>::all_possible(),
             vec![
-                [Correct, Correct, Correct],
-                [Elsewhere, Correct, Correct],
-                [Nowhere, Correct, Correct],
-                [Correct, Elsewhere, Correct],
-                [Elsewhere, Elsewhere, Correct],
-                [Nowhere, Elsewhere, Correct],
-                [Correct, Nowhere, Correct],
-                [Elsewhere, Nowhere, Correct],
-                [Nowhere, Nowhere, Correct],
-                [Correct, Correct, Elsewhere],
-                [Elsewhere, Correct, Elsewhere],
-                [Nowhere, Correct, Elsewhere],
-                [Correct, Elsewhere, Elsewhere],
-                [Elsewhere, Elsewhere, Elsewhere],
-                [Nowhere, Elsewhere, Elsewhere],
-                [Correct, Nowhere, Elsewhere],
-                [Elsewhere, Nowhere, Elsewhere],
-                [Nowhere, Nowhere, Elsewhere],
-                [Correct, Correct, Nowhere],
-                [Elsewhere, Correct, Nowhere],
-                [Nowhere, Correct, Nowhere],
-                [Correct, Elsewhere, Nowhere],
-                [Elsewhere, Elsewhere, Nowhere],
-                [Nowhere, Elsewhere, Nowhere],
-                [Correct, Nowhere, Nowhere],
-                [Elsewhere, Nowhere, Nowhere],
-                [Nowhere, Nowhere, Nowhere]
+                WordHint::from("√√√"),
+                WordHint::from("~√√"),
+                WordHint::from("X√√"),
+                WordHint::from("√~√"),
+                WordHint::from("~~√"),
+                WordHint::from("X~√"),
+                WordHint::from("√X√"),
+                WordHint::from("~X√"),
+                WordHint::from("XX√"),
+                WordHint::from("√√~"),
+                WordHint::from("~√~"),
+                WordHint::from("X√~"),
+                WordHint::from("√~~"),
+                WordHint::from("~~~"),
+                WordHint::from("X~~"),
+                WordHint::from("√X~"),
+                WordHint::from("~X~"),
+                WordHint::from("XX~"),
+                WordHint::from("√√X"),
+                WordHint::from("~√X"),
+                WordHint::from("X√X"),
+                WordHint::from("√~X"),
+                WordHint::from("~~X"),
+                WordHint::from("X~X"),
+                WordHint::from("√XX"),
+                WordHint::from("~XX"),
+                WordHint::from("XXX"),
             ]
         )
     }

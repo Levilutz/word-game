@@ -1,17 +1,14 @@
-use crate::{
-    hint::{Hint, guess_to_hints},
-    word::Word,
-};
+use crate::{hint::WordHint, word::Word};
 
 pub fn dumb_search_words<const WORD_SIZE: usize>(
     words: &[Word<WORD_SIZE>],
     guess: Word<WORD_SIZE>,
-    hints: [Hint; WORD_SIZE],
+    word_hint: WordHint<WORD_SIZE>,
 ) -> Vec<Word<WORD_SIZE>> {
     words
         .iter()
         .filter_map(|word| {
-            if guess_to_hints(*word, guess) == hints {
+            if WordHint::from_guess_and_answer(&guess, word) == word_hint {
                 Some(*word)
             } else {
                 None
@@ -23,7 +20,6 @@ pub fn dumb_search_words<const WORD_SIZE: usize>(
 #[cfg(test)]
 mod tests {
     use super::*;
-    use Hint::{Correct, Elsewhere, Nowhere};
 
     #[test]
     fn test_search_words() {
@@ -39,7 +35,7 @@ mod tests {
                 .map(|word| Word::from_str(word))
                 .collect::<Vec<Word<5>>>(),
             Word::from_str("board"),
-            [Correct, Nowhere, Elsewhere, Elsewhere, Correct],
+            WordHint::from("√X~~√"),
         );
         assert_eq!(results, vec![Word::from_str("bread")])
     }

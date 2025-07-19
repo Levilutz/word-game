@@ -1,4 +1,4 @@
-use std::{cmp::min, collections::HashMap};
+use std::{cmp::min, collections::HashMap, fmt::Display};
 
 use crate::word::Word;
 
@@ -12,6 +12,41 @@ pub enum Hint {
 
     /// The submitted character is not present in the word
     Nowhere,
+}
+
+impl Display for Hint {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Hint::Correct => write!(f, "√"),
+            Hint::Elsewhere => write!(f, "~"),
+            Hint::Nowhere => write!(f, "X"),
+        }
+    }
+}
+
+pub fn fmt_hints<const WORD_SIZE: usize>(hints: &[Hint; WORD_SIZE]) -> String {
+    hints
+        .iter()
+        .map(|hint| format!("{}", hint))
+        .collect::<Vec<String>>()
+        .join("")
+}
+
+pub fn fmt_clue<const WORD_SIZE: usize>(
+    guess: &Word<WORD_SIZE>,
+    hints: &[Hint; WORD_SIZE],
+) -> String {
+    let mut out: Vec<String> = vec![];
+    for ind in 0..WORD_SIZE {
+        match hints[ind] {
+            Hint::Correct => out.push("\x1b[42m".to_string()),
+            Hint::Elsewhere => out.push("\x1b[43m".to_string()),
+            Hint::Nowhere => out.push("\x1b[40m".to_string()),
+        }
+        out.push(format!("{}", (b'A' + guess.0[ind]) as char));
+        out.push("\x1b[0m".to_string())
+    }
+    out.join("")
 }
 
 /// Given a guess and an answer, compute the set of hints.

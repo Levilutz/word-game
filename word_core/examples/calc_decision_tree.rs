@@ -2,7 +2,9 @@ use std::{env::args, fs};
 
 use word_core::{decision_tree::compute_node_aggressive, word::Word, word_search::SearchableWords};
 
-fn load_words() -> Vec<Word<5>> {
+const WORD_SIZE: usize = 3;
+
+fn load_words() -> Vec<Word<WORD_SIZE>> {
     let file_path = args()
         .nth(1)
         .expect("Must supply word list file as first arg");
@@ -18,8 +20,8 @@ fn main() {
     let words = load_words();
     println!("loaded {} words", words.len());
 
-    let possible_answers: SearchableWords<5, 26> = SearchableWords::build(words.clone());
-    let (decision_tree, avg_perf) = compute_node_aggressive(&words, possible_answers, 0, false);
+    let possible_answers: SearchableWords<WORD_SIZE, 26> = SearchableWords::build(words.clone());
+    let (decision_tree, avg_perf) = compute_node_aggressive(&words, possible_answers, 0, true);
     println!("{:#?}", decision_tree);
     println!("avg perf: {}", avg_perf);
 }

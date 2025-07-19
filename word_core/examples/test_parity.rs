@@ -5,7 +5,9 @@ use word_core::{
     word::Word, word_search::SearchableWords,
 };
 
-fn load_words() -> Vec<Word<5>> {
+const WORD_SIZE: usize = 5;
+
+fn load_words() -> Vec<Word<WORD_SIZE>> {
     let file_path = args()
         .nth(1)
         .expect("Must supply word list file as first arg");
@@ -23,7 +25,7 @@ fn main() {
 
     println!("loaded {} words -> {} test cases", words.len(), num_trials);
 
-    let smart_search: SearchableWords<5, 26> = SearchableWords::build(words.clone());
+    let smart_search: SearchableWords<WORD_SIZE, 26> = SearchableWords::build(words.clone());
 
     let start = Instant::now();
     let mut i = 0;
@@ -53,8 +55,8 @@ fn main() {
                 smart_search.filter_words(&smart_search.eval_query(query.clone()));
 
             // Compare results
-            let dumb_set: HashSet<Word<5>> = possible_answers_dumb.into_iter().collect();
-            let smart_set: HashSet<Word<5>> = possible_answers_smart.into_iter().collect();
+            let dumb_set: HashSet<Word<WORD_SIZE>> = possible_answers_dumb.into_iter().collect();
+            let smart_set: HashSet<Word<WORD_SIZE>> = possible_answers_smart.into_iter().collect();
 
             assert_eq!(
                 dumb_set,

@@ -24,12 +24,31 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
     do_print: bool,
 ) -> (TreeNode<WORD_SIZE>, f64) {
     let prefix = (0..depth).map(|_| "\t").collect::<Vec<&str>>().join("");
+    // Shortcut - if only one option left, just guess it
     if possible_answers.len() == 1 {
         return (
             TreeNode::Answer {
                 answer: possible_answers.filter_words(&Column::from_true(1))[0],
             },
             1.0,
+        );
+    }
+    // Shortcut - if only two options left, just guess one of them
+    if possible_answers.len() == 2 {
+        let possible_answer_words = possible_answers.filter_words(&Column::from_true(2));
+        let possible_answer_a = possible_answer_words[0];
+        let possible_answer_b = possible_answer_words[1];
+        return (
+            TreeNode::Decision {
+                should_enter: possible_answer_a,
+                next: HashMap::from([(
+                    WordHint::from_guess_and_answer(&possible_answer_a, &possible_answer_b),
+                    TreeNode::Answer {
+                        answer: possible_answer_b,
+                    },
+                )]),
+            },
+            1.5,
         );
     }
     let mut best: Option<(
@@ -89,20 +108,12 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
                 }
                 continue;
             }
-            let (child_node, child_est_addl_cost) = match num_answers_giving_this_hint {
-                1 => (
-                    TreeNode::Answer {
-                        answer: possible_answers.filter_words(&mask)[0],
-                    },
-                    1.0,
-                ),
-                _ => compute_node_aggressive(
-                    &child_allowed_guesses,
-                    possible_answers.filter(&mask),
-                    depth + 1,
-                    do_print,
-                ),
-            };
+            let (child_node, child_est_addl_cost) = compute_node_aggressive(
+                &child_allowed_guesses,
+                possible_answers.filter(&mask),
+                depth + 1,
+                do_print,
+            );
             if do_print {
                 println!(
                     "{}scenario {} est addl cost {}",

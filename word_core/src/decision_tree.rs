@@ -21,8 +21,9 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
     allowed_guesses: &[Word<WORD_SIZE>],
     possible_answers: SearchableWords<WORD_SIZE, ALPHABET_SIZE>,
     depth: u64,
+    max_depth: u64,
     do_print: bool,
-) -> (TreeNode<WORD_SIZE>, f64) {
+) -> Option<(TreeNode<WORD_SIZE>, f64)> {
     let prefix = (0..depth * 2).map(|_| "\t").collect::<Vec<&str>>().join("");
     // Shortcut - if only one option left, just guess it
     if possible_answers.len() == 1 {
@@ -33,7 +34,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
                 prefix, answer, 1.0
             );
         }
-        return (TreeNode::Answer { answer }, 1.0);
+        return Some((TreeNode::Answer { answer }, 1.0));
     }
     // Shortcut - if only two options left, just guess one of them
     if possible_answers.len() == 2 {
@@ -46,7 +47,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
                 prefix, possible_answer_a, 1.5
             );
         }
-        return (
+        return Some((
             TreeNode::Decision {
                 should_enter: possible_answer_a,
                 next: HashMap::from([(
@@ -57,16 +58,21 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
                 )]),
             },
             1.5,
-        );
+        ));
     }
     let mut best: Option<(
         Word<WORD_SIZE>,
         HashMap<WordHint<WORD_SIZE>, TreeNode<WORD_SIZE>>,
         f64,
     )> = None;
-    for guess in allowed_guesses {
-        if !do_print && depth == 0 {
-            println!("evaluating top level guess \x1b[1m{}\x1b[0m", guess);
+    for (guess_ind, guess) in allowed_guesses.iter().enumerate() {
+        if !do_print && depth <= 0 {
+            println!(
+                "evaluating level {} guess \x1b[1m{}\x1b[0m - {:.0}%",
+                depth,
+                guess,
+                100.0 * guess_ind as f64 / allowed_guesses.len() as f64
+            );
         }
         if do_print {
             println!("{}evaluating guess \x1b[1m{}\x1b[0m", prefix, guess)
@@ -116,15 +122,28 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
                 // We happened to guess correctly, there is no additional cost
                 continue;
             }
-            let (child_node, child_est_addl_cost) = compute_node_aggressive(
+            if depth == max_depth - 1 {
+                // We've used all our allowed guesses, don't consider this path
+                if do_print {
+                    println!("{}guess \x1b[1m{}\x1b[0m is too expensive", prefix, guess);
+                }
+                guess_est_cost = INFINITY;
+                break;
+            }
+            if let Some((child_node, child_est_addl_cost)) = compute_node_aggressive(
                 &child_allowed_guesses,
                 possible_answers.filter(&mask),
                 depth + 1,
+                max_depth,
                 do_print,
-            );
-            guess_est_cost += child_est_addl_cost * num_answers_giving_this_hint as f64
-                / possible_answers.len() as f64;
-            guess_decision_tree.insert(word_hint, child_node);
+            ) {
+                guess_est_cost += child_est_addl_cost * num_answers_giving_this_hint as f64
+                    / possible_answers.len() as f64;
+                guess_decision_tree.insert(word_hint, child_node);
+            } else {
+                guess_est_cost = INFINITY;
+                break;
+            }
         }
         if guess_est_cost == INFINITY {
             continue;
@@ -142,18 +161,18 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
             _ => best = Some((*guess, guess_decision_tree, guess_est_cost)),
         }
     }
-    let (best_guess, best_guess_decision_tree, best_guess_est_cost) = best.unwrap();
+    let (best_guess, best_guess_decision_tree, best_guess_est_cost) = best?;
     if do_print {
         println!(
             "{}best guess is \x1b[1m{}\x1b[0m with est cost of {}",
             prefix, best_guess, best_guess_est_cost
         );
     }
-    (
+    Some((
         TreeNode::Decision {
             should_enter: best_guess,
             next: best_guess_decision_tree,
         },
         best_guess_est_cost,
-    )
+    ))
 }

@@ -91,6 +91,24 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
         if do_print {
             println!("{}evaluating guess \x1b[1m{}\x1b[0m", prefix, guess)
         }
+
+        // Evaluate if this guess is useless before scanning all possible hints
+        // Pull a random possible answer, generate a random possible hint, and see if
+        // that hint covers every answer.
+        let mask = possible_answers.eval_query(clue_to_query(
+            *guess,
+            WordHint::from_guess_and_answer(guess, &possible_answers.words()[0]),
+        ));
+        if mask.count_true() == possible_answers.len() as u64 {
+            if do_print {
+                println!(
+                    "{}guess \x1b[1m{}\x1b[0m is useless, skipping",
+                    prefix, guess
+                );
+            }
+            continue;
+        }
+
         let child_allowed_guesses: Vec<Word<WORD_SIZE, ALPHABET_SIZE>> = allowed_guesses
             .iter()
             .filter(|allowed_guess| *allowed_guess != guess)
@@ -114,17 +132,6 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
             let num_answers_giving_this_hint = mask.count_true();
             if num_answers_giving_this_hint == 0 {
                 continue;
-            }
-            if num_answers_giving_this_hint == possible_answers.len() as u64 {
-                // This guess doesn't filter at all and is worthless, don't consider
-                if do_print {
-                    println!(
-                        "{}guess \x1b[1m{}\x1b[0m is useless, skipping",
-                        prefix, guess
-                    );
-                }
-                guess_est_cost = INFINITY;
-                break;
             }
             if do_print {
                 println!(

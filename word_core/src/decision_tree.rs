@@ -1,4 +1,7 @@
-use std::{collections::HashMap, f64::INFINITY};
+use std::{
+    collections::{HashMap, HashSet},
+    f64::INFINITY,
+};
 
 use serde::{Deserialize, Serialize};
 
@@ -117,7 +120,13 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
         let mut guess_decision_tree: HashMap<WordHint<WORD_SIZE>, TreeNode<WORD_SIZE>> =
             HashMap::new();
         let mut guess_est_cost = 1.0;
-        let possible_hints = WordHint::all_possible();
+        let possible_hints: Vec<WordHint<WORD_SIZE>> = possible_answers
+            .words()
+            .iter()
+            .map(|answer| WordHint::from_guess_and_answer(guess, answer))
+            .collect::<HashSet<WordHint<WORD_SIZE>>>()
+            .into_iter()
+            .collect();
         let num_possible_hints = possible_hints.len();
         let mut answers_accounted_for = 0;
         for (word_hint_ind, word_hint) in possible_hints.into_iter().enumerate() {

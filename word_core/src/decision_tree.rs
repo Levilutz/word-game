@@ -120,6 +120,15 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
         let mut guess_decision_tree: HashMap<WordHint<WORD_SIZE>, TreeNode<WORD_SIZE>> =
             HashMap::new();
         let mut guess_est_cost = 1.0;
+        let answers_by_hint: HashMap<WordHint<WORD_SIZE>, Vec<Word<WORD_SIZE, ALPHABET_SIZE>>> =
+            possible_answers
+                .words()
+                .iter()
+                .map(|answer| (WordHint::from_guess_and_answer(guess, answer), answer))
+                .fold(HashMap::new(), |mut map, (hint, answer)| {
+                    map.entry(hint).or_default().push(*answer);
+                    map
+                });
         let possible_hints: Vec<WordHint<WORD_SIZE>> = possible_answers
             .words()
             .iter()
@@ -128,7 +137,9 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
             .into_iter()
             .collect();
         let num_possible_hints = possible_hints.len();
-        for (word_hint_ind, word_hint) in possible_hints.into_iter().enumerate() {
+        for (word_hint_ind, (word_hint, possible_answers_giving_this_hint)) in
+            answers_by_hint.into_iter().enumerate()
+        {
             if !do_print && depth < 0 {
                 println!(
                     "evaluating level {} clue {}\x1b[0m - {:.0}%",
@@ -137,18 +148,13 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
                     100.0 * word_hint_ind as f64 / num_possible_hints as f64
                 );
             }
-            let mask = possible_answers.eval_query(clue_to_query(*guess, word_hint));
-            let num_answers_giving_this_hint = mask.count_true();
-            if num_answers_giving_this_hint == 0 {
-                continue;
-            }
             if do_print {
                 println!(
                     "{}\tclue {} would indicate {} possible answer{} - {}",
                     prefix,
                     word_hint.color_guess(guess),
-                    num_answers_giving_this_hint,
-                    if num_answers_giving_this_hint > 1 {
+                    possible_answers_giving_this_hint.len(),
+                    if possible_answers_giving_this_hint.len() > 1 {
                         "s"
                     } else {
                         ""
@@ -175,12 +181,14 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
             }
             if let Some((child_node, child_est_addl_cost)) = compute_node_aggressive(
                 &child_allowed_guesses,
-                possible_answers.filter(&mask),
+                possible_answers
+                    .filter(&possible_answers.eval_query(clue_to_query(*guess, word_hint))),
                 depth + 1,
                 max_depth,
                 do_print,
             ) {
-                guess_est_cost += child_est_addl_cost * num_answers_giving_this_hint as f64
+                guess_est_cost += child_est_addl_cost
+                    * possible_answers_giving_this_hint.len() as f64
                     / possible_answers.len() as f64;
                 guess_decision_tree.insert(word_hint, child_node);
             } else {

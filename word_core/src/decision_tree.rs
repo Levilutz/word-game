@@ -83,7 +83,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
         f64,
     )> = None;
     for (guess_ind, guess) in allowed_guesses.iter().enumerate() {
-        if !do_print && depth <= 1 {
+        if !do_print && depth <= 0 {
             println!(
                 "evaluating level {} guess \x1b[1m{}\x1b[0m - {:.0}%",
                 depth,
@@ -129,7 +129,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
             .collect();
         let num_possible_hints = possible_hints.len();
         for (word_hint_ind, word_hint) in possible_hints.into_iter().enumerate() {
-            if !do_print && depth <= 0 {
+            if !do_print && depth < 0 {
                 println!(
                     "evaluating level {} clue {}\x1b[0m - {:.0}%",
                     depth,

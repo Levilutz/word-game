@@ -128,11 +128,7 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
             .into_iter()
             .collect();
         let num_possible_hints = possible_hints.len();
-        let mut answers_accounted_for = 0;
         for (word_hint_ind, word_hint) in possible_hints.into_iter().enumerate() {
-            if answers_accounted_for >= possible_answers.len() as u64 {
-                break;
-            }
             if !do_print && depth <= 0 {
                 println!(
                     "evaluating level {} clue {}\x1b[0m - {:.0}%",
@@ -146,7 +142,6 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
             if num_answers_giving_this_hint == 0 {
                 continue;
             }
-            answers_accounted_for += num_answers_giving_this_hint;
             if do_print {
                 println!(
                     "{}\tclue {} would indicate {} possible answer{} - {}",

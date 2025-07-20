@@ -118,7 +118,10 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
             if num_answers_giving_this_hint == possible_answers.len() as u64 {
                 // This guess doesn't filter at all and is worthless, don't consider
                 if do_print {
-                    println!("{}guess \x1b[1m{}\x1b[0m is useless", prefix, guess);
+                    println!(
+                        "{}guess \x1b[1m{}\x1b[0m is useless, skipping",
+                        prefix, guess
+                    );
                 }
                 guess_est_cost = INFINITY;
                 break;
@@ -141,6 +144,20 @@ pub fn compute_node_aggressive<const WORD_SIZE: usize>(
                         .collect::<Vec<String>>()
                         .join(", ")
                 );
+            }
+            if num_answers_giving_this_hint > (possible_answers.len() as u64 + 1) / 2 {
+                // This guess is poor at filtering, so we should skip
+                // TODO this heuristic may or may not be 100% correct.
+                // Are there cases where the genuine best guess filters less than half
+                // the options? Especially consider small A values
+                if do_print {
+                    println!(
+                        "{}guess \x1b[1m{}\x1b[0m has low power, skipping",
+                        prefix, guess
+                    );
+                }
+                guess_est_cost = INFINITY;
+                break;
             }
             if word_hint.all_correct() {
                 // We happened to guess correctly, there is no additional cost

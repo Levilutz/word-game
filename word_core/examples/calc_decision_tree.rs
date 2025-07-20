@@ -2,7 +2,7 @@ use std::{env::args, fs};
 
 use word_core::{decision_tree::compute_node_aggressive, word::Word, word_search::SearchableWords};
 
-const WORD_SIZE: usize = 5;
+const WORD_SIZE: usize = 3;
 const ALPHABET_SIZE: u8 = 26;
 
 fn load_words() -> Vec<Word<WORD_SIZE, ALPHABET_SIZE>> {
@@ -22,7 +22,7 @@ fn main() {
     println!("loaded {} words", words.len());
 
     let possible_answers: SearchableWords<WORD_SIZE, 26> = SearchableWords::build(words.clone());
-    let (decision_tree, est_cost) = compute_node_aggressive(&words, possible_answers, 0, 4, false)
+    let (decision_tree, est_cost) = compute_node_aggressive(&words, possible_answers, 0, 5, true)
         .expect("failed to compute top-level result");
     println!("{}", serde_json::to_string_pretty(&decision_tree).unwrap());
     println!("est cost: {}", est_cost);

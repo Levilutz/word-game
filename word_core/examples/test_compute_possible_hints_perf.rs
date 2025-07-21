@@ -74,19 +74,6 @@ fn main() {
             if answers_giving_this_hint_mask.count_true() > 0 {
                 possible_hints.insert(hint);
             }
-            for answer_giving_this_hint in
-                searchable_answers.filter_words(&answers_giving_this_hint_mask)
-            {
-                let actual_hint = WordHint::from_guess_and_answer(guess, &answer_giving_this_hint);
-                if actual_hint != hint {
-                    println!(
-                        "ERROR: Query engine came up with wrong hint for {} | {}",
-                        guess, answer_giving_this_hint
-                    );
-                    println!("calc'd: {}", hint.color_guess(guess));
-                    println!("actual: {}", actual_hint.color_guess(guess));
-                }
-            }
         }
         possible_hints_per_guess_query_engine.insert(*guess, possible_hints);
     }

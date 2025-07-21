@@ -6,6 +6,35 @@ use crate::{
     word_search::Query,
 };
 
+/// Check whether a clue is possible for a given word.
+///
+/// The case this looks for is Elsewhere hints after Nowhere hints for a given char.
+/// The default wordle hint generation will always fill the first characters possible
+/// with Elsewhere hints.
+pub fn clue_possible<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
+    guess: Word<WORD_SIZE, ALPHABET_SIZE>,
+    word_hint: WordHint<WORD_SIZE>,
+) -> bool {
+    let mut nowhere_chars: HashSet<u8> = HashSet::new();
+    for ind in 0..WORD_SIZE {
+        let guess_char = guess.0[ind];
+        let char_hint = word_hint.0[ind];
+
+        match char_hint {
+            CharHint::Nowhere => {
+                nowhere_chars.insert(guess_char);
+            }
+            CharHint::Elsewhere => {
+                if nowhere_chars.contains(&guess_char) {
+                    return false;
+                }
+            }
+            CharHint::Correct => {}
+        }
+    }
+    true
+}
+
 pub fn clue_to_query<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
     guess: Word<WORD_SIZE, ALPHABET_SIZE>,
     word_hint: WordHint<WORD_SIZE>,

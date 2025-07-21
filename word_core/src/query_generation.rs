@@ -9,7 +9,7 @@ use crate::{
 /// Check whether a clue is possible for a given word.
 ///
 /// The case this looks for is Elsewhere hints after Nowhere hints for a given char.
-/// The default wordle hint generation will always fill the first characters possible
+/// The default word-game hint generation will always fill the first characters possible
 /// with Elsewhere hints.
 pub fn clue_possible<const WORD_SIZE: usize, const ALPHABET_SIZE: u8>(
     guess: Word<WORD_SIZE, ALPHABET_SIZE>,

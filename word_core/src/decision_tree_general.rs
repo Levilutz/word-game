@@ -31,7 +31,15 @@ pub fn compute_decision_tree_aggressive(
         Some(printer) if printer.should_print_at_depth(depth) => Some(printer),
         _ => None,
     };
+
+    // Build tab prefix and print initial log
     let prefix = "\t".repeat(depth as usize * 2);
+    if let Some(_) = &printer {
+        println!(
+            "{prefix}computing decision tree for {} possible answers",
+            possible_answers.len()
+        );
+    }
 
     // Don't continue if we've already hit depth limit
     if depth == max_depth {
@@ -46,7 +54,7 @@ pub fn compute_decision_tree_aggressive(
         let answer = possible_answers.into_iter().next().unwrap();
         if let Some(printer) = &printer {
             println!(
-                "{prefix}best guess is {} with est cost of {}",
+                "{prefix}best guess is {} with est cost of {} (certain)",
                 printer.fmt_answer(answer),
                 1.0
             );

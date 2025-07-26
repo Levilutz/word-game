@@ -10,7 +10,7 @@ use word_core::{
     word_search::SearchableWords,
 };
 
-const WORD_SIZE: usize = 5;
+const WORD_SIZE: usize = 3;
 const ALPHABET_SIZE: u8 = 26;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -113,7 +113,7 @@ fn main() {
         (0..possible_answers.len() as u16).into_iter().collect(),
         0,
         4,
-        Some(MyDebugPrinter {
+        Some(&MyDebugPrinter {
             allowed_guesses: &allowed_guesses,
             possible_answers: &possible_answers,
             max_print_depth: None,

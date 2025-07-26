@@ -106,18 +106,18 @@ fn main() {
     let total_elapsed = start.elapsed().as_secs_f64();
     println!("done in {:.3}s", total_elapsed);
 
-    let printer = MyDebugPrinter {
-        allowed_guesses: &allowed_guesses,
-        possible_answers: &possible_answers,
-        max_print_depth: None,
-    };
-
+    println!("generating decision tree...");
+    let start = Instant::now();
     let (decision_tree, est_cost) = compute_decision_tree_aggressive(
         &all_hints,
         (0..possible_answers.len() as u16).into_iter().collect(),
         0,
         4,
-        Some(printer),
+        Some(MyDebugPrinter {
+            allowed_guesses: &allowed_guesses,
+            possible_answers: &possible_answers,
+            max_print_depth: None,
+        }),
     )
     .expect("failed to compute top-level result");
     let readable_decision_tree = ReadableTreeNode::from_generalized_tree_node(
@@ -125,9 +125,11 @@ fn main() {
         &allowed_guesses,
         &possible_answers,
     );
+    let total_elapsed = start.elapsed().as_secs_f64();
     println!(
         "{}",
         serde_json::to_string_pretty(&readable_decision_tree).unwrap()
     );
     println!("est cost: {}", est_cost);
+    println!("done in {:.3}s", total_elapsed);
 }

@@ -177,11 +177,17 @@ pub fn compute_decision_tree_aggressive(
                     map
                 });
 
+        // Convert into list of tuples, ordered by number of answers descending
+        let mut hints_answers: Vec<(u8, HashSet<u16>)> = answers_by_hint.into_iter().collect();
+        hints_answers.sort_unstable_by(|(_, answers_a), (_, answers_b)| {
+            answers_a.len().cmp(&answers_b.len())
+        });
+
         if let Some(printer) = printer {
             println!(
                 "{}considering {} possible hints",
                 printer.get_prefix(),
-                answers_by_hint.len(),
+                hints_answers.len(),
             );
         }
 
@@ -189,7 +195,7 @@ pub fn compute_decision_tree_aggressive(
         let mut guess_est_cost = 1.0;
         let mut guess_next_nodes: HashMap<u8, TreeNode> = HashMap::new();
 
-        for (hint, hint_possible_answers) in answers_by_hint.into_iter() {
+        for (hint, hint_possible_answers) in hints_answers.into_iter() {
             let hint_num_possible_answers = hint_possible_answers.len();
             let hint_likelihood = hint_num_possible_answers as f64 / possible_answers.len() as f64;
 

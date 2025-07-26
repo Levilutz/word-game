@@ -16,13 +16,14 @@ const ALPHABET_SIZE: u8 = 26;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ReadableTreeNode {
     should_guess: Word<WORD_SIZE, ALPHABET_SIZE>,
+    est_cost: f64,
     #[serde(skip_serializing_if = "HashMap::is_empty", default)]
     next: HashMap<WordHint<WORD_SIZE>, ReadableTreeNode>,
 }
 
 impl ReadableTreeNode {
     fn from_generalized_tree_node(
-        tree_node: TreeNode,
+        tree_node: &TreeNode,
         allowed_guesses: &[Word<WORD_SIZE, ALPHABET_SIZE>],
         possible_answers: &[Word<WORD_SIZE, ALPHABET_SIZE>],
     ) -> Self {
@@ -31,14 +32,15 @@ impl ReadableTreeNode {
                 GuessFrom::Guess(guess_ind) => allowed_guesses[guess_ind as usize],
                 GuessFrom::Answer(answer_ind) => possible_answers[answer_ind as usize],
             },
+            est_cost: tree_node.est_cost,
             next: tree_node
                 .next
-                .into_iter()
+                .iter()
                 .map(|(hint_id, next_node)| {
                     (
-                        WordHint::from_id(hint_id),
+                        WordHint::from_id(*hint_id),
                         ReadableTreeNode::from_generalized_tree_node(
-                            next_node,
+                            &next_node,
                             allowed_guesses,
                             possible_answers,
                         ),
@@ -122,12 +124,12 @@ fn main() {
 
     println!("generating decision tree...");
     let start = Instant::now();
-    let (decision_tree, est_cost) = compute_decision_tree_aggressive(
+    let decision_tree = compute_decision_tree_aggressive(
         &all_hints,
         (0..possible_answers.len() as u16).into_iter().collect(),
         0,
-        4,
-        2.90,
+        5,
+        2.69,
         None::<&MyDebugPrinter>,
         // Some(&MyDebugPrinter {
         //     allowed_guesses: &allowed_guesses,
@@ -138,7 +140,7 @@ fn main() {
     )
     .expect("failed to compute top-level result");
     let readable_decision_tree = ReadableTreeNode::from_generalized_tree_node(
-        decision_tree,
+        &decision_tree,
         &allowed_guesses,
         &possible_answers,
     );
@@ -147,6 +149,6 @@ fn main() {
         "{}",
         serde_json::to_string_pretty(&readable_decision_tree).unwrap()
     );
-    println!("est cost: {}", est_cost);
+    println!("est cost: {}", decision_tree.est_cost);
     println!("done in {:.3}s", total_elapsed);
 }

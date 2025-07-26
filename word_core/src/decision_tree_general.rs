@@ -8,6 +8,7 @@ pub enum GuessFrom {
 
 pub struct TreeNode {
     pub should_guess: GuessFrom,
+    pub est_cost: f64,
     pub next: HashMap<u8, TreeNode>,
 }
 
@@ -28,7 +29,7 @@ pub fn compute_decision_tree_aggressive(
     max_depth: u8,
     max_cost: f64,
     printer: Option<&impl DebugPrinter>,
-) -> Option<(TreeNode, f64)> {
+) -> Option<TreeNode> {
     // Set the printer to `None` if we're past the configured depth
     let printer = match printer {
         Some(printer) if printer.should_print_at_depth(depth) => Some(printer),
@@ -71,13 +72,11 @@ pub fn compute_decision_tree_aggressive(
                 1.0
             );
         }
-        return Some((
-            TreeNode {
-                should_guess: GuessFrom::Answer(answer),
-                next: HashMap::new(),
-            },
-            1.0,
-        ));
+        return Some(TreeNode {
+            should_guess: GuessFrom::Answer(answer),
+            est_cost: 1.0,
+            next: HashMap::new(),
+        });
     }
 
     // Don't continue if we aren't guaranteed to avoid depth limit
@@ -109,23 +108,22 @@ pub fn compute_decision_tree_aggressive(
                 1.5
             );
         }
-        return Some((
-            TreeNode {
-                should_guess: GuessFrom::Answer(possible_answer_a),
-                next: HashMap::from([(
-                    hints[possible_answer_a as usize][possible_answer_b as usize],
-                    TreeNode {
-                        should_guess: GuessFrom::Answer(possible_answer_b),
-                        next: HashMap::new(),
-                    },
-                )]),
-            },
-            1.5,
-        ));
+        return Some(TreeNode {
+            should_guess: GuessFrom::Answer(possible_answer_a),
+            est_cost: 1.5,
+            next: HashMap::from([(
+                hints[possible_answer_a as usize][possible_answer_b as usize],
+                TreeNode {
+                    should_guess: GuessFrom::Answer(possible_answer_b),
+                    est_cost: 1.0,
+                    next: HashMap::new(),
+                },
+            )]),
+        });
     }
 
     // Go through every possible guess and determine which is the best
-    let mut best: Option<(TreeNode, f64)> = None;
+    let mut best: Option<TreeNode> = None;
     let mut guess_max_est_cost = max_cost;
 
     'guess_loop: for guess_ind in 0..hints.len() as u16 {
@@ -192,8 +190,11 @@ pub fn compute_decision_tree_aggressive(
         }
 
         // Add up estimated cost across all possibilities, weighted by likelihood
-        let mut guess_est_cost = 1.0;
-        let mut guess_next_nodes: HashMap<u8, TreeNode> = HashMap::new();
+        let mut guess = TreeNode {
+            should_guess: GuessFrom::Guess(guess_ind),
+            est_cost: 1.0,
+            next: HashMap::new(),
+        };
 
         for (hint, hint_possible_answers) in hints_answers.into_iter() {
             let hint_num_possible_answers = hint_possible_answers.len();
@@ -221,9 +222,9 @@ pub fn compute_decision_tree_aggressive(
             }
 
             // Find the child node for this clue
-            let remaining_est_cost_budget = guess_max_est_cost - guess_est_cost;
+            let remaining_est_cost_budget = guess_max_est_cost - guess.est_cost;
             let child_max_est_cost = remaining_est_cost_budget / hint_likelihood;
-            if let Some((child_tree_node, child_est_cost)) = compute_decision_tree_aggressive(
+            if let Some(child_tree_node) = compute_decision_tree_aggressive(
                 hints,
                 hint_possible_answers,
                 depth + 1,
@@ -231,8 +232,8 @@ pub fn compute_decision_tree_aggressive(
                 child_max_est_cost,
                 printer,
             ) {
-                guess_est_cost += child_est_cost * hint_likelihood;
-                guess_next_nodes.insert(hint, child_tree_node);
+                guess.est_cost += child_tree_node.est_cost * hint_likelihood;
+                guess.next.insert(hint, child_tree_node);
             } else {
                 if let Some(printer) = printer {
                     println!(
@@ -243,13 +244,13 @@ pub fn compute_decision_tree_aggressive(
                 }
                 continue 'guess_loop;
             }
-            if guess_est_cost >= guess_max_est_cost {
+            if guess.est_cost >= guess_max_est_cost {
                 if let Some(printer) = printer {
                     println!(
                         "{}guess {} est cost of {:.3} already exceeds max of {:.3}",
                         printer.get_prefix(),
                         printer.fmt_guess(guess_ind),
-                        guess_est_cost,
+                        guess.est_cost,
                         guess_max_est_cost,
                     );
                 }
@@ -258,8 +259,8 @@ pub fn compute_decision_tree_aggressive(
         }
 
         // Evaluate if this guess beats the current best guess
-        let this_guess_is_new_best = match best {
-            Some((_, best_guess_est_cost)) if best_guess_est_cost <= guess_est_cost => false,
+        let this_guess_is_new_best = match &best {
+            Some(best_guess) if best_guess.est_cost <= guess.est_cost => false,
             _ => true,
         };
         if let Some(printer) = printer {
@@ -267,7 +268,7 @@ pub fn compute_decision_tree_aggressive(
                 "{}guess {} has est cost {} - {}",
                 printer.get_prefix(),
                 printer.fmt_guess(guess_ind),
-                guess_est_cost,
+                guess.est_cost,
                 if this_guess_is_new_best {
                     "new best"
                 } else {
@@ -276,28 +277,22 @@ pub fn compute_decision_tree_aggressive(
             );
         }
         if this_guess_is_new_best {
-            best = Some((
-                TreeNode {
-                    should_guess: GuessFrom::Guess(guess_ind),
-                    next: guess_next_nodes,
-                },
-                guess_est_cost,
-            ));
-            guess_max_est_cost = guess_est_cost;
+            guess_max_est_cost = guess.est_cost;
+            best = Some(guess);
         }
     }
 
     // Print the best guess and return
     if let Some(printer) = printer {
         match &best {
-            Some((tree_node, est_cost)) => println!(
+            Some(tree_node) => println!(
                 "{}best guess is {} with est cost of {}",
                 printer.get_prefix(),
                 match tree_node.should_guess {
                     GuessFrom::Guess(guess_ind) => printer.fmt_guess(guess_ind),
                     GuessFrom::Answer(answer_ind) => printer.fmt_answer(answer_ind),
                 },
-                est_cost
+                tree_node.est_cost
             ),
             None => println!(
                 "{}no guesses are guaranteed to solve within depth limit",

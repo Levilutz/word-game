@@ -62,7 +62,6 @@ fn main() {
             }
             let answers_giving_this_hint_mask =
                 searchable_answers.eval_query(clue_to_query(*guess, hint));
-            // TODO filter for count_true > 0
             for answer_ind in answers_giving_this_hint_mask.true_inds() {
                 hints_for_guess[answer_ind] = hint;
             }

@@ -87,5 +87,52 @@ pub fn compute_decision_tree_aggressive(
         ));
     }
 
-    None
+    // Go through every possible guess and determine which is the best
+    let mut best: Option<(TreeNode, f64)> = None;
+
+    for guess_ind in 0..hints.len() as u16 {
+        if let Some(printer) = &printer {
+            println!(
+                "{prefix}evaluating guess {} ({:.0}%",
+                printer.fmt_guess(guess_ind),
+                100.0 * guess_ind as f64 / hints.len() as f64
+            );
+        }
+
+        // Check first if this guess is useless
+        // If only 1 hint is possible for this guess, then it doesn't narrow down the
+        // possible answer pool at all.
+        let mut useless = true;
+        for &hint in &hints[guess_ind as usize][1..] {
+            if hint != hints[guess_ind as usize][0] {
+                useless = false;
+                break;
+            }
+        }
+        if useless {
+            if let Some(printer) = &printer {
+                println!(
+                    "{prefix}guess {} is useless, skipping",
+                    printer.fmt_guess(guess_ind),
+                );
+            }
+            continue;
+        }
+    }
+
+    // Print the best guess and return
+    if let Some(printer) = &printer {
+        match &best {
+            Some((tree_node, est_cost)) => println!(
+                "{prefix}best guess is {} with est cost of {}",
+                match tree_node.should_guess {
+                    GuessFrom::Guess(guess_ind) => printer.fmt_guess(guess_ind),
+                    GuessFrom::Answer(answer_ind) => printer.fmt_answer(answer_ind),
+                },
+                est_cost
+            ),
+            None => println!("{prefix}no guesses are guaranteed to solve within max_depth"),
+        }
+    }
+    best
 }

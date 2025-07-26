@@ -1,6 +1,6 @@
 pub mod column;
 pub mod decision_tree;
-pub mod decision_tree_reduced;
+pub mod decision_tree_general;
 pub mod dumb_word_search;
 pub mod hint;
 pub mod load_words;

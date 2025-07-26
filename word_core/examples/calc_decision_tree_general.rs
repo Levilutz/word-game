@@ -2,7 +2,7 @@ use std::{collections::HashMap, time::Instant};
 
 use serde::{Deserialize, Serialize};
 use word_core::{
-    decision_tree_reduced::{DebugPrinter, GuessFrom, TreeNode, compute_decision_tree_aggressive},
+    decision_tree_general::{DebugPrinter, GuessFrom, TreeNode, compute_decision_tree_aggressive},
     hint::WordHint,
     load_words::load_guesses_and_answers_from_args,
     query_generation::{clue_possible, clue_to_query},

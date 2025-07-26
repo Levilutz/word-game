@@ -26,6 +26,7 @@ pub fn compute_decision_tree_aggressive(
     possible_answers: HashSet<u16>,
     depth: u8,
     max_depth: u8,
+    max_cost: f64,
     printer: Option<&impl DebugPrinter>,
 ) -> Option<(TreeNode, f64)> {
     // Set the printer to `None` if we're past the configured depth
@@ -34,10 +35,27 @@ pub fn compute_decision_tree_aggressive(
         _ => None,
     };
 
+    if let Some(printer) = printer {
+        println!(
+            "{}must compute {} possible answers with max cost of {}",
+            printer.get_prefix(),
+            possible_answers.len(),
+            max_cost
+        );
+    }
+
     // Don't continue if we've already hit depth limit
     if depth == max_depth {
         if let Some(printer) = printer {
             println!("{}depth limit reached", printer.get_prefix());
+        }
+        return None;
+    }
+
+    // Don't continue if we've already hit cost limit
+    if max_cost < 1.0 {
+        if let Some(printer) = printer {
+            println!("{}cost limit exceeded", printer.get_prefix());
         }
         return None;
     }
@@ -66,6 +84,14 @@ pub fn compute_decision_tree_aggressive(
     if depth == max_depth - 1 {
         if let Some(printer) = printer {
             println!("{}depth limit cannot be avoided", printer.get_prefix());
+        }
+        return None;
+    }
+
+    // Don't continue if we aren't guaranteed to avoid cost limit
+    if max_cost < 1.5 {
+        if let Some(printer) = printer {
+            println!("{}cost limit cannot be avoided", printer.get_prefix());
         }
         return None;
     }
@@ -100,6 +126,7 @@ pub fn compute_decision_tree_aggressive(
 
     // Go through every possible guess and determine which is the best
     let mut best: Option<(TreeNode, f64)> = None;
+    let mut guess_max_est_cost = max_cost;
 
     'guess_loop: for guess_ind in 0..hints.len() as u16 {
         let guess_hints = &hints[guess_ind as usize];
@@ -173,7 +200,7 @@ pub fn compute_decision_tree_aggressive(
 
             if let Some(printer) = printer {
                 println!(
-                    "{}evaluating clue {} with {}/{} possible answers - {:.0}% chance",
+                    "{}evaluating clue {} with {}/{} possible answers - {:.2}% chance",
                     printer.get_prefix(),
                     printer.fmt_clue(hint, guess_ind),
                     hint_num_possible_answers,
@@ -188,11 +215,14 @@ pub fn compute_decision_tree_aggressive(
             }
 
             // Find the child node for this clue
+            let remaining_est_cost_budget = guess_max_est_cost - guess_est_cost;
+            let child_max_est_cost = remaining_est_cost_budget / hint_likelihood;
             if let Some((child_tree_node, child_est_cost)) = compute_decision_tree_aggressive(
                 hints,
                 hint_possible_answers,
                 depth + 1,
                 max_depth,
+                child_max_est_cost,
                 printer,
             ) {
                 guess_est_cost += child_est_cost * hint_likelihood;
@@ -203,6 +233,18 @@ pub fn compute_decision_tree_aggressive(
                         "{}guess {} cannot guarantee an answer within depth limit",
                         printer.get_prefix(),
                         printer.fmt_guess(guess_ind),
+                    );
+                }
+                continue 'guess_loop;
+            }
+            if guess_est_cost >= guess_max_est_cost {
+                if let Some(printer) = printer {
+                    println!(
+                        "{}guess {} est cost of {:.3} already exceeds max of {:.3}",
+                        printer.get_prefix(),
+                        printer.fmt_guess(guess_ind),
+                        guess_est_cost,
+                        guess_max_est_cost,
                     );
                 }
                 continue 'guess_loop;
@@ -225,7 +267,7 @@ pub fn compute_decision_tree_aggressive(
                 } else {
                     "rejecting"
                 }
-            )
+            );
         }
         if this_guess_is_new_best {
             best = Some((
@@ -234,7 +276,8 @@ pub fn compute_decision_tree_aggressive(
                     next: guess_next_nodes,
                 },
                 guess_est_cost,
-            ))
+            ));
+            guess_max_est_cost = guess_est_cost;
         }
     }
 

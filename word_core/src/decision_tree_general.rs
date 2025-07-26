@@ -16,6 +16,7 @@ pub trait DebugPrinter {
     fn fmt_answer(&self, answer_ind: u16) -> String;
     fn fmt_hint(&self, hint_id: u8) -> String;
     fn fmt_clue(&self, hint_id: u8, guess_ind: u16) -> String;
+    fn should_print_at_depth(&self, depth: u8) -> bool;
 }
 
 pub fn compute_decision_tree_aggressive(
@@ -25,11 +26,16 @@ pub fn compute_decision_tree_aggressive(
     max_depth: u8,
     printer: Option<impl DebugPrinter>,
 ) -> Option<(TreeNode, f64)> {
+    // Set the printer to `None` if we're past the configured depth
+    let printer = match printer {
+        Some(printer) if printer.should_print_at_depth(depth) => Some(printer),
+        _ => None,
+    };
     let prefix = "\t".repeat(depth as usize * 2);
 
     // Don't continue if we've already hit depth limit
     if depth == max_depth {
-        if let Some(_) = printer {
+        if let Some(_) = &printer {
             println!("{prefix}depth limit reached");
         }
         return None;
@@ -38,7 +44,7 @@ pub fn compute_decision_tree_aggressive(
     // Shortcut - if only one option left, just guess it
     if possible_answers.len() == 1 {
         let answer = possible_answers.into_iter().next().unwrap();
-        if let Some(printer) = printer {
+        if let Some(printer) = &printer {
             println!(
                 "{prefix}best guess is {} with est cost of {}",
                 printer.fmt_answer(answer),
@@ -59,7 +65,7 @@ pub fn compute_decision_tree_aggressive(
         let mut possible_answers_iter = possible_answers.into_iter();
         let possible_answer_a = possible_answers_iter.next().unwrap();
         let possible_answer_b = possible_answers_iter.next().unwrap();
-        if let Some(printer) = printer {
+        if let Some(printer) = &printer {
             println!(
                 "{prefix}best guess is {} with est cost of {}",
                 printer.fmt_answer(possible_answer_a),

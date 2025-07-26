@@ -52,6 +52,7 @@ impl ReadableTreeNode {
 struct MyDebugPrinter<'a> {
     allowed_guesses: &'a [Word<WORD_SIZE, ALPHABET_SIZE>],
     possible_answers: &'a [Word<WORD_SIZE, ALPHABET_SIZE>],
+    max_print_depth: Option<u8>,
 }
 
 impl<'a> DebugPrinter for MyDebugPrinter<'a> {
@@ -70,6 +71,13 @@ impl<'a> DebugPrinter for MyDebugPrinter<'a> {
     fn fmt_clue(&self, hint_id: u8, guess_ind: u16) -> String {
         WordHint::<WORD_SIZE>::from_id(hint_id)
             .color_guess(&self.allowed_guesses[guess_ind as usize])
+    }
+
+    fn should_print_at_depth(&self, depth: u8) -> bool {
+        match self.max_print_depth {
+            Some(max_print_depth) => depth <= max_print_depth,
+            None => true,
+        }
     }
 }
 
@@ -101,6 +109,7 @@ fn main() {
     let printer = MyDebugPrinter {
         allowed_guesses: &allowed_guesses,
         possible_answers: &possible_answers,
+        max_print_depth: None,
     };
 
     let (decision_tree, est_cost) = compute_decision_tree_aggressive(

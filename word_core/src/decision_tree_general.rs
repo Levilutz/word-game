@@ -62,6 +62,14 @@ pub fn compute_decision_tree_aggressive(
         ));
     }
 
+    // Don't continue if we aren't guaranteed to avoid depth limit
+    if depth == max_depth - 1 {
+        if let Some(printer) = printer {
+            println!("{}depth limit cannot be avoided", printer.get_prefix());
+        }
+        return None;
+    }
+
     // Shortcut - if only two options left, just guess one of them
     if possible_answers.len() == 2 {
         let mut possible_answers_iter = possible_answers.into_iter();
@@ -142,6 +150,14 @@ pub fn compute_decision_tree_aggressive(
                     map
                 });
 
+        if let Some(printer) = printer {
+            println!(
+                "{}considering {} possible hints",
+                printer.get_prefix(),
+                answers_by_hint.len(),
+            );
+        }
+
         // Add up estimated cost across all possibilities, weighted by likelihood
         let mut guess_est_cost = 1.0;
         let mut guess_next_nodes: HashMap<u8, TreeNode> = HashMap::new();
@@ -169,18 +185,6 @@ pub fn compute_decision_tree_aggressive(
             // If we happened to guess correctly, there is no additional cost
             if hint == 0 {
                 continue;
-            }
-
-            // Don't go further if we're at the max depth
-            if depth == max_depth - 1 {
-                if let Some(printer) = printer {
-                    println!(
-                        "{}guess {} cannot guarantee an answer within depth limit",
-                        printer.get_prefix(),
-                        printer.fmt_guess(guess_ind),
-                    );
-                }
-                continue 'guess_loop;
             }
 
             // Find the child node for this clue

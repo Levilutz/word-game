@@ -89,19 +89,7 @@ impl<const WORD_SIZE: usize> WordHint<WORD_SIZE> {
     /// Get all possible hints for this word size
     pub fn all_possible() -> Vec<Self> {
         (0..3usize.pow(WORD_SIZE as u32))
-            .map(|ind| {
-                let mut ind = ind;
-                let mut char_hints = [CharHint::Correct; WORD_SIZE];
-                for digit in 0..WORD_SIZE {
-                    char_hints[digit] = match ind % 3 {
-                        0 => CharHint::Correct,
-                        1 => CharHint::Elsewhere,
-                        _ => CharHint::Nowhere,
-                    };
-                    ind /= 3;
-                }
-                Self(char_hints)
-            })
+            .map(|ind| Self::from_id(ind as u8))
             .collect()
     }
 
@@ -126,6 +114,37 @@ impl<const WORD_SIZE: usize> WordHint<WORD_SIZE> {
     /// Is this hint all correct
     pub fn all_correct(&self) -> bool {
         return self.0 == [CharHint::Correct; WORD_SIZE];
+    }
+
+    /// Get the constant id for this hint (little-endian).
+    /// Invariant - id 0 is all correct
+    pub fn hint_id(&self) -> u8 {
+        let mut id = 0;
+        let mut factor = 1;
+        for char_ind in (0..WORD_SIZE).rev() {
+            id += match self.0[char_ind] {
+                CharHint::Correct => 0,
+                CharHint::Elsewhere => factor,
+                CharHint::Nowhere => factor * 2,
+            };
+            factor *= 3;
+        }
+        id
+    }
+
+    /// Get the hind given a constant id (little-endian).
+    /// Invariant - id 0 is all correct
+    pub fn from_id(mut hint_id: u8) -> Self {
+        let mut char_hints = [CharHint::Correct; WORD_SIZE];
+        for digit in (0..WORD_SIZE).rev() {
+            char_hints[digit] = match hint_id % 3 {
+                0 => CharHint::Correct,
+                1 => CharHint::Elsewhere,
+                _ => CharHint::Nowhere,
+            };
+            hint_id /= 3;
+        }
+        Self(char_hints)
     }
 }
 
@@ -249,13 +268,13 @@ mod tests {
             WordHint::<2>::all_possible(),
             vec![
                 WordHint::from("√√"),
-                WordHint::from("~√"),
-                WordHint::from("X√"),
                 WordHint::from("√~"),
-                WordHint::from("~~"),
-                WordHint::from("X~"),
                 WordHint::from("√X"),
+                WordHint::from("~√"),
+                WordHint::from("~~"),
                 WordHint::from("~X"),
+                WordHint::from("X√"),
+                WordHint::from("X~"),
                 WordHint::from("XX"),
             ]
         )
@@ -267,31 +286,31 @@ mod tests {
             WordHint::<3>::all_possible(),
             vec![
                 WordHint::from("√√√"),
-                WordHint::from("~√√"),
-                WordHint::from("X√√"),
-                WordHint::from("√~√"),
-                WordHint::from("~~√"),
-                WordHint::from("X~√"),
-                WordHint::from("√X√"),
-                WordHint::from("~X√"),
-                WordHint::from("XX√"),
                 WordHint::from("√√~"),
-                WordHint::from("~√~"),
-                WordHint::from("X√~"),
-                WordHint::from("√~~"),
-                WordHint::from("~~~"),
-                WordHint::from("X~~"),
-                WordHint::from("√X~"),
-                WordHint::from("~X~"),
-                WordHint::from("XX~"),
                 WordHint::from("√√X"),
-                WordHint::from("~√X"),
-                WordHint::from("X√X"),
+                WordHint::from("√~√"),
+                WordHint::from("√~~"),
                 WordHint::from("√~X"),
-                WordHint::from("~~X"),
-                WordHint::from("X~X"),
+                WordHint::from("√X√"),
+                WordHint::from("√X~"),
                 WordHint::from("√XX"),
+                WordHint::from("~√√"),
+                WordHint::from("~√~"),
+                WordHint::from("~√X"),
+                WordHint::from("~~√"),
+                WordHint::from("~~~"),
+                WordHint::from("~~X"),
+                WordHint::from("~X√"),
+                WordHint::from("~X~"),
                 WordHint::from("~XX"),
+                WordHint::from("X√√"),
+                WordHint::from("X√~"),
+                WordHint::from("X√X"),
+                WordHint::from("X~√"),
+                WordHint::from("X~~"),
+                WordHint::from("X~X"),
+                WordHint::from("XX√"),
+                WordHint::from("XX~"),
                 WordHint::from("XXX"),
             ]
         )
@@ -329,5 +348,15 @@ mod tests {
         let json = serde_json::to_string(&original).unwrap();
         let reconstructed = serde_json::from_str(&json).unwrap();
         assert_eq!(original, reconstructed);
+    }
+
+    #[test]
+    fn test_ids_match() {
+        const WORD_SIZE: usize = 5;
+        for hint_id in 0..3u8.pow(WORD_SIZE as u32) {
+            let hint: WordHint<WORD_SIZE> = WordHint::from_id(hint_id);
+            let hint_id_recov = hint.hint_id();
+            assert_eq!(hint_id, hint_id_recov);
+        }
     }
 }

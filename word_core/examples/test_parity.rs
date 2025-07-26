@@ -1,27 +1,15 @@
-use std::{collections::HashSet, env::args, fs, time::Instant};
+use std::{collections::HashSet, env::args, time::Instant};
 
 use word_core::{
-    dumb_word_search::dumb_search_words, hint::WordHint, query_generation::clue_to_query,
-    word::Word, word_search::SearchableWords,
+    dumb_word_search::dumb_search_words, hint::WordHint, load_words::load_words,
+    query_generation::clue_to_query, word::Word, word_search::SearchableWords,
 };
 
 const WORD_SIZE: usize = 5;
 const ALPHABET_SIZE: u8 = 26;
 
-fn load_words() -> Vec<Word<WORD_SIZE, ALPHABET_SIZE>> {
-    let file_path = args()
-        .nth(1)
-        .expect("Must supply word list file as first arg");
-    let file = fs::read_to_string(file_path).unwrap();
-    file.split("\n")
-        .map(|row| row.trim())
-        .filter(|row| row.len() > 0)
-        .map(|word| Word::from_str(word))
-        .collect()
-}
-
 fn main() {
-    let words = load_words();
+    let words = load_words(&args().nth(1).expect("Must supply word list as first arg"));
     let num_trials = words.len() * words.len();
 
     println!("loaded {} words -> {} test cases", words.len(), num_trials);

@@ -1,12 +1,11 @@
 use std::{
     collections::{HashMap, HashSet},
-    env::args,
-    fs,
     time::Instant,
 };
 
 use word_core::{
     hint::WordHint,
+    load_words::load_guesses_and_answers_from_args,
     query_generation::{clue_possible, clue_to_query},
     word::Word,
     word_search::SearchableWords,
@@ -16,29 +15,8 @@ const WORD_SIZE: usize = 5;
 const ALPHABET_SIZE: u8 = 26;
 const MAX_BAR_SIZE: f64 = 64.0;
 
-fn load_words(file_path: String) -> Vec<Word<WORD_SIZE, ALPHABET_SIZE>> {
-    let file = fs::read_to_string(file_path).unwrap();
-    file.split("\n")
-        .map(|row| row.trim())
-        .filter(|row| row.len() > 0)
-        .map(|word| Word::from_str(word))
-        .collect()
-}
-
 fn main() {
-    let allowed_guesses = load_words(
-        args()
-            .nth(1)
-            .expect("Must supply allowed guesses word list file as first arg"),
-    );
-    println!("loaded {} allowed guesses", allowed_guesses.len());
-
-    let possible_answers = load_words(
-        args()
-            .nth(2)
-            .expect("Must supply possible answers word list file as second arg"),
-    );
-    println!("loaded {} possible answers", possible_answers.len());
+    let (allowed_guesses, possible_answers) = load_guesses_and_answers_from_args(true);
 
     println!("<- running query engine scan ->");
     let start = Instant::now();

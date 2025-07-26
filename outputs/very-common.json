@@ -1,0 +1,1704 @@
+{
+  "should_guess": "TRACE",
+  "next": {
+    "X~√X~": {
+      "should_guess": "LEARN",
+      "next": {
+        "X√√~X": {
+          "should_guess": "READY"
+        }
+      }
+    },
+    "√√XX~": {
+      "should_guess": "TREND"
+    },
+    "√XX~X": {
+      "should_guess": "TOPIC"
+    },
+    "X√√X√": {
+      "should_guess": "GRADE",
+      "next": {
+        "√√√X√": {
+          "should_guess": "GRAVE"
+        },
+        "X√√X√": {
+          "should_guess": "FRAME"
+        }
+      }
+    },
+    "X~~~X": {
+      "should_guess": "CARRY"
+    },
+    "XXX√X": {
+      "should_guess": "BUNCH",
+      "next": {
+        "X√X√X": {
+          "should_guess": "QUICK"
+        },
+        "XXX√~": {
+          "should_guess": "SHOCK"
+        },
+        "X√√√√": {
+          "should_guess": "LUNCH"
+        },
+        "XX~√X": {
+          "should_guess": "KNOCK"
+        },
+        "XXX√√": {
+          "should_guess": "WHICH"
+        },
+        "X~X√√": {
+          "should_guess": "COUCH"
+        },
+        "√XX√X": {
+          "should_guess": "BLOCK"
+        },
+        "XXX√X": {
+          "should_guess": "CLOCK"
+        }
+      }
+    },
+    "X√~~~": {
+      "should_guess": "CREAM"
+    },
+    "~X~√X": {
+      "should_guess": "CHEAP",
+      "next": {
+        "~~X~X": {
+          "should_guess": "WATCH",
+          "next": {
+            "X√√√√": {
+              "should_guess": "MATCH"
+            }
+          }
+        },
+        "~~X~~": {
+          "should_guess": "PATCH"
+        },
+        "√~X~X": {
+          "should_guess": "CATCH"
+        }
+      }
+    },
+    "√√X√X": {
+      "should_guess": "TRUCK",
+      "next": {
+        "√√X√√": {
+          "should_guess": "TRICK"
+        }
+      }
+    },
+    "√XXX√": {
+      "should_guess": "THEME",
+      "next": {
+        "√√XX√": {
+          "should_guess": "THOSE"
+        },
+        "√√√X√": {
+          "should_guess": "THESE"
+        },
+        "√XXX√": {
+          "should_guess": "TITLE"
+        }
+      }
+    },
+    "~XXX√": {
+      "should_guess": "ELITE",
+      "next": {
+        "X~X~√": {
+          "should_guess": "STYLE"
+        },
+        "XX√√√": {
+          "should_guess": "WHITE",
+          "next": {
+            "XX√√√": {
+              "should_guess": "QUITE"
+            }
+          }
+        },
+        "XXX~√": {
+          "should_guess": "STONE"
+        },
+        "XXX√√": {
+          "should_guess": "QUOTE"
+        }
+      }
+    },
+    "X~XXX": {
+      "should_guess": "SOUND",
+      "next": {
+        "X√X~X": {
+          "should_guess": "HONOR"
+        },
+        "X~~XX": {
+          "should_guess": "HUMOR"
+        },
+        "X√XX√": {
+          "should_guess": "WORLD"
+        },
+        "X~XXX": {
+          "should_guess": "FLOOR"
+        },
+        "X√√XX": {
+          "should_guess": "ROUGH"
+        },
+        "X√XXX": {
+          "should_guess": "WORRY"
+        },
+        "X√√√√": {
+          "should_guess": "ROUND"
+        },
+        "~X~XX": {
+          "should_guess": "VIRUS"
+        },
+        "√X~XX": {
+          "should_guess": "SHRUG"
+        },
+        "X~X~X": {
+          "should_guess": "MINOR"
+        },
+        "√√XXX": {
+          "should_guess": "SORRY"
+        },
+        "~√XXX": {
+          "should_guess": "WORKS"
+        },
+        "~√√XX": {
+          "should_guess": "YOURS"
+        }
+      }
+    },
+    "√√~X~": {
+      "should_guess": "TREAT"
+    },
+    "X~X~~": {
+      "should_guess": "COVER"
+    },
+    "XXX√√": {
+      "should_guess": "SINCE",
+      "next": {
+        "X√X√√": {
+          "should_guess": "PIECE"
+        },
+        "XX√√√": {
+          "should_guess": "FENCE"
+        },
+        "X~X√√": {
+          "should_guess": "VOICE",
+          "next": {
+            "XX√√√": {
+              "should_guess": "JUICE"
+            }
+          }
+        },
+        "√~X√√": {
+          "should_guess": "SLICE"
+        }
+      }
+    },
+    "X√XX√": {
+      "should_guess": "DRIVE",
+      "next": {
+        "~√√X√": {
+          "should_guess": "PRIDE"
+        },
+        "X√√X√": {
+          "should_guess": "PRIME"
+        },
+        "X√X√√": {
+          "should_guess": "PROVE"
+        }
+      }
+    },
+    "~~~XX": {
+      "should_guess": "PARTY",
+      "next": {
+        "X√~~X": {
+          "should_guess": "RATIO"
+        }
+      }
+    },
+    "~XXX~": {
+      "should_guess": "SHEET",
+      "next": {
+        "X~~X~": {
+          "should_guess": "DEPTH"
+        },
+        "X~X√~": {
+          "should_guess": "HOTEL"
+        },
+        "XX~X~": {
+          "should_guess": "EMPTY"
+        },
+        "XXX√√": {
+          "should_guess": "QUIET"
+        },
+        "√X√√√": {
+          "should_guess": "SWEET"
+        },
+        "X~~X√": {
+          "should_guess": "EIGHT"
+        },
+        "~X√X√": {
+          "should_guess": "GUEST"
+        },
+        "√X√√~": {
+          "should_guess": "STEEL"
+        },
+        "~X~X√": {
+          "should_guess": "EXIST"
+        },
+        "XXX√~": {
+          "should_guess": "OFTEN"
+        },
+        "XX√~√": {
+          "should_guess": "EVENT"
+        }
+      }
+    },
+    "~X~X~": {
+      "should_guess": "AGENT",
+      "next": {
+        "~X~X~": {
+          "should_guess": "METAL"
+        },
+        "√X~X√": {
+          "should_guess": "ASSET"
+        },
+        "~X√X~": {
+          "should_guess": "STEAL"
+        }
+      }
+    },
+    "~~√XX": {
+      "should_guess": "SMART",
+      "next": {
+        "XX√√√": {
+          "should_guess": "APART"
+        },
+        "√X√~~": {
+          "should_guess": "STAIR"
+        },
+        "√X√√√": {
+          "should_guess": "START"
+        }
+      }
+    },
+    "XX~√√": {
+      "should_guess": "DANCE",
+      "next": {
+        "X√X√√": {
+          "should_guess": "SAUCE"
+        }
+      }
+    },
+    "~~√√~": {
+      "should_guess": "REACT"
+    },
+    "√√√X√": {
+      "should_guess": "TRADE"
+    },
+    "XX~~~": {
+      "should_guess": "CHEAP",
+      "next": {
+        "~X√√X": {
+          "should_guess": "OCEAN"
+        },
+        "√X√√X": {
+          "should_guess": "CLEAN"
+        }
+      }
+    },
+    "√X√√~": {
+      "should_guess": "TEACH"
+    },
+    "X~XX√": {
+      "should_guess": "HORSE",
+      "next": {
+        "XX√~√": {
+          "should_guess": "SERVE"
+        },
+        "XX√X√": {
+          "should_guess": "NERVE"
+        },
+        "XX√√√": {
+          "should_guess": "NURSE"
+        },
+        "~~~~√": {
+          "should_guess": "SHORE"
+        },
+        "XX~X√": {
+          "should_guess": "RIFLE"
+        },
+        "~X~X√": {
+          "should_guess": "WHERE"
+        }
+      }
+    },
+    "XXX~√": {
+      "should_guess": "CLOSE",
+      "next": {
+        "√~XX√": {
+          "should_guess": "CYCLE"
+        },
+        "~~XX√": {
+          "should_guess": "UNCLE"
+        },
+        "~XX~√": {
+          "should_guess": "SCENE"
+        },
+        "~X√~√": {
+          "should_guess": "SCOPE"
+        }
+      }
+    },
+    "XX√X~": {
+      "should_guess": "HEAVY"
+    },
+    "√√XX√": {
+      "should_guess": "TRIBE"
+    },
+    "XXXX~": {
+      "should_guess": "MODEL",
+      "next": {
+        "XX~√X": {
+          "should_guess": "SPEED"
+        },
+        "XX~~~": {
+          "should_guess": "FIELD",
+          "next": {
+            "X√√√√": {
+              "should_guess": "YIELD"
+            }
+          }
+        },
+        "~~X~~": {
+          "should_guess": "LEMON"
+        },
+        "XXX√√": {
+          "should_guess": "LEVEL",
+          "next": {
+            "X~X√√": {
+              "should_guess": "WHEEL"
+            }
+          }
+        },
+        "XXX√~": {
+          "should_guess": "SLEEP"
+        },
+        "XXX~X": {
+          "should_guess": "BEGIN",
+          "next": {
+            "X~~XX": {
+              "should_guess": "GUESS"
+            },
+            "√√~~~": {
+              "should_guess": "BEING"
+            },
+            "X√~~X": {
+              "should_guess": "WEIGH"
+            }
+          }
+        },
+        "XX√√X": {
+          "should_guess": "INDEX"
+        },
+        "X√~√X": {
+          "should_guess": "DOZEN"
+        },
+        "X√X√X": {
+          "should_guess": "HONEY"
+        },
+        "√√X√X": {
+          "should_guess": "MONEY"
+        },
+        "X√X√√": {
+          "should_guess": "NOVEL"
+        },
+        "~XX~X": {
+          "should_guess": "ENEMY"
+        },
+        "X~√√X": {
+          "should_guess": "VIDEO"
+        },
+        "~XX~√": {
+          "should_guess": "SMELL"
+        },
+        "XXX~√": {
+          "should_guess": "SHELL"
+        },
+        "X~X~~": {
+          "should_guess": "HELLO",
+          "next": {
+            "X√√X~": {
+              "should_guess": "BELOW"
+            }
+          }
+        },
+        "X~X~X": {
+          "should_guess": "ENJOY"
+        },
+        "XXX√X": {
+          "should_guess": "GIVEN",
+          "next": {
+            "XXX√X": {
+              "should_guess": "SWEEP"
+            },
+            "XX√√√": {
+              "should_guess": "SEVEN"
+            }
+          }
+        },
+        "XXX~~": {
+          "should_guess": "FLESH",
+          "next": {
+            "~~√~~": {
+              "should_guess": "SHELF"
+            },
+            "X~~XX": {
+              "should_guess": "NEWLY"
+            }
+          }
+        },
+        "XX~~X": {
+          "should_guess": "SPEND"
+        }
+      }
+    },
+    "~XXXX": {
+      "should_guess": "SHIFT",
+      "next": {
+        "√~~X√": {
+          "should_guess": "SIGHT"
+        },
+        "√X~X√": {
+          "should_guess": "SPLIT"
+        },
+        "√X√X~": {
+          "should_guess": "STILL"
+        },
+        "~X~X√": {
+          "should_guess": "VISIT"
+        },
+        "XXXX√": {
+          "should_guess": "DOUBT",
+          "next": {
+            "X√√X√": {
+              "should_guess": "MOUNT"
+            }
+          }
+        },
+        "~√XX√": {
+          "should_guess": "GHOST"
+        },
+        "XX~X~": {
+          "should_guess": "UNTIL"
+        },
+        "X~~X√": {
+          "should_guess": "ALBUM",
+          "next": {
+            "XXXXX": {
+              "should_guess": "NIGHT"
+            },
+            "XXXX~": {
+              "should_guess": "MIGHT"
+            },
+            "X~XXX": {
+              "should_guess": "LIGHT"
+            }
+          }
+        },
+        "X~~~~": {
+          "should_guess": "FIFTH"
+        },
+        "XX√X√": {
+          "should_guess": "POINT",
+          "next": {
+            "X√√√√": {
+              "should_guess": "JOINT"
+            }
+          }
+        },
+        "X~XX~": {
+          "should_guess": "MONTH",
+          "next": {
+            "√√X√√": {
+              "should_guess": "MOUTH"
+            },
+            "X√X√√": {
+              "should_guess": "YOUTH"
+            }
+          }
+        },
+        "XX~X√": {
+          "should_guess": "LIMIT",
+          "next": {
+            "~√XX√": {
+              "should_guess": "PILOT"
+            }
+          }
+        },
+        "X~XX√": {
+          "should_guess": "OUGHT"
+        },
+        "√~XX~": {
+          "should_guess": "SOUTH"
+        },
+        "X~~~√": {
+          "should_guess": "FIGHT"
+        },
+        "√XXX~": {
+          "should_guess": "STUDY"
+        },
+        "√XX√~": {
+          "should_guess": "STUFF"
+        },
+        "√√XX√": {
+          "should_guess": "SHOUT",
+          "next": {
+            "√√√X√": {
+              "should_guess": "SHOOT"
+            }
+          }
+        },
+        "X√XX~": {
+          "should_guess": "PHOTO"
+        },
+        "XX~~~": {
+          "should_guess": "FIFTY"
+        }
+      }
+    },
+    "~~XX√": {
+      "should_guess": "ROUTE",
+      "next": {
+        "~~X~√": {
+          "should_guess": "STORE"
+        }
+      }
+    },
+    "X~X~X": {
+      "should_guess": "COLOR",
+      "next": {
+        "~~XX√": {
+          "should_guess": "OCCUR"
+        }
+      }
+    },
+    "~X√√~": {
+      "should_guess": "EXACT"
+    },
+    "X~~~~": {
+      "should_guess": "CLEAR"
+    },
+    "~X√XX": {
+      "should_guess": "ADAPT",
+      "next": {
+        "XX√X√": {
+          "should_guess": "GIANT"
+        },
+        "XX√~√": {
+          "should_guess": "PLANT"
+        },
+        "X~√X~": {
+          "should_guess": "STAND"
+        },
+        "XX√X~": {
+          "should_guess": "STAFF"
+        }
+      }
+    },
+    "X~~X√": {
+      "should_guess": "AGREE",
+      "next": {
+        "~~√X√": {
+          "should_guess": "LARGE"
+        },
+        "~X~X√": {
+          "should_guess": "RAISE"
+        },
+        "~~~X√": {
+          "should_guess": "RANGE"
+        }
+      }
+    },
+    "XXX~~": {
+      "should_guess": "CHEEK",
+      "next": {
+        "√√X√X": {
+          "should_guess": "CHIEF"
+        }
+      }
+    },
+    "~~~~X": {
+      "should_guess": "ACTOR"
+    },
+    "√X~XX": {
+      "should_guess": "TOTAL",
+      "next": {
+        "√√X√X": {
+          "should_guess": "TODAY"
+        }
+      }
+    },
+    "~√XXX": {
+      "should_guess": "FRONT",
+      "next": {
+        "X√X√√": {
+          "should_guess": "PRINT"
+        },
+        "√√XX√": {
+          "should_guess": "FRUIT"
+        }
+      }
+    },
+    "X√X~X": {
+      "should_guess": "CROSS",
+      "next": {
+        "√√√XX": {
+          "should_guess": "CROWD"
+        }
+      }
+    },
+    "XX√~√": {
+      "should_guess": "SCALE",
+      "next": {
+        "~~√X√": {
+          "should_guess": "CHASE"
+        }
+      }
+    },
+    "~~XXX": {
+      "should_guess": "SHIFT",
+      "next": {
+        "XXXX~": {
+          "should_guess": "MOTOR"
+        },
+        "X~XX~": {
+          "should_guess": "NORTH",
+          "next": {
+            "X√√√√": {
+              "should_guess": "WORTH"
+            }
+          }
+        },
+        "√X~X~": {
+          "should_guess": "STRIP"
+        },
+        "√XXX√": {
+          "should_guess": "SPORT"
+        },
+        "X~~X~": {
+          "should_guess": "BIRTH"
+        },
+        "XX~X~": {
+          "should_guess": "DIRTY"
+        },
+        "X~X~~": {
+          "should_guess": "FORTH"
+        },
+        "√√√X√": {
+          "should_guess": "SHIRT"
+        },
+        "√√XX√": {
+          "should_guess": "SHORT"
+        },
+        "~X~~√": {
+          "should_guess": "FIRST"
+        },
+        "X~~X√": {
+          "should_guess": "RIGHT"
+        },
+        "√XXX~": {
+          "should_guess": "STORY",
+          "next": {
+            "√√√√X": {
+              "should_guess": "STORM"
+            }
+          }
+        }
+      }
+    },
+    "XXXXX": {
+      "should_guess": "POUND",
+      "next": {
+        "X√√√X": {
+          "should_guess": "YOUNG"
+        },
+        "X√√X√": {
+          "should_guess": "WOULD"
+        },
+        "XX~XX": {
+          "should_guess": "FULLY"
+        },
+        "XXXXX": {
+          "should_guess": "SKILL"
+        },
+        "X~~~X": {
+          "should_guess": "UNION"
+        },
+        "XXX√√": {
+          "should_guess": "BLIND"
+        },
+        "XXX√X": {
+          "should_guess": "SWING"
+        },
+        "XX~X√": {
+          "should_guess": "BUILD"
+        },
+        "X√√√√": {
+          "should_guess": "AWFUL",
+          "next": {
+            "XXX~X": {
+              "should_guess": "SOUND"
+            },
+            "XX~~X": {
+              "should_guess": "FOUND"
+            },
+            "X~X~X": {
+              "should_guess": "WOUND"
+            }
+          }
+        },
+        "X~X~X": {
+          "should_guess": "ONION"
+        },
+        "XX~√X": {
+          "should_guess": "FUNNY"
+        },
+        "~XXXX": {
+          "should_guess": "IMPLY"
+        },
+        "X√XX√": {
+          "should_guess": "SOLID"
+        },
+        "X~XX√": {
+          "should_guess": "BLOOD"
+        }
+      }
+    },
+    "~X~X√": {
+      "should_guess": "WASTE"
+    },
+    "√XX√X": {
+      "should_guess": "TOUCH",
+      "next": {
+        "√XX√~": {
+          "should_guess": "THICK"
+        }
+      }
+    },
+    "~XX√~": {
+      "should_guess": "ELECT"
+    },
+    "XX~~√": {
+      "should_guess": "CABLE",
+      "next": {
+        "√√XX√": {
+          "should_guess": "CAUSE"
+        }
+      }
+    },
+    "X~~XX": {
+      "should_guess": "MAYOR",
+      "next": {
+        "√~X~~": {
+          "should_guess": "MORAL"
+        },
+        "X√X√√": {
+          "should_guess": "LABOR",
+          "next": {
+            "X√X√√": {
+              "should_guess": "FAVOR"
+            }
+          }
+        },
+        "X√XX~": {
+          "should_guess": "RAPID"
+        },
+        "X√X~~": {
+          "should_guess": "RADIO"
+        },
+        "√√X√√": {
+          "should_guess": "MAJOR"
+        },
+        "X~~X~": {
+          "should_guess": "ANGRY"
+        },
+        "X~XX√": {
+          "should_guess": "SUGAR"
+        },
+        "√√~X~": {
+          "should_guess": "MARRY"
+        },
+        "X~X~√": {
+          "should_guess": "SOLAR"
+        },
+        "X~XX~": {
+          "should_guess": "RURAL"
+        }
+      }
+    },
+    "XX√√~": {
+      "should_guess": "BEACH"
+    },
+    "X~√√~": {
+      "should_guess": "REACH"
+    },
+    "~~√X~": {
+      "should_guess": "HEART"
+    },
+    "√√XXX": {
+      "should_guess": "TRUST",
+      "next": {
+        "√√√XX": {
+          "should_guess": "TRULY"
+        },
+        "√√XXX": {
+          "should_guess": "TROOP"
+        },
+        "√√√X~": {
+          "should_guess": "TRUTH"
+        }
+      }
+    },
+    "√X~X√": {
+      "should_guess": "TABLE",
+      "next": {
+        "√√XX√": {
+          "should_guess": "TASTE"
+        }
+      }
+    },
+    "√√√XX": {
+      "should_guess": "TRAIL",
+      "next": {
+        "√√√√X": {
+          "should_guess": "TRAIN"
+        }
+      }
+    },
+    "X√√~X": {
+      "should_guess": "CRAZY",
+      "next": {
+        "√√√XX": {
+          "should_guess": "CRASH"
+        }
+      }
+    },
+    "√~XX~": {
+      "should_guess": "THEIR",
+      "next": {
+        "√X~~~": {
+          "should_guess": "TIRED"
+        },
+        "√X~X~": {
+          "should_guess": "TERMS"
+        },
+        "√X~X√": {
+          "should_guess": "TOWER"
+        }
+      }
+    },
+    "~√√XX": {
+      "should_guess": "DRAFT",
+      "next": {
+        "X√√X√": {
+          "should_guess": "GRANT"
+        }
+      }
+    },
+    "X~√X√": {
+      "should_guess": "SHARE",
+      "next": {
+        "XX√√√": {
+          "should_guess": "AWARE"
+        }
+      }
+    },
+    "X√XXX": {
+      "should_guess": "GROUP",
+      "next": {
+        "X√√X~": {
+          "should_guess": "PROOF"
+        },
+        "~√XXX": {
+          "should_guess": "BRING"
+        },
+        "X√~X~": {
+          "should_guess": "PRIOR"
+        },
+        "X√X~X": {
+          "should_guess": "BRUSH"
+        },
+        "X√XXX": {
+          "should_guess": "IRISH",
+          "next": {
+            "X√√XX": {
+              "should_guess": "DRINK"
+            }
+          }
+        },
+        "X√√XX": {
+          "should_guess": "BROWN"
+        },
+        "~√√XX": {
+          "should_guess": "WRONG"
+        },
+        "X√√√~": {
+          "should_guess": "PROUD"
+        }
+      }
+    },
+    "XXX√~": {
+      "should_guess": "CHECK",
+      "next": {
+        "X~~√X": {
+          "should_guess": "BENCH"
+        }
+      }
+    },
+    "√XX√√": {
+      "should_guess": "TWICE"
+    },
+    "XX~~X": {
+      "should_guess": "BASIC",
+      "next": {
+        "X~XX~": {
+          "should_guess": "LOCAL"
+        },
+        "~√X√~": {
+          "should_guess": "CABIN"
+        }
+      }
+    },
+    "XX√X√": {
+      "should_guess": "BLIND",
+      "next": {
+        "X√XXX": {
+          "should_guess": "FLAME",
+          "next": {
+            "X√√X√": {
+              "should_guess": "SLAVE"
+            }
+          }
+        },
+        "X~XXX": {
+          "should_guess": "LEAVE"
+        },
+        "XXXX~": {
+          "should_guess": "SHADE"
+        },
+        "XXXXX": {
+          "should_guess": "PHASE",
+          "next": {
+            "X√√~√": {
+              "should_guess": "SHAKE"
+            },
+            "~√√~√": {
+              "should_guess": "SHAPE"
+            }
+          }
+        },
+        "√√XXX": {
+          "should_guess": "BLAME"
+        },
+        "√√XX~": {
+          "should_guess": "BLADE"
+        },
+        "X√X√X": {
+          "should_guess": "PLANE"
+        },
+        "XX~XX": {
+          "should_guess": "IMAGE"
+        }
+      }
+    },
+    "√√√√X": {
+      "should_guess": "TRACK"
+    },
+    "√~XXX": {
+      "should_guess": "THIRD",
+      "next": {
+        "√√X~X": {
+          "should_guess": "THROW"
+        }
+      }
+    },
+    "X√√√X": {
+      "should_guess": "CRACK"
+    },
+    "XXX~X": {
+      "should_guess": "CHILD",
+      "next": {
+        "~XXXX": {
+          "should_guess": "FOCUS"
+        },
+        "~XX~X": {
+          "should_guess": "LUCKY"
+        },
+        "√X~~X": {
+          "should_guess": "CIVIL"
+        },
+        "√XX~√": {
+          "should_guess": "CLOUD"
+        },
+        "√X√~X": {
+          "should_guess": "CLIMB"
+        },
+        "√XX√√": {
+          "should_guess": "COULD"
+        },
+        "~X~XX": {
+          "should_guess": "MUSIC"
+        }
+      }
+    },
+    "X~√~X": {
+      "should_guess": "CHAIR"
+    },
+    "X√~X√": {
+      "should_guess": "ARISE",
+      "next": {
+        "√√XX√": {
+          "should_guess": "ARGUE"
+        }
+      }
+    },
+    "~X√X√": {
+      "should_guess": "PLATE",
+      "next": {
+        "XX√√√": {
+          "should_guess": "STATE"
+        },
+        "XX√~√": {
+          "should_guess": "STAGE",
+          "next": {
+            "√√√X√": {
+              "should_guess": "STAKE"
+            }
+          }
+        }
+      }
+    },
+    "~X√X~": {
+      "should_guess": "DEATH",
+      "next": {
+        "X√√~X": {
+          "should_guess": "LEAST"
+        }
+      }
+    },
+    "X~XX~": {
+      "should_guess": "NEWLY",
+      "next": {
+        "√√XXX": {
+          "should_guess": "NEVER"
+        },
+        "X~√~X": {
+          "should_guess": "LOWER"
+        },
+        "X~√XX": {
+          "should_guess": "POWER"
+        },
+        "~~XXX": {
+          "should_guess": "UNDER",
+          "next": {
+            "X√X√√": {
+              "should_guess": "INNER"
+            }
+          }
+        },
+        "X~XX√": {
+          "should_guess": "EVERY"
+        },
+        "X√√XX": {
+          "should_guess": "FEWER"
+        },
+        "X√X√√": {
+          "should_guess": "REPLY"
+        },
+        "X~X~X": {
+          "should_guess": "LOVER"
+        },
+        "X~XXX": {
+          "should_guess": "BUILD",
+          "next": {
+            "X~XXX": {
+              "should_guess": "UPPER"
+            },
+            "XX~XX": {
+              "should_guess": "RIVER"
+            },
+            "~X~XX": {
+              "should_guess": "FIBER"
+            },
+            "X√XXX": {
+              "should_guess": "SUPER"
+            },
+            "XXXXX": {
+              "should_guess": "OFFER"
+            }
+          }
+        },
+        "X√XXX": {
+          "should_guess": "REFER"
+        },
+        "~~~XX": {
+          "should_guess": "OWNER"
+        },
+        "X~XX~": {
+          "should_guess": "BUYER"
+        }
+      }
+    },
+    "~XX√X": {
+      "should_guess": "PITCH",
+      "next": {
+        "X~~√X": {
+          "should_guess": "STICK"
+        },
+        "XX~√X": {
+          "should_guess": "STOCK"
+        }
+      }
+    },
+    "√XXXX": {
+      "should_guess": "THING",
+      "next": {
+        "√√√√X": {
+          "should_guess": "THINK"
+        },
+        "√~XXX": {
+          "should_guess": "TOOTH"
+        },
+        "√~XX~": {
+          "should_guess": "TOUGH"
+        },
+        "√~~X~": {
+          "should_guess": "TIGHT"
+        }
+      }
+    },
+    "~XX~~": {
+      "should_guess": "CHEST"
+    },
+    "~√~X~": {
+      "should_guess": "GREAT"
+    },
+    "~~~X~": {
+      "should_guess": "ALTER",
+      "next": {
+        "√X√√√": {
+          "should_guess": "AFTER"
+        },
+        "~X~~~": {
+          "should_guess": "EARTH"
+        },
+        "~X√√√": {
+          "should_guess": "WATER"
+        },
+        "~X√~~": {
+          "should_guess": "EXTRA"
+        },
+        "~~√√√": {
+          "should_guess": "LATER"
+        }
+      }
+    },
+    "~√√~X": {
+      "should_guess": "CRAFT"
+    },
+    "√X√XX": {
+      "should_guess": "THANK"
+    },
+    "~~X~X": {
+      "should_guess": "COURT"
+    },
+    "√~XX√": {
+      "should_guess": "THERE",
+      "next": {
+        "√√~~√": {
+          "should_guess": "THREE"
+        }
+      }
+    },
+    "X~√XX": {
+      "should_guess": "ABOUT",
+      "next": {
+        "~XX~X": {
+          "should_guess": "GUARD"
+        },
+        "√XXXX": {
+          "should_guess": "AWARD"
+        },
+        "~XXXX": {
+          "should_guess": "SHARP"
+        },
+        "~~~XX": {
+          "should_guess": "BOARD"
+        }
+      }
+    },
+    "X~X√X": {
+      "should_guess": "PORCH"
+    },
+    "~√XX√": {
+      "should_guess": "WRITE"
+    },
+    "XX√XX": {
+      "should_guess": "ALBUM",
+      "next": {
+        "~~XX~": {
+          "should_guess": "SMALL"
+        },
+        "√XXXX": {
+          "should_guess": "AGAIN"
+        },
+        "~~XXX": {
+          "should_guess": "SHALL"
+        },
+        "~√XXX": {
+          "should_guess": "GLASS"
+        },
+        "~XXXX": {
+          "should_guess": "PIANO"
+        }
+      }
+    },
+    "~~√X√": {
+      "should_guess": "STARE"
+    },
+    "X√√XX": {
+      "should_guess": "GRAIN",
+      "next": {
+        "X√√~X": {
+          "should_guess": "IRAQI"
+        },
+        "X√√XX": {
+          "should_guess": "DRAMA"
+        },
+        "√√√XX": {
+          "should_guess": "GRASS"
+        },
+        "X√√√√": {
+          "should_guess": "BRAIN"
+        },
+        "X√√X~": {
+          "should_guess": "BRAND"
+        },
+        "√√√X~": {
+          "should_guess": "GRAND"
+        }
+      }
+    },
+    "X~X√√": {
+      "should_guess": "FORCE"
+    },
+    "XX~X~": {
+      "should_guess": "DELAY",
+      "next": {
+        "~~X√X": {
+          "should_guess": "AHEAD"
+        },
+        "~~X~X": {
+          "should_guess": "NAKED"
+        },
+        "X~X√X": {
+          "should_guess": "SPEAK"
+        },
+        "~~~√X": {
+          "should_guess": "IDEAL"
+        },
+        "X√~√X": {
+          "should_guess": "LEGAL"
+        },
+        "~√X~X": {
+          "should_guess": "MEDIA"
+        },
+        "X~X√√": {
+          "should_guess": "ESSAY"
+        },
+        "X~~√X": {
+          "should_guess": "EQUAL"
+        },
+        "X~~~X": {
+          "should_guess": "LABEL",
+          "next": {
+            "X√X√√": {
+              "should_guess": "PANEL"
+            }
+          }
+        },
+        "X~√~X": {
+          "should_guess": "SALES"
+        }
+      }
+    },
+    "XX√~X": {
+      "should_guess": "CHAIN",
+      "next": {
+        "√X√√X": {
+          "should_guess": "CLAIM"
+        },
+        "√X√XX": {
+          "should_guess": "CLASS"
+        }
+      }
+    },
+    "X~X~√": {
+      "should_guess": "SCORE"
+    },
+    "~~XX~": {
+      "should_guess": "ENTER",
+      "next": {
+        "XX√√√": {
+          "should_guess": "VOTER"
+        },
+        "XX~√√": {
+          "should_guess": "OTHER"
+        },
+        "~X√√√": {
+          "should_guess": "METER"
+        },
+        "√√√X~": {
+          "should_guess": "ENTRY"
+        }
+      }
+    },
+    "~X~XX": {
+      "should_guess": "BLIND",
+      "next": {
+        "XX√√X": {
+          "should_guess": "PAINT"
+        },
+        "X~XX~": {
+          "should_guess": "ADULT"
+        },
+        "X~~~X": {
+          "should_guess": "LATIN"
+        },
+        "XX√XX": {
+          "should_guess": "FAITH"
+        },
+        "X√XXX": {
+          "should_guess": "FLOAT"
+        },
+        "XXXX~": {
+          "should_guess": "ADOPT"
+        },
+        "~X~XX": {
+          "should_guess": "HABIT"
+        },
+        "X~~XX": {
+          "should_guess": "VITAL"
+        },
+        "XX~X~": {
+          "should_guess": "ADMIT"
+        },
+        "X~XXX": {
+          "should_guess": "FAULT"
+        },
+        "~XXXX": {
+          "should_guess": "ABOUT"
+        }
+      }
+    },
+    "X~~X~": {
+      "should_guess": "EARLY",
+      "next": {
+        "~√~~~": {
+          "should_guess": "LAYER"
+        },
+        "~√~XX": {
+          "should_guess": "PAPER",
+          "next": {
+            "X√X√√": {
+              "should_guess": "MAKER"
+            }
+          }
+        },
+        "~~~~X": {
+          "should_guess": "RELAX"
+        },
+        "~~~XX": {
+          "should_guess": "SWEAR",
+          "next": {
+            "XX~~√": {
+              "should_guess": "ANGER"
+            }
+          }
+        },
+        "√√~XX": {
+          "should_guess": "EAGER"
+        }
+      }
+    },
+    "~X√~X": {
+      "should_guess": "COAST"
+    },
+    "√√~XX": {
+      "should_guess": "TRIAL"
+    },
+    "XX√√√": {
+      "should_guess": "PEACE",
+      "next": {
+        "~X√√√": {
+          "should_guess": "SPACE"
+        },
+        "√X√√√": {
+          "should_guess": "PLACE"
+        }
+      }
+    },
+    "X√X~√": {
+      "should_guess": "CRIME"
+    },
+    "XX~X√": {
+      "should_guess": "ALIVE",
+      "next": {
+        "√XX√√": {
+          "should_guess": "ABOVE"
+        },
+        "~~XX√": {
+          "should_guess": "FALSE"
+        },
+        "~XXX√": {
+          "should_guess": "MAYBE",
+          "next": {
+            "X√XX√": {
+              "should_guess": "PAUSE"
+            }
+          }
+        },
+        "√X√X√": {
+          "should_guess": "ASIDE"
+        },
+        "√√XX√": {
+          "should_guess": "ALONE"
+        },
+        "~~X~√": {
+          "should_guess": "VALUE"
+        },
+        "√XXX√": {
+          "should_guess": "ABUSE"
+        },
+        "√~XX√": {
+          "should_guess": "ANGLE",
+          "next": {
+            "√XX√√": {
+              "should_guess": "APPLE"
+            }
+          }
+        }
+      }
+    },
+    "~XX~X": {
+      "should_guess": "COUNT"
+    },
+    "XX~XX": {
+      "should_guess": "BLIND",
+      "next": {
+        "X√XXX": {
+          "should_guess": "ALLOW"
+        },
+        "XXX~X": {
+          "should_guess": "HUMAN",
+          "next": {
+            "XX√√√": {
+              "should_guess": "WOMAN"
+            }
+          }
+        },
+        "XX√~X": {
+          "should_guess": "ASIAN"
+        },
+        "XXX√X": {
+          "should_guess": "AMONG"
+        },
+        "~√XXX": {
+          "should_guess": "ALBUM"
+        },
+        "XX~X√": {
+          "should_guess": "AVOID"
+        },
+        "X~√X~": {
+          "should_guess": "DAILY"
+        },
+        "X√X√X": {
+          "should_guess": "ALONG"
+        },
+        "√~XX~": {
+          "should_guess": "BADLY"
+        },
+        "X~XXX": {
+          "should_guess": "AWFUL",
+          "next": {
+            "~XX~~": {
+              "should_guess": "LAUGH"
+            },
+            "~XX~√": {
+              "should_guess": "USUAL"
+            },
+            "√XXX~": {
+              "should_guess": "APPLY"
+            }
+          }
+        },
+        "XXXXX": {
+          "should_guess": "HAPPY"
+        },
+        "√X~XX": {
+          "should_guess": "BASIS"
+        },
+        "X~XX√": {
+          "should_guess": "SALAD"
+        },
+        "X~~~X": {
+          "should_guess": "FINAL"
+        }
+      }
+    },
+    "X√X√√": {
+      "should_guess": "PRICE"
+    },
+    "X√XX~": {
+      "should_guess": "FOUND",
+      "next": {
+        "XXXXX": {
+          "should_guess": "PRESS"
+        },
+        "XXX~X": {
+          "should_guess": "GREEN"
+        },
+        "~XXXX": {
+          "should_guess": "BRIEF"
+        },
+        "√XXXX": {
+          "should_guess": "FRESH"
+        },
+        "X~XX~": {
+          "should_guess": "ORDER"
+        },
+        "XXXX~": {
+          "should_guess": "DRESS"
+        },
+        "X~XXX": {
+          "should_guess": "ERROR"
+        }
+      }
+    },
+    "~~√~X": {
+      "should_guess": "CHART"
+    },
+    "X√X√X": {
+      "should_guess": "BRICK"
+    },
+    "XX√√X": {
+      "should_guess": "BLACK",
+      "next": {
+        "XX√√X": {
+          "should_guess": "COACH"
+        }
+      }
+    },
+    "X√~XX": {
+      "should_guess": "URBAN",
+      "next": {
+        "X√~√X": {
+          "should_guess": "BROAD"
+        }
+      }
+    },
+    "XXXX√": {
+      "should_guess": "SMILE",
+      "next": {
+        "√XX~√": {
+          "should_guess": "SOLVE"
+        },
+        "√X√~√": {
+          "should_guess": "SLIDE"
+        },
+        "X~~X√": {
+          "should_guess": "MOVIE"
+        },
+        "XX~√√": {
+          "should_guess": "BIBLE"
+        },
+        "XX√X√": {
+          "should_guess": "GUIDE",
+          "next": {
+            "XX√X√": {
+              "should_guess": "KNIFE"
+            }
+          }
+        },
+        "~XX~√": {
+          "should_guess": "LOOSE"
+        },
+        "XX√√√": {
+          "should_guess": "WHILE"
+        },
+        "XXX~√": {
+          "should_guess": "GLOVE"
+        },
+        "√X√X√": {
+          "should_guess": "SHINE",
+          "next": {
+            "√X√X√": {
+              "should_guess": "SEIZE"
+            }
+          }
+        },
+        "√XXX√": {
+          "should_guess": "SENSE"
+        },
+        "~XXX√": {
+          "should_guess": "HOUSE",
+          "next": {
+            "~~X√√": {
+              "should_guess": "WHOSE"
+            }
+          }
+        },
+        "√√XX√": {
+          "should_guess": "SMOKE"
+        },
+        "XXX√√": {
+          "should_guess": "WHOLE"
+        },
+        "~X√X√": {
+          "should_guess": "NOISE"
+        },
+        "~X~X√": {
+          "should_guess": "ISSUE"
+        },
+        "XXXX√": {
+          "should_guess": "JUDGE",
+          "next": {
+            "XXXX√": {
+              "should_guess": "PHONE"
+            }
+          }
+        },
+        "~~XX√": {
+          "should_guess": "MOUSE"
+        }
+      }
+    },
+    "X√~X~": {
+      "should_guess": "ARMED",
+      "next": {
+        "~√X~√": {
+          "should_guess": "BREAD"
+        },
+        "~√X~X": {
+          "should_guess": "BREAK"
+        },
+        "~√~~~": {
+          "should_guess": "DREAM"
+        }
+      }
+    }
+  }
+}

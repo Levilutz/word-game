@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize, Serializer, de::Visitor};
 use crate::word::Word;
 
 /// A hint for a single character.
-#[derive(Debug, Clone, Copy, Eq, PartialEq, PartialOrd, Ord, Hash)]
+#[derive(Debug, Default, Clone, Copy, Eq, PartialEq, PartialOrd, Ord, Hash)]
 pub enum CharHint {
     /// The submitted character is correct
     Correct,
@@ -14,6 +14,7 @@ pub enum CharHint {
     Elsewhere,
 
     /// The submitted character is not present in the word
+    #[default]
     Nowhere,
 }
 
@@ -125,6 +126,12 @@ impl<const WORD_SIZE: usize> WordHint<WORD_SIZE> {
     /// Is this hint all correct
     pub fn all_correct(&self) -> bool {
         return self.0 == [CharHint::Correct; WORD_SIZE];
+    }
+}
+
+impl<const WORD_SIZE: usize> Default for WordHint<WORD_SIZE> {
+    fn default() -> Self {
+        Self([CharHint::default(); WORD_SIZE])
     }
 }
 

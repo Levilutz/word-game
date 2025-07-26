@@ -127,7 +127,7 @@ fn main() {
         (0..possible_answers.len() as u16).into_iter().collect(),
         0,
         4,
-        2.69,
+        2.90,
         None::<&MyDebugPrinter>,
         // Some(&MyDebugPrinter {
         //     allowed_guesses: &allowed_guesses,

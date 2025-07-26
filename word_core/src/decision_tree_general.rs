@@ -17,6 +17,8 @@ pub trait DebugPrinter {
     fn fmt_hint(&self, hint_id: u8) -> String;
     fn fmt_clue(&self, hint_id: u8, guess_ind: u16) -> String;
     fn should_print_at_depth(&self, depth: u8) -> bool;
+    fn with_prefix(&self, prefix: String) -> Self;
+    fn get_prefix(&self) -> &str;
 }
 
 pub fn compute_decision_tree_aggressive(
@@ -32,19 +34,10 @@ pub fn compute_decision_tree_aggressive(
         _ => None,
     };
 
-    // Build tab prefix and print initial log
-    let prefix = "|   ".repeat(depth as usize * 2);
-    if let Some(_) = printer {
-        println!(
-            "{prefix}computing decision tree for {} possible answers",
-            possible_answers.len()
-        );
-    }
-
     // Don't continue if we've already hit depth limit
     if depth == max_depth {
-        if let Some(_) = printer {
-            println!("{prefix}depth limit reached");
+        if let Some(printer) = printer {
+            println!("{}depth limit reached", printer.get_prefix());
         }
         return None;
     }
@@ -54,7 +47,8 @@ pub fn compute_decision_tree_aggressive(
         let answer = possible_answers.into_iter().next().unwrap();
         if let Some(printer) = printer {
             println!(
-                "{prefix}best guess is {} with est cost of {} (certain)",
+                "{}best guess is {} with est cost of {} (certain)",
+                printer.get_prefix(),
                 printer.fmt_answer(answer),
                 1.0
             );
@@ -75,7 +69,8 @@ pub fn compute_decision_tree_aggressive(
         let possible_answer_b = possible_answers_iter.next().unwrap();
         if let Some(printer) = printer {
             println!(
-                "{prefix}best guess is {} with est cost of {}",
+                "{}best guess is {} with est cost of {}",
+                printer.get_prefix(),
                 printer.fmt_answer(possible_answer_a),
                 1.5
             );
@@ -100,9 +95,14 @@ pub fn compute_decision_tree_aggressive(
 
     'guess_loop: for guess_ind in 0..hints.len() as u16 {
         let guess_hints = &hints[guess_ind as usize];
+
+        let printer_owned = printer
+            .map(|printer| printer.with_prefix(format!("{} > ", printer.fmt_guess(guess_ind))));
+        let printer = printer_owned.as_ref();
         if let Some(printer) = printer {
             println!(
-                "{prefix}evaluating guess {} - {:.0}% complete",
+                "{}evaluating guess {} - {:.0}% complete",
+                printer.get_prefix(),
                 printer.fmt_guess(guess_ind),
                 100.0 * guess_ind as f64 / hints.len() as f64
             );
@@ -124,7 +124,8 @@ pub fn compute_decision_tree_aggressive(
         if useless {
             if let Some(printer) = printer {
                 println!(
-                    "{prefix}guess {} is useless, skipping",
+                    "{}guess {} is useless, skipping",
+                    printer.get_prefix(),
                     printer.fmt_guess(guess_ind),
                 );
             }
@@ -149,9 +150,15 @@ pub fn compute_decision_tree_aggressive(
             let hint_num_possible_answers = hint_possible_answers.len();
             let hint_likelihood = hint_num_possible_answers as f64 / possible_answers.len() as f64;
 
+            let printer_owned = printer.map(|printer| {
+                printer.with_prefix(format!("{} > ", printer.fmt_clue(hint, guess_ind)))
+            });
+            let printer = printer_owned.as_ref();
+
             if let Some(printer) = printer {
                 println!(
-                    "{prefix}|   evaluating clue {} with {}/{} possible answers - {:.0}% chance",
+                    "{}evaluating clue {} with {}/{} possible answers - {:.0}% chance",
+                    printer.get_prefix(),
                     printer.fmt_clue(hint, guess_ind),
                     hint_num_possible_answers,
                     possible_answers.len(),
@@ -168,7 +175,8 @@ pub fn compute_decision_tree_aggressive(
             if depth == max_depth - 1 {
                 if let Some(printer) = printer {
                     println!(
-                        "{prefix}guess {} cannot guarantee an answer within depth limit",
+                        "{}guess {} cannot guarantee an answer within depth limit",
+                        printer.get_prefix(),
                         printer.fmt_guess(guess_ind),
                     );
                 }
@@ -188,7 +196,8 @@ pub fn compute_decision_tree_aggressive(
             } else {
                 if let Some(printer) = printer {
                     println!(
-                        "{prefix}guess {} cannot guarantee an answer within depth limit",
+                        "{}guess {} cannot guarantee an answer within depth limit",
+                        printer.get_prefix(),
                         printer.fmt_guess(guess_ind),
                     );
                 }
@@ -203,7 +212,8 @@ pub fn compute_decision_tree_aggressive(
         };
         if let Some(printer) = printer {
             println!(
-                "{prefix}guess {} has est cost {} - {}",
+                "{}guess {} has est cost {} - {}",
+                printer.get_prefix(),
                 printer.fmt_guess(guess_ind),
                 guess_est_cost,
                 if this_guess_is_new_best {
@@ -228,14 +238,18 @@ pub fn compute_decision_tree_aggressive(
     if let Some(printer) = printer {
         match &best {
             Some((tree_node, est_cost)) => println!(
-                "{prefix}best guess is {} with est cost of {}",
+                "{}best guess is {} with est cost of {}",
+                printer.get_prefix(),
                 match tree_node.should_guess {
                     GuessFrom::Guess(guess_ind) => printer.fmt_guess(guess_ind),
                     GuessFrom::Answer(answer_ind) => printer.fmt_answer(answer_ind),
                 },
                 est_cost
             ),
-            None => println!("{prefix}no guesses are guaranteed to solve within depth limit"),
+            None => println!(
+                "{}no guesses are guaranteed to solve within depth limit",
+                printer.get_prefix(),
+            ),
         }
     }
     best

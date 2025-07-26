@@ -53,6 +53,7 @@ struct MyDebugPrinter<'a> {
     allowed_guesses: &'a [Word<WORD_SIZE, ALPHABET_SIZE>],
     possible_answers: &'a [Word<WORD_SIZE, ALPHABET_SIZE>],
     max_print_depth: Option<u8>,
+    prefix: String,
 }
 
 impl<'a> DebugPrinter for MyDebugPrinter<'a> {
@@ -78,6 +79,19 @@ impl<'a> DebugPrinter for MyDebugPrinter<'a> {
             Some(max_print_depth) => depth <= max_print_depth,
             None => true,
         }
+    }
+
+    fn with_prefix(&self, prefix: String) -> Self {
+        Self {
+            allowed_guesses: self.allowed_guesses,
+            possible_answers: self.possible_answers,
+            max_print_depth: self.max_print_depth,
+            prefix: format!("{}{}", self.prefix, prefix),
+        }
+    }
+
+    fn get_prefix(&self) -> &str {
+        &self.prefix
     }
 }
 
@@ -117,6 +131,7 @@ fn main() {
             allowed_guesses: &allowed_guesses,
             possible_answers: &possible_answers,
             max_print_depth: None,
+            prefix: "".to_string(),
         }),
     )
     .expect("failed to compute top-level result");

@@ -175,24 +175,87 @@ pub fn compute_decision_tree_aggressive(
                     map
                 });
 
+        let correct_hint_present = answers_by_hint.contains_key(&0);
+
         // Convert into list of tuples, ordered by number of answers descending
         let mut hints_answers: Vec<(u8, HashSet<u16>)> = answers_by_hint.into_iter().collect();
         hints_answers.sort_unstable_by(|(_, answers_a), (_, answers_b)| {
             answers_a.len().cmp(&answers_b.len())
         });
 
+        // Set lower bound on estimated cost given what we know so far, so we can prune earlier
+        // Lower bound cost for a single hint is `(2p - 1)` / p (p is # of possible answers for that hint)
+        // or 0 if the hint is all-correct.
+        // This is based on the best-case scenario of guessing the correct answer next with 1/p odds, or
+        // knowing exactly which of the remaining is the answer with (p-1)/p odds.
+        // The lower bound for the whole set of hints then simplifies to:
+        // > `2 - h / p` if correct hint not present
+        // > `2 - (h + 1) / p` if correct hint present
+        // h = total # of hints, p = total # of possible answers
+        // h is the total number of hints and p is the total number of possible answers.
+        // We then must add 1 more to accommodate the hint we just made above=
+        let est_cost_lower_bound = if correct_hint_present {
+            3.0 - ((hints_answers.len() as f64 + 1.0) / possible_answers.len() as f64)
+        } else {
+            3.0 - (hints_answers.len() as f64 / possible_answers.len() as f64)
+        };
+
+        let est_cost_lower_bound_verify = 1.0
+            + hints_answers
+                .iter()
+                .map(|(hint, answers)| {
+                    if *hint == 0 {
+                        0.0
+                    } else {
+                        let lower_bound = (2.0 * answers.len() as f64 - 1.0) / answers.len() as f64;
+                        let scaled_lower_bound =
+                            lower_bound * answers.len() as f64 / possible_answers.len() as f64;
+                        if let Some(printer) = printer {
+                            println!(
+                                "{}clue {} pre-computed est cost lower bound of {:.3} scaled {:.3}",
+                                printer.get_prefix(),
+                                printer.fmt_clue(*hint, guess_ind),
+                                lower_bound,
+                                scaled_lower_bound,
+                            );
+                        }
+                        scaled_lower_bound
+                    }
+                })
+                .sum::<f64>();
+        assert!((est_cost_lower_bound - est_cost_lower_bound_verify).abs() < 1e-6);
+
         if let Some(printer) = printer {
             println!(
-                "{}considering {} possible hints",
+                "{}considering {} possible hints - lower bound est_cost of {:.3}, correct hint is {}",
                 printer.get_prefix(),
                 hints_answers.len(),
+                est_cost_lower_bound,
+                if correct_hint_present {
+                    "present"
+                } else {
+                    "not present"
+                },
             );
+        }
+
+        if est_cost_lower_bound >= guess_max_est_cost {
+            if let Some(printer) = printer {
+                println!(
+                    "{}guess {} est cost lower bound of {:.3} already exceeds max of {:.3}",
+                    printer.get_prefix(),
+                    printer.fmt_guess(guess_ind),
+                    est_cost_lower_bound,
+                    guess_max_est_cost,
+                );
+            }
+            continue;
         }
 
         // Add up estimated cost across all possibilities, weighted by likelihood
         let mut guess = TreeNode {
             should_guess: GuessFrom::Guess(guess_ind),
-            est_cost: 1.0,
+            est_cost: est_cost_lower_bound,
             next: HashMap::new(),
         };
 
@@ -221,9 +284,39 @@ pub fn compute_decision_tree_aggressive(
                 continue;
             }
 
-            // Find the child node for this clue
-            let remaining_est_cost_budget = guess_max_est_cost - guess.est_cost;
+            // Reconstruct the lower bound we made earlier, for this specific hint
+            let child_est_cost_lower_bound = 2.0 - 1.0 / hint_num_possible_answers as f64;
+            let child_est_cost_lower_bound_scaled = child_est_cost_lower_bound * hint_likelihood;
+            if let Some(printer) = printer {
+                println!(
+                    "{}clue has reconstructed est cost lower bound of {:.3} scaled {:.3}",
+                    printer.get_prefix(),
+                    child_est_cost_lower_bound,
+                    child_est_cost_lower_bound_scaled,
+                )
+            }
+
+            // Compute how much "budget" we have at our level for total est cost
+            let guess_cost_so_far_discounting_this_child_precomputation =
+                guess.est_cost - child_est_cost_lower_bound_scaled;
+            let remaining_est_cost_budget =
+                guess_max_est_cost - guess_cost_so_far_discounting_this_child_precomputation;
+
+            // Compute the child's est cost based on hint probability
             let child_max_est_cost = remaining_est_cost_budget / hint_likelihood;
+
+            if let Some(printer) = printer {
+                println!(
+                    "{}cost so far {:.3} discounted to {:.3} leaving budget of {:.3} scaled to {:.3}",
+                    printer.get_prefix(),
+                    guess.est_cost,
+                    guess_cost_so_far_discounting_this_child_precomputation,
+                    remaining_est_cost_budget,
+                    child_max_est_cost,
+                )
+            }
+
+            // Find the child node for this clue
             if let Some(child_tree_node) = compute_decision_tree_aggressive(
                 hints,
                 hint_possible_answers,
@@ -232,7 +325,8 @@ pub fn compute_decision_tree_aggressive(
                 child_max_est_cost,
                 printer,
             ) {
-                guess.est_cost += child_tree_node.est_cost * hint_likelihood;
+                guess.est_cost +=
+                    (child_tree_node.est_cost - child_est_cost_lower_bound) * hint_likelihood;
                 guess.next.insert(hint, child_tree_node);
             } else {
                 if let Some(printer) = printer {

@@ -128,7 +128,7 @@ fn main() {
         &all_hints,
         (0..possible_answers.len() as u16).into_iter().collect(),
         0,
-        5,
+        4,
         2.69,
         None::<&MyDebugPrinter>,
         // Some(&MyDebugPrinter {

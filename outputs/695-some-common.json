@@ -1,0 +1,3218 @@
+{
+  "should_guess": "TEARS",
+  "est_cost": 3.030215827338127,
+  "next": {
+    "X~X√√": {
+      "should_guess": "PIERS",
+      "est_cost": 1.0
+    },
+    "X~√√X": {
+      "should_guess": "FLARE",
+      "est_cost": 1.0
+    },
+    "X~XX~": {
+      "should_guess": "SCOPE",
+      "est_cost": 2.238095238095238,
+      "next": {
+        "√X√~√": {
+          "should_guess": "SPOKE",
+          "est_cost": 1.0
+        },
+        "√XX~~": {
+          "should_guess": "SPEND",
+          "est_cost": 1.0
+        },
+        "√~XX√": {
+          "should_guess": "SLICE",
+          "est_cost": 1.0
+        },
+        "√X~X~": {
+          "should_guess": "SOWED",
+          "est_cost": 1.0
+        },
+        "~XX~√": {
+          "should_guess": "PULSE",
+          "est_cost": 1.0
+        },
+        "~XXX√": {
+          "should_guess": "GUISE",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X~~~√": {
+              "should_guess": "ISSUE",
+              "est_cost": 1.0
+            },
+            "X~X~√": {
+              "should_guess": "ENSUE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√~X~√": {
+          "should_guess": "SPICE",
+          "est_cost": 1.0
+        },
+        "√XXX~": {
+          "should_guess": "SMELL",
+          "est_cost": 1.75,
+          "next": {
+            "√X√√√": {
+              "should_guess": "SWELL",
+              "est_cost": 1.0
+            },
+            "√X~XX": {
+              "should_guess": "SIDED",
+              "est_cost": 1.0
+            },
+            "√X√XX": {
+              "should_guess": "SHEIK",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√√XX√": {
+          "should_guess": "SCENE",
+          "est_cost": 1.0
+        },
+        "√X√X√": {
+          "should_guess": "SHONE",
+          "est_cost": 1.0
+        },
+        "√XX√√": {
+          "should_guess": "SNIPE",
+          "est_cost": 1.0
+        },
+        "√XXX√": {
+          "should_guess": "SMILE",
+          "est_cost": 1.0
+        },
+        "~X√X√": {
+          "should_guess": "NOOSE",
+          "est_cost": 1.5,
+          "next": {
+            "X√√√√": {
+              "should_guess": "MOOSE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~X~~√": {
+          "should_guess": "POSSE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XXXXX": {
+      "should_guess": "CLUNG",
+      "est_cost": 2.230769230769231,
+      "next": {
+        "X~XXX": {
+          "should_guess": "FILLY",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X√X√√": {
+              "should_guess": "DIMLY",
+              "est_cost": 1.0
+            },
+            "XX~X~": {
+              "should_guess": "LYMPH",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√√√√": {
+          "should_guess": "FLUNG",
+          "est_cost": 1.0
+        },
+        "XX√X~": {
+          "should_guess": "BOUGH",
+          "est_cost": 1.0
+        },
+        "X√X~X": {
+          "should_guess": "FLOWN",
+          "est_cost": 1.0
+        },
+        "X~XX~": {
+          "should_guess": "GOLLY",
+          "est_cost": 1.0
+        },
+        "XX~√X": {
+          "should_guess": "FUNNY",
+          "est_cost": 1.0
+        },
+        "~XX~X": {
+          "should_guess": "KNOCK",
+          "est_cost": 1.0
+        },
+        "√XXXX": {
+          "should_guess": "CHICK",
+          "est_cost": 1.0
+        },
+        "XXX√X": {
+          "should_guess": "BONNY",
+          "est_cost": 1.0
+        },
+        "√X√X~": {
+          "should_guess": "COUGH",
+          "est_cost": 1.0
+        },
+        "~√XXX": {
+          "should_guess": "BLOCK",
+          "est_cost": 1.0
+        },
+        "√XX√X": {
+          "should_guess": "CHINK",
+          "est_cost": 1.0
+        },
+        "~XXXX": {
+          "should_guess": "MIMIC",
+          "est_cost": 1.0
+        },
+        "X√XXX": {
+          "should_guess": "BLOOM",
+          "est_cost": 1.0
+        },
+        "X√XX~": {
+          "should_guess": "GLOOM",
+          "est_cost": 1.0
+        },
+        "√√XXX": {
+          "should_guess": "CLICK",
+          "est_cost": 1.0
+        },
+        "XXX~X": {
+          "should_guess": "NYMPH",
+          "est_cost": 1.5,
+          "next": {
+            "~XXXX": {
+              "should_guess": "ONION",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√X√X": {
+          "should_guess": "BLOND",
+          "est_cost": 1.5,
+          "next": {
+            "√√X√X": {
+              "should_guess": "BLINK",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~~~~X": {
+          "should_guess": "LUNCH",
+          "est_cost": 1.0
+        },
+        "XXXXX": {
+          "should_guess": "HOBBY",
+          "est_cost": 1.5,
+          "next": {
+            "X~XXX": {
+              "should_guess": "IDIOM",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~X√XX": {
+          "should_guess": "POUCH",
+          "est_cost": 1.0
+        },
+        "X√√XX": {
+          "should_guess": "FLUFF",
+          "est_cost": 1.5,
+          "next": {
+            "X√√XX": {
+              "should_guess": "PLUMB",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XXX√√": {
+          "should_guess": "GOING",
+          "est_cost": 1.0
+        },
+        "XXXX~": {
+          "should_guess": "PIGMY",
+          "est_cost": 1.0
+        },
+        "X~X~~": {
+          "should_guess": "LOGIN",
+          "est_cost": 1.5,
+          "next": {
+            "√~~~~": {
+              "should_guess": "LINGO",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX~XX": {
+          "should_guess": "MUMMY",
+          "est_cost": 1.75,
+          "next": {
+            "~√XXX": {
+              "should_guess": "BUXOM",
+              "est_cost": 1.0
+            },
+            "√√XX√": {
+              "should_guess": "MUDDY",
+              "est_cost": 1.0
+            },
+            "X√XX√": {
+              "should_guess": "PUFFY",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√X√XX": {
+          "should_guess": "CHUCK",
+          "est_cost": 1.0
+        },
+        "~~XXX": {
+          "should_guess": "FILCH",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~√√XX": {
+      "should_guess": "MEANT",
+      "est_cost": 1.0
+    },
+    "√X~XX": {
+      "should_guess": "TALON",
+      "est_cost": 1.5,
+      "next": {
+        "√√XX~": {
+          "should_guess": "TAINT",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√X√~√": {
+      "should_guess": "TRAMS",
+      "est_cost": 1.0
+    },
+    "~XXX√": {
+      "should_guess": "EPOCH",
+      "est_cost": 2.1818181818181817,
+      "next": {
+        "X~XXX": {
+          "should_guess": "PINTS",
+          "est_cost": 1.0
+        },
+        "XXXX~": {
+          "should_guess": "HINTS",
+          "est_cost": 1.5,
+          "next": {
+            "√X√√√": {
+              "should_guess": "HUNTS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX√X~": {
+          "should_guess": "SHOTS",
+          "est_cost": 1.0
+        },
+        "X√XXX": {
+          "should_guess": "SPITS",
+          "est_cost": 1.0
+        },
+        "XX~XX": {
+          "should_guess": "VOLTS",
+          "est_cost": 1.5,
+          "next": {
+            "X√√√√": {
+              "should_guess": "BOLTS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX√XX": {
+          "should_guess": "BOOTS",
+          "est_cost": 1.0
+        },
+        "X~√XX": {
+          "should_guess": "STOPS",
+          "est_cost": 1.0
+        },
+        "XXXXX": {
+          "should_guess": "BUSTS",
+          "est_cost": 1.0
+        },
+        "XXX~X": {
+          "should_guess": "CULTS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√√√X": {
+      "should_guess": "YEARN",
+      "est_cost": 1.0
+    },
+    "√~~X√": {
+      "should_guess": "TAPES",
+      "est_cost": 1.0
+    },
+    "√XX~√": {
+      "should_guess": "TRIPS",
+      "est_cost": 1.0
+    },
+    "~~~~X": {
+      "should_guess": "LATER",
+      "est_cost": 1.6666666666666667,
+      "next": {
+        "X√√√√": {
+          "should_guess": "WATER",
+          "est_cost": 1.0
+        },
+        "X√~~~": {
+          "should_guess": "EARTH",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XXXX√": {
+      "should_guess": "LINGO",
+      "est_cost": 2.4473684210526314,
+      "next": {
+        "~XXXX": {
+          "should_guess": "BULBS",
+          "est_cost": 1.5,
+          "next": {
+            "√√√X√": {
+              "should_guess": "BULLS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~√XXX": {
+          "should_guess": "HILLS",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X√√X√": {
+              "should_guess": "WILDS",
+              "est_cost": 1.0
+            },
+            "X√√√√": {
+              "should_guess": "MILLS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XXXX~": {
+          "should_guess": "MOCKS",
+          "est_cost": 1.8,
+          "next": {
+            "X√√√√": {
+              "should_guess": "SOCKS",
+              "est_cost": 1.0
+            },
+            "X√XX√": {
+              "should_guess": "FOODS",
+              "est_cost": 1.0
+            },
+            "X√~X√": {
+              "should_guess": "COUPS",
+              "est_cost": 1.0
+            },
+            "X√X√√": {
+              "should_guess": "HOOKS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~XXX": {
+          "should_guess": "WHIMS",
+          "est_cost": 1.5,
+          "next": {
+            "X√√X√": {
+              "should_guess": "CHIPS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√XXXX": {
+          "should_guess": "LULLS",
+          "est_cost": 1.0
+        },
+        "~XX√X": {
+          "should_guess": "SLUGS",
+          "est_cost": 1.5,
+          "next": {
+            "X√√√√": {
+              "should_guess": "PLUGS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√X~X": {
+          "should_guess": "SIGHS",
+          "est_cost": 1.0
+        },
+        "√X√√X": {
+          "should_guess": "LUNGS",
+          "est_cost": 1.0
+        },
+        "~XXX~": {
+          "should_guess": "FOLKS",
+          "est_cost": 1.8,
+          "next": {
+            "√~~X√": {
+              "should_guess": "FLOSS",
+              "est_cost": 1.0
+            },
+            "X√~X√": {
+              "should_guess": "HOWLS",
+              "est_cost": 1.0
+            },
+            "X√√X√": {
+              "should_guess": "POLLS",
+              "est_cost": 1.0
+            },
+            "X~~X√": {
+              "should_guess": "SLOPS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX~XX": {
+          "should_guess": "HYMNS",
+          "est_cost": 1.5,
+          "next": {
+            "~XX√√": {
+              "should_guess": "SHUNS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XXXXX": {
+          "should_guess": "MUCUS",
+          "est_cost": 1.0
+        },
+        "X√√XX": {
+          "should_guess": "SHARK",
+          "est_cost": 2.0,
+          "next": {
+            "~XXXX": {
+              "should_guess": "MINDS",
+              "est_cost": 1.0
+            },
+            "~~XXX": {
+              "should_guess": "HINDS",
+              "est_cost": 1.0
+            },
+            "~XXX~": {
+              "should_guess": "KINDS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√√√X": {
+          "should_guess": "KINGS",
+          "est_cost": 1.0
+        },
+        "XX~X~": {
+          "should_guess": "BOONS",
+          "est_cost": 1.0
+        },
+        "~~XXX": {
+          "should_guess": "CLIPS",
+          "est_cost": 1.0
+        },
+        "X~~XX": {
+          "should_guess": "SKINS",
+          "est_cost": 1.0
+        },
+        "√XXX~": {
+          "should_guess": "LOCKS",
+          "est_cost": 1.0
+        },
+        "~√X~X": {
+          "should_guess": "GILLS",
+          "est_cost": 1.0
+        },
+        "√√XXX": {
+          "should_guess": "LICKS",
+          "est_cost": 1.0
+        },
+        "~~XX~": {
+          "should_guess": "SOILS",
+          "est_cost": 1.0
+        },
+        "√√~X~": {
+          "should_guess": "LIONS",
+          "est_cost": 1.0
+        },
+        "~XX~X": {
+          "should_guess": "GULLS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XXX√~": {
+      "should_guess": "SHORN",
+      "est_cost": 1.5,
+      "next": {
+        "√X√√X": {
+          "should_guess": "SWORD",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX√~~": {
+      "should_guess": "GRASP",
+      "est_cost": 1.0
+    },
+    "~~XX√": {
+      "should_guess": "BUXOM",
+      "est_cost": 2.0,
+      "next": {
+        "X√XX~": {
+          "should_guess": "MUTES",
+          "est_cost": 1.0
+        },
+        "XXX~X": {
+          "should_guess": "VOTES",
+          "est_cost": 1.0
+        },
+        "X√XXX": {
+          "should_guess": "LUTES",
+          "est_cost": 1.0
+        },
+        "XXXX~": {
+          "should_guess": "MITES",
+          "est_cost": 1.0
+        },
+        "XX~XX": {
+          "should_guess": "EXITS",
+          "est_cost": 1.0
+        },
+        "XXX~~": {
+          "should_guess": "MOTES",
+          "est_cost": 1.0
+        },
+        "XXXXX": {
+          "should_guess": "CITES",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX√XX": {
+      "should_guess": "CLAMP",
+      "est_cost": 1.8333333333333333,
+      "next": {
+        "√√√XX": {
+          "should_guess": "CLANG",
+          "est_cost": 1.0
+        },
+        "~X√XX": {
+          "should_guess": "WHACK",
+          "est_cost": 1.0
+        },
+        "√X√√√": {
+          "should_guess": "CHAMP",
+          "est_cost": 1.0
+        },
+        "√X√XX": {
+          "should_guess": "CHAFF",
+          "est_cost": 1.0
+        },
+        "X~√~X": {
+          "should_guess": "QUALM",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX√~√": {
+      "should_guess": "CRAGS",
+      "est_cost": 1.75,
+      "next": {
+        "X√√√√": {
+          "should_guess": "DRAGS",
+          "est_cost": 1.0
+        },
+        "X~√X√": {
+          "should_guess": "ROAMS",
+          "est_cost": 1.0
+        },
+        "X√√~√": {
+          "should_guess": "GRABS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X~√~~": {
+      "should_guess": "ERASE",
+      "est_cost": 1.0
+    },
+    "X~X√X": {
+      "should_guess": "FIERY",
+      "est_cost": 1.5,
+      "next": {
+        "XX√√X": {
+          "should_guess": "CLERK",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~XX√~": {
+      "should_guess": "LANKY",
+      "est_cost": 2.0,
+      "next": {
+        "XXXXX": {
+          "should_guess": "STORM",
+          "est_cost": 1.0
+        },
+        "XXXX√": {
+          "should_guess": "STORY",
+          "est_cost": 1.0
+        },
+        "XX~XX": {
+          "should_guess": "SNORT",
+          "est_cost": 1.0
+        },
+        "XXX~X": {
+          "should_guess": "STORK",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~√X~X": {
+      "should_guess": "REBUT",
+      "est_cost": 1.5,
+      "next": {
+        "~√~X~": {
+          "should_guess": "BERTH",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√XX~~": {
+      "should_guess": "TRUST",
+      "est_cost": 1.5,
+      "next": {
+        "√~X√X": {
+          "should_guess": "TORSO",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX~~X": {
+      "should_guess": "LOGIN",
+      "est_cost": 2.1666666666666665,
+      "next": {
+        "XXX√X": {
+          "should_guess": "ACRID",
+          "est_cost": 1.0
+        },
+        "X√XXX": {
+          "should_guess": "FORAY",
+          "est_cost": 1.5,
+          "next": {
+            "X√√√X": {
+              "should_guess": "BORAX",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XXXXX": {
+          "should_guess": "HARPY",
+          "est_cost": 1.5,
+          "next": {
+            "~√~XX": {
+              "should_guess": "RAJAH",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~XXX": {
+          "should_guess": "CROAK",
+          "est_cost": 1.0
+        },
+        "X~~X√": {
+          "should_guess": "GROAN",
+          "est_cost": 1.0
+        },
+        "X~√X√": {
+          "should_guess": "ORGAN",
+          "est_cost": 1.0
+        },
+        "XX√XX": {
+          "should_guess": "AUGUR",
+          "est_cost": 1.0
+        },
+        "~XX~X": {
+          "should_guess": "RIVAL",
+          "est_cost": 1.0
+        },
+        "XXX~~": {
+          "should_guess": "RAINY",
+          "est_cost": 1.0
+        },
+        "X~~XX": {
+          "should_guess": "CARGO",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~X~~X": {
+      "should_guess": "ALTAR",
+      "est_cost": 1.5,
+      "next": {
+        "√X√X√": {
+          "should_guess": "ACTOR",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√√X~X": {
+      "should_guess": "TENOR",
+      "est_cost": 1.0
+    },
+    "~X~X√": {
+      "should_guess": "MASON",
+      "est_cost": 2.0,
+      "next": {
+        "X√~XX": {
+          "should_guess": "WAITS",
+          "est_cost": 1.0
+        },
+        "X~~X~": {
+          "should_guess": "AUNTS",
+          "est_cost": 1.0
+        },
+        "X√√XX": {
+          "should_guess": "FASTS",
+          "est_cost": 1.0
+        },
+        "X√~X~": {
+          "should_guess": "PANTS",
+          "est_cost": 1.0
+        },
+        "X~~√X": {
+          "should_guess": "ALTOS",
+          "est_cost": 1.0
+        },
+        "~~~~X": {
+          "should_guess": "ATOMS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~√XX~": {
+      "should_guess": "BESET",
+      "est_cost": 1.0
+    },
+    "X√√XX": {
+      "should_guess": "MEALY",
+      "est_cost": 1.5,
+      "next": {
+        "X√√~√": {
+          "should_guess": "LEAKY",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~~~X~": {
+      "should_guess": "SHREW",
+      "est_cost": 2.0,
+      "next": {
+        "~XX~X": {
+          "should_guess": "CASTE",
+          "est_cost": 1.0
+        },
+        "√XX~~": {
+          "should_guess": "SWEAT",
+          "est_cost": 1.0
+        },
+        "√XX~X": {
+          "should_guess": "STEAM",
+          "est_cost": 1.0
+        },
+        "√XX√X": {
+          "should_guess": "SATED",
+          "est_cost": 1.0
+        },
+        "~~X~X": {
+          "should_guess": "HASTE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XXXX~": {
+      "should_guess": "SNOWY",
+      "est_cost": 2.0625,
+      "next": {
+        "√~~X~": {
+          "should_guess": "SYNOD",
+          "est_cost": 1.0
+        },
+        "√X~XX": {
+          "should_guess": "SOUGH",
+          "est_cost": 1.0
+        },
+        "√X~X√": {
+          "should_guess": "SOGGY",
+          "est_cost": 1.0
+        },
+        "√X√X√": {
+          "should_guess": "SMOKY",
+          "est_cost": 1.0
+        },
+        "√√XXX": {
+          "should_guess": "SNIFF",
+          "est_cost": 1.0
+        },
+        "√XXX√": {
+          "should_guess": "SLYLY",
+          "est_cost": 1.0
+        },
+        "√~X~X": {
+          "should_guess": "SWING",
+          "est_cost": 1.0
+        },
+        "√XXXX": {
+          "should_guess": "SPILL",
+          "est_cost": 1.5,
+          "next": {
+            "√XX~X": {
+              "should_guess": "SLUSH",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~XX~X": {
+          "should_guess": "WHISK",
+          "est_cost": 1.0
+        },
+        "~~~X√": {
+          "should_guess": "NOISY",
+          "est_cost": 1.0
+        },
+        "~X~XX": {
+          "should_guess": "BOSOM",
+          "est_cost": 1.0
+        },
+        "√X√XX": {
+          "should_guess": "SPOOK",
+          "est_cost": 1.0
+        },
+        "√~XXX": {
+          "should_guess": "SKUNK",
+          "est_cost": 1.5,
+          "next": {
+            "√X√√√": {
+              "should_guess": "SLUNK",
+              "est_cost": 1.0
+            }
+          }
+        }
+      }
+    },
+    "X~~~~": {
+      "should_guess": "ARISE",
+      "est_cost": 1.0
+    },
+    "XX√~X": {
+      "should_guess": "LANKY",
+      "est_cost": 2.0,
+      "next": {
+        "X~~~X": {
+          "should_guess": "CRANK",
+          "est_cost": 1.0
+        },
+        "~~XXX": {
+          "should_guess": "FRAIL",
+          "est_cost": 1.0
+        },
+        "X~XX√": {
+          "should_guess": "GRAVY",
+          "est_cost": 1.0
+        },
+        "X~X~X": {
+          "should_guess": "CRACK",
+          "est_cost": 1.0
+        },
+        "X~~XX": {
+          "should_guess": "GRAIN",
+          "est_cost": 1.0
+        },
+        "X~XXX": {
+          "should_guess": "CRAMP",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~~X~X": {
+      "should_guess": "SUPER",
+      "est_cost": 2.0,
+      "next": {
+        "X~X~~": {
+          "should_guess": "ROUTE",
+          "est_cost": 1.0
+        },
+        "XXX~~": {
+          "should_guess": "FORTE",
+          "est_cost": 1.0
+        },
+        "XXX√~": {
+          "should_guess": "GREET",
+          "est_cost": 1.0
+        },
+        "XXX√√": {
+          "should_guess": "VOTER",
+          "est_cost": 1.0
+        },
+        "XX~~~": {
+          "should_guess": "CREPT",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~~~XX": {
+      "should_guess": "AGENT",
+      "est_cost": 1.6666666666666667,
+      "next": {
+        "~X~X~": {
+          "should_guess": "LATHE",
+          "est_cost": 1.0
+        },
+        "√X~√~": {
+          "should_guess": "ATONE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~XX~~": {
+      "should_guess": "FIRST",
+      "est_cost": 1.0
+    },
+    "~X√XX": {
+      "should_guess": "AWAIT",
+      "est_cost": 1.5,
+      "next": {
+        "√X√X√": {
+          "should_guess": "ABAFT",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~√√X√": {
+      "should_guess": "HEATS",
+      "est_cost": 1.5,
+      "next": {
+        "X√√√√": {
+          "should_guess": "MEATS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√~XX~": {
+      "should_guess": "THESE",
+      "est_cost": 1.0
+    },
+    "X~X~~": {
+      "should_guess": "SHREW",
+      "est_cost": 1.8333333333333333,
+      "next": {
+        "~~~√X": {
+          "should_guess": "USHER",
+          "est_cost": 1.0
+        },
+        "√√√√X": {
+          "should_guess": "SHRED",
+          "est_cost": 1.0
+        },
+        "~~~~X": {
+          "should_guess": "FRESH",
+          "est_cost": 1.0
+        },
+        "√X√√X": {
+          "should_guess": "SIREN",
+          "est_cost": 1.0
+        },
+        "√X~√X": {
+          "should_guess": "SUPER",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XXX~~": {
+      "should_guess": "SCRUB",
+      "est_cost": 1.5,
+      "next": {
+        "~~~~X": {
+          "should_guess": "CRUSH",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X~XX√": {
+      "should_guess": "MINED",
+      "est_cost": 2.5,
+      "next": {
+        "~XX√X": {
+          "should_guess": "FUMES",
+          "est_cost": 1.0
+        },
+        "X~X√X": {
+          "should_guess": "SPIES",
+          "est_cost": 1.0
+        },
+        "XX~~X": {
+          "should_guess": "OPENS",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "XX√√√": {
+              "should_guess": "GLENS",
+              "est_cost": 1.0
+            },
+            "√X√√√": {
+              "should_guess": "OVENS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~√X√~": {
+          "should_guess": "DIMES",
+          "est_cost": 1.0
+        },
+        "√√X√X": {
+          "should_guess": "MIMES",
+          "est_cost": 1.0
+        },
+        "~√X√X": {
+          "should_guess": "LIMES",
+          "est_cost": 1.0
+        },
+        "X√X√~": {
+          "should_guess": "DICES",
+          "est_cost": 1.0
+        },
+        "~XX√~": {
+          "should_guess": "DOMES",
+          "est_cost": 1.0
+        },
+        "√XX√X": {
+          "should_guess": "MOVES",
+          "est_cost": 1.0
+        },
+        "XXX√X": {
+          "should_guess": "BLOCK",
+          "est_cost": 2.0,
+          "next": {
+            "X~~XX": {
+              "should_guess": "LOSES",
+              "est_cost": 1.0
+            },
+            "XX~XX": {
+              "should_guess": "POPES",
+              "est_cost": 1.0
+            },
+            "XX~X~": {
+              "should_guess": "POKES",
+              "est_cost": 1.0
+            },
+            "XX~~X": {
+              "should_guess": "COVES",
+              "est_cost": 1.0
+            },
+            "X√XXX": {
+              "should_guess": "FLUES",
+              "est_cost": 1.0
+            },
+            "XXXXX": {
+              "should_guess": "FUSES",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√X√X": {
+          "should_guess": "VOILE",
+          "est_cost": 2.0,
+          "next": {
+            "√X~X~": {
+              "should_guess": "VICES",
+              "est_cost": 1.0
+            },
+            "XX~X~": {
+              "should_guess": "WIPES",
+              "est_cost": 1.0
+            },
+            "XX~~~": {
+              "should_guess": "FILES",
+              "est_cost": 1.0
+            },
+            "~X~X~": {
+              "should_guess": "GIVES",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX√√X": {
+          "should_guess": "ZONES",
+          "est_cost": 1.0
+        },
+        "XXX~X": {
+          "should_guess": "CHEFS",
+          "est_cost": 1.5,
+          "next": {
+            "√X√√√": {
+              "should_guess": "CLEFS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XXX√~": {
+          "should_guess": "DOVES",
+          "est_cost": 1.0
+        },
+        "X√~~X": {
+          "should_guess": "LIENS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~XXXX": {
+      "should_guess": "LIGHT",
+      "est_cost": 2.142857142857143,
+      "next": {
+        "X√XX√": {
+          "should_guess": "PIVOT",
+          "est_cost": 1.0
+        },
+        "X√√√√": {
+          "should_guess": "NIGHT",
+          "est_cost": 1.0
+        },
+        "X√XX~": {
+          "should_guess": "DITTO",
+          "est_cost": 1.5,
+          "next": {
+            "√√√√X": {
+              "should_guess": "DITTY",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~√X√": {
+          "should_guess": "INGOT",
+          "est_cost": 1.0
+        },
+        "X√X~~": {
+          "should_guess": "PITCH",
+          "est_cost": 1.0
+        },
+        "X~XX√": {
+          "should_guess": "JOINT",
+          "est_cost": 1.0
+        },
+        "XXXX~": {
+          "should_guess": "BOOTY",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X~~~X": {
+              "should_guess": "OUTDO",
+              "est_cost": 1.0
+            },
+            "X√~√X": {
+              "should_guess": "MOTTO",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX√√√": {
+          "should_guess": "OUGHT",
+          "est_cost": 1.0
+        },
+        "~XXX√": {
+          "should_guess": "CLOUT",
+          "est_cost": 1.0
+        },
+        "X√√X√": {
+          "should_guess": "BIGOT",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX√√√": {
+      "should_guess": "BOARS",
+      "est_cost": 1.0
+    },
+    "~~XXX": {
+      "should_guess": "FILCH",
+      "est_cost": 2.0,
+      "next": {
+        "X~X√X": {
+          "should_guess": "EDICT",
+          "est_cost": 1.0
+        },
+        "~XXXX": {
+          "should_guess": "OFTEN",
+          "est_cost": 1.0
+        },
+        "X~XX~": {
+          "should_guess": "WHITE",
+          "est_cost": 1.0
+        },
+        "XXXXX": {
+          "should_guess": "EMPTY",
+          "est_cost": 1.0
+        },
+        "X~~XX": {
+          "should_guess": "ELITE",
+          "est_cost": 1.0
+        },
+        "XX~XX": {
+          "should_guess": "KNELT",
+          "est_cost": 1.0
+        },
+        "√X~XX": {
+          "should_guess": "FLEET",
+          "est_cost": 1.0
+        },
+        "~X~~X": {
+          "should_guess": "CLEFT",
+          "est_cost": 1.0
+        },
+        "X~XXX": {
+          "should_guess": "QUITE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√~X√": {
+      "should_guess": "AEONS",
+      "est_cost": 1.0
+    },
+    "X√√X√": {
+      "should_guess": "SEALS",
+      "est_cost": 1.6666666666666667,
+      "next": {
+        "X√√√√": {
+          "should_guess": "DEALS",
+          "est_cost": 1.0
+        },
+        "X√√X√": {
+          "should_guess": "BEANS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√XX~X": {
+      "should_guess": "THROW",
+      "est_cost": 1.6666666666666667,
+      "next": {
+        "√√√√X": {
+          "should_guess": "THROB",
+          "est_cost": 1.0
+        },
+        "√X~XX": {
+          "should_guess": "TRULY",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX~XX": {
+      "should_guess": "BLOND",
+      "est_cost": 2.0,
+      "next": {
+        "X~X~X": {
+          "should_guess": "LANKY",
+          "est_cost": 1.0
+        },
+        "XXXXX": {
+          "should_guess": "AFFIX",
+          "est_cost": 1.0
+        },
+        "XXX~~": {
+          "should_guess": "DIVAN",
+          "est_cost": 1.0
+        },
+        "X√√XX": {
+          "should_guess": "CLOAK",
+          "est_cost": 1.0
+        },
+        "X√~XX": {
+          "should_guess": "ALLOY",
+          "est_cost": 1.0
+        },
+        "X~XXX": {
+          "should_guess": "PAPAL",
+          "est_cost": 1.0
+        },
+        "~√XXX": {
+          "should_guess": "ALIBI",
+          "est_cost": 1.0
+        },
+        "XXX~X": {
+          "should_guess": "HUMAN",
+          "est_cost": 1.0
+        },
+        "X~XX√": {
+          "should_guess": "VALID",
+          "est_cost": 1.0
+        },
+        "~X~~X": {
+          "should_guess": "NABOB",
+          "est_cost": 1.0
+        },
+        "XXXX~": {
+          "should_guess": "MADAM",
+          "est_cost": 1.0
+        },
+        "X~~XX": {
+          "should_guess": "AGLOW",
+          "est_cost": 1.0
+        },
+        "XX~XX": {
+          "should_guess": "OAKUM",
+          "est_cost": 1.0
+        },
+        "XXX√X": {
+          "should_guess": "FAUNA",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX~√X": {
+      "should_guess": "ANGRY",
+      "est_cost": 1.5,
+      "next": {
+        "~XX√√": {
+          "should_guess": "PARRY",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√XX√√": {
+      "should_guess": "TOURS",
+      "est_cost": 1.0
+    },
+    "X√XX~": {
+      "should_guess": "SEIZE",
+      "est_cost": 1.0
+    },
+    "X~√XX": {
+      "should_guess": "ADAGE",
+      "est_cost": 2.0,
+      "next": {
+        "XX√~√": {
+          "should_guess": "GLAZE",
+          "est_cost": 1.0
+        },
+        "XX√X√": {
+          "should_guess": "QUAKE",
+          "est_cost": 1.0
+        },
+        "XX√√√": {
+          "should_guess": "IMAGE",
+          "est_cost": 1.0
+        },
+        "X~√X√": {
+          "should_guess": "BLADE",
+          "est_cost": 1.0
+        },
+        "√X√X√": {
+          "should_guess": "AWAKE",
+          "est_cost": 1.5,
+          "next": {
+            "√X√X√": {
+              "should_guess": "AMAZE",
+              "est_cost": 1.0
+            }
+          }
+        }
+      }
+    },
+    "X~~~X": {
+      "should_guess": "GAPED",
+      "est_cost": 2.071428571428571,
+      "next": {
+        "X~X~X": {
+          "should_guess": "CREAM",
+          "est_cost": 1.5,
+          "next": {
+            "X√√~X": {
+              "should_guess": "ARENA",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√~√X": {
+          "should_guess": "PALER",
+          "est_cost": 1.0
+        },
+        "~~X√X": {
+          "should_guess": "AUGER",
+          "est_cost": 1.0
+        },
+        "X√X~X": {
+          "should_guess": "CARVE",
+          "est_cost": 1.0
+        },
+        "X~X√X": {
+          "should_guess": "ABLER",
+          "est_cost": 1.0
+        },
+        "X~X√~": {
+          "should_guess": "ADDER",
+          "est_cost": 1.0
+        },
+        "~√X~X": {
+          "should_guess": "RANGE",
+          "est_cost": 1.0
+        },
+        "X√X√√": {
+          "should_guess": "RAZED",
+          "est_cost": 1.0
+        },
+        "X~X~√": {
+          "should_guess": "DREAD",
+          "est_cost": 1.0
+        },
+        "~~X~X": {
+          "should_guess": "ARGUE",
+          "est_cost": 1.0
+        },
+        "X~X√√": {
+          "should_guess": "ARMED",
+          "est_cost": 1.0
+        },
+        "~√X√X": {
+          "should_guess": "WAGER",
+          "est_cost": 1.0
+        },
+        "X√~√√": {
+          "should_guess": "PARED",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√XXX": {
+      "should_guess": "WHOLE",
+      "est_cost": 2.071428571428571,
+      "next": {
+        "~XXX~": {
+          "should_guess": "MEWED",
+          "est_cost": 1.0
+        },
+        "√~XX~": {
+          "should_guess": "WENCH",
+          "est_cost": 1.0
+        },
+        "√~X~~": {
+          "should_guess": "WELCH",
+          "est_cost": 1.0
+        },
+        "XXX~√": {
+          "should_guess": "DELVE",
+          "est_cost": 1.5,
+          "next": {
+            "X√~X√": {
+              "should_guess": "LEMME",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX~~~": {
+          "should_guess": "LEMON",
+          "est_cost": 1.0
+        },
+        "XXX√~": {
+          "should_guess": "JELLY",
+          "est_cost": 1.0
+        },
+        "XXX√√": {
+          "should_guess": "BELLE",
+          "est_cost": 1.0
+        },
+        "√XXX√": {
+          "should_guess": "WEDGE",
+          "est_cost": 1.0
+        },
+        "XX~X~": {
+          "should_guess": "VENOM",
+          "est_cost": 1.0
+        },
+        "X~XX~": {
+          "should_guess": "BEECH",
+          "est_cost": 1.0
+        },
+        "XXXX~": {
+          "should_guess": "DEIGN",
+          "est_cost": 1.0
+        },
+        "~XX√~": {
+          "should_guess": "NEWLY",
+          "est_cost": 1.0
+        },
+        "X~XX√": {
+          "should_guess": "HENCE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~√√X~": {
+      "should_guess": "TRULY",
+      "est_cost": 2.0,
+      "next": {
+        "~XXXX": {
+          "should_guess": "FEAST",
+          "est_cost": 1.0
+        },
+        "~XXX~": {
+          "should_guess": "YEAST",
+          "est_cost": 1.0
+        },
+        "~XX~X": {
+          "should_guess": "LEAST",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~X~XX": {
+      "should_guess": "LOGIN",
+      "est_cost": 2.0,
+      "next": {
+        "X√~XX": {
+          "should_guess": "GOTTA",
+          "est_cost": 1.0
+        },
+        "XXX~X": {
+          "should_guess": "AMITY",
+          "est_cost": 1.0
+        },
+        "X~XXX": {
+          "should_guess": "ABOUT",
+          "est_cost": 1.0
+        },
+        "~~~XX": {
+          "should_guess": "GLOAT",
+          "est_cost": 1.0
+        },
+        "XXX~~": {
+          "should_guess": "PAINT",
+          "est_cost": 1.0
+        },
+        "~XX~X": {
+          "should_guess": "VITAL",
+          "est_cost": 1.0
+        },
+        "~XXXX": {
+          "should_guess": "FATAL",
+          "est_cost": 1.0
+        },
+        "XXX√X": {
+          "should_guess": "HABIT",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~XX√X": {
+      "should_guess": "FLIRT",
+      "est_cost": 1.0
+    },
+    "~~√X~": {
+      "should_guess": "LOGIN",
+      "est_cost": 2.25,
+      "next": {
+        "XXXXX": {
+          "should_guess": "STAVE",
+          "est_cost": 1.5,
+          "next": {
+            "√√√X√": {
+              "should_guess": "STAKE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX~XX": {
+          "should_guess": "STAGE",
+          "est_cost": 1.0
+        },
+        "~XXXX": {
+          "should_guess": "STALE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√XX√X": {
+      "should_guess": "THORN",
+      "est_cost": 1.0
+    },
+    "~XX~X": {
+      "should_guess": "BURNT",
+      "est_cost": 1.8333333333333333,
+      "next": {
+        "XX~√√": {
+          "should_guess": "PRINT",
+          "est_cost": 1.0
+        },
+        "XX√X~": {
+          "should_guess": "FORTH",
+          "est_cost": 1.0
+        },
+        "√~~√√": {
+          "should_guess": "BRUNT",
+          "est_cost": 1.0
+        },
+        "~X~X√": {
+          "should_guess": "ORBIT",
+          "est_cost": 1.0
+        },
+        "XX~X√": {
+          "should_guess": "DRIFT",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√X~~": {
+      "should_guess": "VERSE",
+      "est_cost": 1.0
+    },
+    "√~X~X": {
+      "should_guess": "THROE",
+      "est_cost": 1.5,
+      "next": {
+        "√X~X~": {
+          "should_guess": "TREND",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~XXX~": {
+      "should_guess": "STONY",
+      "est_cost": 2.0833333333333335,
+      "next": {
+        "√√X√X": {
+          "should_guess": "STUNT",
+          "est_cost": 1.5,
+          "next": {
+            "√√X√X": {
+              "should_guess": "STINK",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√~XXX": {
+          "should_guess": "SMITH",
+          "est_cost": 1.0
+        },
+        "~~XX√": {
+          "should_guess": "MUSTY",
+          "est_cost": 1.5,
+          "next": {
+            "X√√√√": {
+              "should_guess": "DUSTY",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√~√XX": {
+          "should_guess": "SLOTH",
+          "est_cost": 1.0
+        },
+        "√√XXX": {
+          "should_guess": "STUMP",
+          "est_cost": 1.0
+        },
+        "~~~XX": {
+          "should_guess": "FOIST",
+          "est_cost": 1.0
+        },
+        "~~XXX": {
+          "should_guess": "WHIST",
+          "est_cost": 1.0
+        },
+        "√~XX√": {
+          "should_guess": "SIXTY",
+          "est_cost": 1.0
+        },
+        "√√√XX": {
+          "should_guess": "STOOL",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X~√√~": {
+      "should_guess": "SPARE",
+      "est_cost": 1.0
+    },
+    "X~√X~": {
+      "should_guess": "SHAVE",
+      "est_cost": 1.8,
+      "next": {
+        "√X√X√": {
+          "should_guess": "SPADE",
+          "est_cost": 1.0
+        },
+        "√X√√√": {
+          "should_guess": "SUAVE",
+          "est_cost": 1.0
+        },
+        "~√√X√": {
+          "should_guess": "PHASE",
+          "est_cost": 1.0
+        },
+        "√√√X√": {
+          "should_guess": "SHALE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√√X~": {
+      "should_guess": "LEASH",
+      "est_cost": 1.5,
+      "next": {
+        "√√√√X": {
+          "should_guess": "LEASE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√XXXX": {
+      "should_guess": "THONG",
+      "est_cost": 1.5,
+      "next": {
+        "√X~XX": {
+          "should_guess": "TOXIC",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XXX~√": {
+      "should_guess": "FORDS",
+      "est_cost": 2.1538461538461537,
+      "next": {
+        "√X√X√": {
+          "should_guess": "FIRMS",
+          "est_cost": 1.0
+        },
+        "X√√X√": {
+          "should_guess": "HORNS",
+          "est_cost": 1.0
+        },
+        "~X~X√": {
+          "should_guess": "RUFFS",
+          "est_cost": 1.0
+        },
+        "XX√X√": {
+          "should_guess": "VIRUS",
+          "est_cost": 1.5,
+          "next": {
+            "XX√~√": {
+              "should_guess": "LURKS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√~X√": {
+          "should_guess": "ROOKS",
+          "est_cost": 1.0
+        },
+        "XX√√√": {
+          "should_guess": "CURDS",
+          "est_cost": 1.0
+        },
+        "X√√√√": {
+          "should_guess": "WORDS",
+          "est_cost": 1.0
+        },
+        "X~~X√": {
+          "should_guess": "CROSS",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X√√X√": {
+              "should_guess": "IRONS",
+              "est_cost": 1.0
+            },
+            "√√√X√": {
+              "should_guess": "CROPS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX~X√": {
+          "should_guess": "RUNGS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√X~X": {
+      "should_guess": "REEDY",
+      "est_cost": 2.0,
+      "next": {
+        "~√~XX": {
+          "should_guess": "MERGE",
+          "est_cost": 1.5,
+          "next": {
+            "X√√X√": {
+              "should_guess": "VERVE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~√X~√": {
+          "should_guess": "DERBY",
+          "est_cost": 1.0
+        },
+        "~√XXX": {
+          "should_guess": "PERIL",
+          "est_cost": 1.0
+        },
+        "√√√XX": {
+          "should_guess": "REEVE",
+          "est_cost": 1.0
+        },
+        "√√~XX": {
+          "should_guess": "REFER",
+          "est_cost": 1.0
+        },
+        "~√XX~": {
+          "should_guess": "BERYL",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√X√XX": {
+      "should_guess": "THANK",
+      "est_cost": 1.5,
+      "next": {
+        "√X√√X": {
+          "should_guess": "TWANG",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√√~√": {
+      "should_guess": "REAPS",
+      "est_cost": 1.0
+    },
+    "~~XX~": {
+      "should_guess": "SLEPT",
+      "est_cost": 1.8333333333333333,
+      "next": {
+        "√X~~~": {
+          "should_guess": "SPITE",
+          "est_cost": 1.0
+        },
+        "√~√X~": {
+          "should_guess": "STEEL",
+          "est_cost": 1.0
+        },
+        "~~~X√": {
+          "should_guess": "ISLET",
+          "est_cost": 1.0
+        },
+        "√X√X~": {
+          "should_guess": "STEED",
+          "est_cost": 1.0
+        },
+        "~√√X√": {
+          "should_guess": "BLEST",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√X~√": {
+      "should_guess": "SLANG",
+      "est_cost": 2.0,
+      "next": {
+        "√XXXX": {
+          "should_guess": "SERFS",
+          "est_cost": 1.0
+        },
+        "~XX√X": {
+          "should_guess": "REINS",
+          "est_cost": 1.0
+        },
+        "~XXX~": {
+          "should_guess": "BERGS",
+          "est_cost": 1.0
+        },
+        "~XXXX": {
+          "should_guess": "JERKS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X~~XX": {
+      "should_guess": "WIDEN",
+      "est_cost": 2.4375,
+      "next": {
+        "XXX√√": {
+          "should_guess": "HAVEN",
+          "est_cost": 1.0
+        },
+        "XX√~X": {
+          "should_guess": "BADGE",
+          "est_cost": 1.0
+        },
+        "XX~√X": {
+          "should_guess": "LICKS",
+          "est_cost": 2.0,
+          "next": {
+            "XX~XX": {
+              "should_guess": "CAVED",
+              "est_cost": 1.0
+            },
+            "XX~~X": {
+              "should_guess": "CAKED",
+              "est_cost": 1.0
+            },
+            "XX√XX": {
+              "should_guess": "FACED",
+              "est_cost": 1.0
+            },
+            "XXX~X": {
+              "should_guess": "BAKED",
+              "est_cost": 1.0
+            },
+            "XXXXX": {
+              "should_guess": "GAPED",
+              "est_cost": 1.0
+            },
+            "~XXXX": {
+              "should_guess": "PALED",
+              "est_cost": 1.0
+            },
+            "√X√XX": {
+              "should_guess": "LACED",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XXX√~": {
+          "should_guess": "PANEL",
+          "est_cost": 1.0
+        },
+        "XX~~X": {
+          "should_guess": "PLEAD",
+          "est_cost": 1.0
+        },
+        "X~X~X": {
+          "should_guess": "ALIVE",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "√~√X√": {
+              "should_guess": "AGILE",
+              "est_cost": 1.0
+            },
+            "~X√X√": {
+              "should_guess": "MAIZE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√~X~X": {
+          "should_guess": "WAIVE",
+          "est_cost": 1.0
+        },
+        "X~X~~": {
+          "should_guess": "NAIVE",
+          "est_cost": 1.0
+        },
+        "XXX~√": {
+          "should_guess": "GLEAN",
+          "est_cost": 1.0
+        },
+        "XX√√X": {
+          "should_guess": "JADED",
+          "est_cost": 1.0
+        },
+        "√XX√√": {
+          "should_guess": "WAXEN",
+          "est_cost": 1.0
+        },
+        "XX~~~": {
+          "should_guess": "DANCE",
+          "est_cost": 1.0
+        },
+        "XXX~X": {
+          "should_guess": "VALVE",
+          "est_cost": 1.8,
+          "next": {
+            "X√XX√": {
+              "should_guess": "GAUGE",
+              "est_cost": 1.0
+            },
+            "√√√X√": {
+              "should_guess": "VALUE",
+              "est_cost": 1.0
+            },
+            "X√~X√": {
+              "should_guess": "MAPLE",
+              "est_cost": 1.0
+            },
+            "X~~X√": {
+              "should_guess": "APPLE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√X√√X": {
+          "should_guess": "WADED",
+          "est_cost": 1.0
+        },
+        "X√~√X": {
+          "should_guess": "AIMED",
+          "est_cost": 1.0
+        },
+        "XXX√X": {
+          "should_guess": "LAPEL",
+          "est_cost": 1.5,
+          "next": {
+            "X√X√√": {
+              "should_guess": "HAZEL",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~X~√X": {
+          "should_guess": "PAWED",
+          "est_cost": 1.0
+        },
+        "XXX~~": {
+          "should_guess": "ALONE",
+          "est_cost": 1.0
+        },
+        "√X~√X": {
+          "should_guess": "WAXED",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~XX~√": {
+      "should_guess": "ROOTS",
+      "est_cost": 1.75,
+      "next": {
+        "~XX√√": {
+          "should_guess": "HURTS",
+          "est_cost": 1.0
+        },
+        "~√X√√": {
+          "should_guess": "PORTS",
+          "est_cost": 1.0
+        },
+        "√X√√√": {
+          "should_guess": "RIOTS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√√XX~": {
+      "should_guess": "TENSE",
+      "est_cost": 1.0
+    },
+    "X√√√√": {
+      "should_guess": "WEARS",
+      "est_cost": 1.5,
+      "next": {
+        "X√√√√": {
+          "should_guess": "FEARS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~X~X~": {
+      "should_guess": "SAITH",
+      "est_cost": 1.6666666666666667,
+      "next": {
+        "~~~√X": {
+          "should_guess": "VISTA",
+          "est_cost": 1.0
+        },
+        "~√X√~": {
+          "should_guess": "HASTY",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√XX√": {
+      "should_guess": "KNELL",
+      "est_cost": 2.2727272727272725,
+      "next": {
+        "X~~XX": {
+          "should_guess": "VEINS",
+          "est_cost": 1.5,
+          "next": {
+            "X√X~√": {
+              "should_guess": "MENDS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~X√~X": {
+          "should_guess": "LEEKS",
+          "est_cost": 1.0
+        },
+        "~~~XX": {
+          "should_guess": "NECKS",
+          "est_cost": 1.0
+        },
+        "XX~~X": {
+          "should_guess": "HELMS",
+          "est_cost": 1.0
+        },
+        "XX~XX": {
+          "should_guess": "FEUDS",
+          "est_cost": 1.0
+        },
+        "XX~√~": {
+          "should_guess": "FELLS",
+          "est_cost": 1.0
+        },
+        "XX√√X": {
+          "should_guess": "HEELS",
+          "est_cost": 1.0
+        },
+        "XX√XX": {
+          "should_guess": "PEEPS",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X√√X√": {
+              "should_guess": "DEEMS",
+              "est_cost": 1.0
+            },
+            "X√√√√": {
+              "should_guess": "WEEPS",
+              "est_cost": 1.0
+            }
+          }
+        }
+      }
+    },
+    "~√XX√": {
+      "should_guess": "DEBTS",
+      "est_cost": 1.6666666666666667,
+      "next": {
+        "√√X√√": {
+          "should_guess": "DENTS",
+          "est_cost": 1.0
+        },
+        "X√X~√": {
+          "should_guess": "FETUS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XXX~X": {
+      "should_guess": "LOGIN",
+      "est_cost": 2.1333333333333333,
+      "next": {
+        "~~XXX": {
+          "should_guess": "PROWL",
+          "est_cost": 1.0
+        },
+        "~X~~X": {
+          "should_guess": "GRILL",
+          "est_cost": 1.0
+        },
+        "~XXXX": {
+          "should_guess": "CURLY",
+          "est_cost": 1.5,
+          "next": {
+            "XX~√√": {
+              "should_guess": "DRYLY",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√XXX": {
+          "should_guess": "PORCH",
+          "est_cost": 1.0
+        },
+        "X~XXX": {
+          "should_guess": "DROOP",
+          "est_cost": 1.5,
+          "next": {
+            "~√√X~": {
+              "should_guess": "PROUD",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XXX~~": {
+          "should_guess": "BRINY",
+          "est_cost": 1.0
+        },
+        "X~X√X": {
+          "should_guess": "CHOIR",
+          "est_cost": 1.0
+        },
+        "X~X~X": {
+          "should_guess": "PRIOR",
+          "est_cost": 1.0
+        },
+        "XXX~X": {
+          "should_guess": "CRICK",
+          "est_cost": 1.0
+        },
+        "XXXX~": {
+          "should_guess": "DRUNK",
+          "est_cost": 1.0
+        },
+        "XX~~~": {
+          "should_guess": "BRING",
+          "est_cost": 1.0
+        },
+        "√XXXX": {
+          "should_guess": "LURCH",
+          "est_cost": 1.0
+        },
+        "XX~XX": {
+          "should_guess": "GRUFF",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~X~~~": {
+      "should_guess": "STRAP",
+      "est_cost": 1.0
+    },
+    "~~X√X": {
+      "should_guess": "EXERT",
+      "est_cost": 1.0
+    },
+    "~X~~√": {
+      "should_guess": "DARTS",
+      "est_cost": 1.0
+    },
+    "XX√X√": {
+      "should_guess": "SLAPS",
+      "est_cost": 1.8,
+      "next": {
+        "√X√~√": {
+          "should_guess": "SPANS",
+          "est_cost": 1.0
+        },
+        "X~√X√": {
+          "should_guess": "GOALS",
+          "est_cost": 1.0
+        },
+        "X√√~√": {
+          "should_guess": "PLAYS",
+          "est_cost": 1.0
+        },
+        "√X√X√": {
+          "should_guess": "SWAYS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X~~√X": {
+      "should_guess": "AFIRE",
+      "est_cost": 1.0
+    },
+    "~√XXX": {
+      "should_guess": "PETTY",
+      "est_cost": 1.6666666666666667,
+      "next": {
+        "X√√XX": {
+          "should_guess": "FETCH",
+          "est_cost": 1.0
+        },
+        "X√√√√": {
+          "should_guess": "JETTY",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX~X~": {
+      "should_guess": "BASAL",
+      "est_cost": 1.8888888888888888,
+      "next": {
+        "X√√XX": {
+          "should_guess": "MASON",
+          "est_cost": 1.0
+        },
+        "X√~X~": {
+          "should_guess": "SALON",
+          "est_cost": 1.0
+        },
+        "X~√√X": {
+          "should_guess": "ASSAY",
+          "est_cost": 1.0
+        },
+        "X√~~~": {
+          "should_guess": "SALSA",
+          "est_cost": 1.0
+        },
+        "X√√√√": {
+          "should_guess": "NASAL",
+          "est_cost": 1.0
+        },
+        "X√~√~": {
+          "should_guess": "SALAD",
+          "est_cost": 1.0
+        },
+        "XX~√X": {
+          "should_guess": "PSHAW",
+          "est_cost": 1.0
+        },
+        "XX√√X": {
+          "should_guess": "UNSAY",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~~X√~": {
+      "should_guess": "STERN",
+      "est_cost": 1.0
+    },
+    "X~X~X": {
+      "should_guess": "PRIED",
+      "est_cost": 2.3076923076923075,
+      "next": {
+        "X√X√√": {
+          "should_guess": "URGED",
+          "est_cost": 1.5,
+          "next": {
+            "X√X√√": {
+              "should_guess": "CREED",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~X√~": {
+          "should_guess": "ODDER",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X√√√√": {
+              "should_guess": "UDDER",
+              "est_cost": 1.0
+            },
+            "√X√√√": {
+              "should_guess": "OLDER",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√√~X": {
+          "should_guess": "BRIBE",
+          "est_cost": 1.5,
+          "next": {
+            "√√√X√": {
+              "should_guess": "BRINE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~~~~": {
+          "should_guess": "DIRGE",
+          "est_cost": 1.0
+        },
+        "X√~√√": {
+          "should_guess": "IRKED",
+          "est_cost": 1.0
+        },
+        "√~X√X": {
+          "should_guess": "POKER",
+          "est_cost": 1.0
+        },
+        "√~~√X": {
+          "should_guess": "PIPER",
+          "est_cost": 1.0
+        },
+        "X~~√~": {
+          "should_guess": "CIDER",
+          "est_cost": 1.0
+        },
+        "X~X~X": {
+          "should_guess": "FORGE",
+          "est_cost": 1.75,
+          "next": {
+            "√X√X√": {
+              "should_guess": "FURZE",
+              "est_cost": 1.0
+            },
+            "XX~X√": {
+              "should_guess": "RHYME",
+              "est_cost": 1.0
+            },
+            "X√~√√": {
+              "should_guess": "ROUGE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~X√X": {
+          "should_guess": "COVER",
+          "est_cost": 1.5,
+          "next": {
+            "X√X√√": {
+              "should_guess": "JOKER",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√X√X": {
+          "should_guess": "GREEN",
+          "est_cost": 1.0
+        },
+        "X~√√X": {
+          "should_guess": "FLIER",
+          "est_cost": 1.0
+        },
+        "√√X~X": {
+          "should_guess": "PRUNE",
+          "est_cost": 1.0
+        },
+        "√√√~X": {
+          "should_guess": "PRIZE",
+          "est_cost": 1.0
+        },
+        "X~~√X": {
+          "should_guess": "FIXER",
+          "est_cost": 1.5,
+          "next": {
+            "X√X√~": {
+              "should_guess": "RIVEN",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√X~X": {
+          "should_guess": "BROKE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX~~√": {
+      "should_guess": "WARNS",
+      "est_cost": 2.0,
+      "next": {
+        "X~√X√": {
+          "should_guess": "AURAS",
+          "est_cost": 1.0
+        },
+        "√√√X√": {
+          "should_guess": "WARMS",
+          "est_cost": 1.0
+        },
+        "X√√X√": {
+          "should_guess": "BARKS",
+          "est_cost": 1.5,
+          "next": {
+            "√√√X√": {
+              "should_guess": "BARBS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√~X√": {
+          "should_guess": "RACKS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~~X~√": {
+      "should_guess": "RITES",
+      "est_cost": 1.0
+    },
+    "X~X~√": {
+      "should_guess": "CRUSH",
+      "est_cost": 2.142857142857143,
+      "next": {
+        "√√X~X": {
+          "should_guess": "CREWS",
+          "est_cost": 1.0
+        },
+        "X~~~X": {
+          "should_guess": "RUSES",
+          "est_cost": 1.5,
+          "next": {
+            "~√X√√": {
+              "should_guess": "LURES",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√√X√X": {
+          "should_guess": "CRESS",
+          "est_cost": 1.0
+        },
+        "X~X~~": {
+          "should_guess": "HIRES",
+          "est_cost": 1.0
+        },
+        "X~X~X": {
+          "should_guess": "FIRES",
+          "est_cost": 1.0
+        },
+        "√~X~X": {
+          "should_guess": "CORES",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~√X~√": {
+      "should_guess": "RENTS",
+      "est_cost": 1.5,
+      "next": {
+        "√√X√√": {
+          "should_guess": "RESTS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX√X~": {
+      "should_guess": "SNAIL",
+      "est_cost": 1.875,
+      "next": {
+        "√√√XX": {
+          "should_guess": "SNAKY",
+          "est_cost": 1.0
+        },
+        "~X√~X": {
+          "should_guess": "QUASI",
+          "est_cost": 1.0
+        },
+        "√~√X~": {
+          "should_guess": "SLANG",
+          "est_cost": 1.0
+        },
+        "√X√X√": {
+          "should_guess": "SMALL",
+          "est_cost": 1.0
+        },
+        "√X√XX": {
+          "should_guess": "SWAMP",
+          "est_cost": 1.0
+        },
+        "~X√X~": {
+          "should_guess": "CLASH",
+          "est_cost": 1.0
+        },
+        "√~√XX": {
+          "should_guess": "SPAWN",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX√√X": {
+      "should_guess": "SWORD",
+      "est_cost": 2.0,
+      "next": {
+        "XXX√~": {
+          "should_guess": "DIARY",
+          "est_cost": 1.0
+        },
+        "XXX√X": {
+          "should_guess": "CHARY",
+          "est_cost": 1.0
+        },
+        "XX~√√": {
+          "should_guess": "BOARD",
+          "est_cost": 1.0
+        },
+        "X√X√√": {
+          "should_guess": "AWARD",
+          "est_cost": 1.0
+        },
+        "XXX√√": {
+          "should_guess": "GUARD",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√~~X": {
+      "should_guess": "FERAL",
+      "est_cost": 1.0
+    },
+    "√X√~X": {
+      "should_guess": "TRAMP",
+      "est_cost": 1.0
+    },
+    "X~√~X": {
+      "should_guess": "CRAZE",
+      "est_cost": 1.6666666666666667,
+      "next": {
+        "~√√X√": {
+          "should_guess": "GRACE",
+          "est_cost": 1.0
+        },
+        "X√√X√": {
+          "should_guess": "DRAKE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX~X√": {
+      "should_guess": "CLIPS",
+      "est_cost": 2.25,
+      "next": {
+        "XXXX√": {
+          "should_guess": "HANDS",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X√√X√": {
+              "should_guess": "GANGS",
+              "est_cost": 1.0
+            },
+            "X√√√√": {
+              "should_guess": "SANDS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~√X√": {
+          "should_guess": "JAILS",
+          "est_cost": 1.0
+        },
+        "√~XX√": {
+          "should_guess": "CALLS",
+          "est_cost": 1.0
+        },
+        "~XXX√": {
+          "should_guess": "HACKS",
+          "est_cost": 1.0
+        },
+        "XX~X√": {
+          "should_guess": "BASIS",
+          "est_cost": 1.5,
+          "next": {
+            "X√√√√": {
+              "should_guess": "OASIS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XXX√√": {
+          "should_guess": "DAMPS",
+          "est_cost": 1.0
+        },
+        "~~XX√": {
+          "should_guess": "LACKS",
+          "est_cost": 1.0
+        },
+        "~XX~√": {
+          "should_guess": "PACKS",
+          "est_cost": 1.0
+        },
+        "X~XX√": {
+          "should_guess": "HALLS",
+          "est_cost": 1.0
+        },
+        "XX√X√": {
+          "should_guess": "GAINS",
+          "est_cost": 1.0
+        },
+        "XXX~√": {
+          "should_guess": "PANGS",
+          "est_cost": 1.5,
+          "next": {
+            "√√XX√": {
+              "should_guess": "PAPAS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~X√X√": {
+          "should_guess": "ACIDS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~X√X√": {
+      "should_guess": "MOATS",
+      "est_cost": 1.5,
+      "next": {
+        "XX√√√": {
+          "should_guess": "SLATS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~~~√X": {
+      "should_guess": "AVERT",
+      "est_cost": 1.0
+    },
+    "√~XX√": {
+      "should_guess": "PITCH",
+      "est_cost": 2.0,
+      "next": {
+        "X√~XX": {
+          "should_guess": "TILES",
+          "est_cost": 1.0
+        },
+        "XX~XX": {
+          "should_guess": "TOMES",
+          "est_cost": 1.0
+        },
+        "~X~XX": {
+          "should_guess": "TYPES",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X~X√~": {
+      "should_guess": "SNORE",
+      "est_cost": 1.0
+    },
+    "~XX√√": {
+      "should_guess": "STIRS",
+      "est_cost": 1.0
+    },
+    "X√X√X": {
+      "should_guess": "MERRY",
+      "est_cost": 1.0
+    },
+    "√X~~X": {
+      "should_guess": "TARDY",
+      "est_cost": 1.0
+    },
+    "X~XXX": {
+      "should_guess": "OILED",
+      "est_cost": 2.3333333333333335,
+      "next": {
+        "XXX√√": {
+          "should_guess": "ENDED",
+          "est_cost": 1.5,
+          "next": {
+            "√X~√√": {
+              "should_guess": "EDGED",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX~√√": {
+          "should_guess": "BLEED",
+          "est_cost": 1.0
+        },
+        "XX~√X": {
+          "should_guess": "EXPEL",
+          "est_cost": 1.0
+        },
+        "√~X~~": {
+          "should_guess": "OXIDE",
+          "est_cost": 1.0
+        },
+        "XX~~X": {
+          "should_guess": "KNELL",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "XX√~X": {
+              "should_guess": "ELEGY",
+              "est_cost": 1.0
+            },
+            "~X√~X": {
+              "should_guess": "FLECK",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~XX√√": {
+          "should_guess": "BONED",
+          "est_cost": 1.5,
+          "next": {
+            "X√X√√": {
+              "should_guess": "DOMED",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~X~~": {
+          "should_guess": "CHIDE",
+          "est_cost": 1.0
+        },
+        "XXX√X": {
+          "should_guess": "QUEEN",
+          "est_cost": 1.0
+        },
+        "~~~~X": {
+          "should_guess": "VOILE",
+          "est_cost": 1.0
+        },
+        "~XX~X": {
+          "should_guess": "EPOCH",
+          "est_cost": 1.0
+        },
+        "√XX√√": {
+          "should_guess": "OOZED",
+          "est_cost": 1.0
+        },
+        "XXX~X": {
+          "should_guess": "ENEMY",
+          "est_cost": 1.5,
+          "next": {
+            "XX√XX": {
+              "should_guess": "CHECK",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~√√√": {
+          "should_guess": "IDLED",
+          "est_cost": 1.0
+        },
+        "XXX~~": {
+          "should_guess": "UNDUE",
+          "est_cost": 1.5,
+          "next": {
+            "~X√X√": {
+              "should_guess": "BUDGE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~X~√X": {
+          "should_guess": "NOVEL",
+          "est_cost": 1.0
+        },
+        "X√X√~": {
+          "should_guess": "WIDEN",
+          "est_cost": 1.0
+        },
+        "X√X~X": {
+          "should_guess": "PIECE",
+          "est_cost": 1.5,
+          "next": {
+            "X√X~√": {
+              "should_guess": "FICHE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√~√√": {
+          "should_guess": "LIKED",
+          "est_cost": 1.0
+        },
+        "X~X√~": {
+          "should_guess": "INDEX",
+          "est_cost": 1.0
+        },
+        "~X~~X": {
+          "should_guess": "CLOVE",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X√√X√": {
+              "should_guess": "ELOPE",
+              "est_cost": 1.0
+            },
+            "X~√X√": {
+              "should_guess": "WHOLE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~X~X": {
+          "should_guess": "KNIFE",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "XX~X~": {
+              "should_guess": "EQUIP",
+              "est_cost": 1.0
+            },
+            "X~√X√": {
+              "should_guess": "WHINE",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X√X√√": {
+          "should_guess": "DINED",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X√X√√": {
+              "should_guess": "BIPED",
+              "est_cost": 1.0
+            },
+            "X√√√√": {
+              "should_guess": "MINED",
+              "est_cost": 1.0
+            }
+          }
+        }
+      }
+    },
+    "X~~~√": {
+      "should_guess": "RAKES",
+      "est_cost": 1.75,
+      "next": {
+        "√√X√√": {
+          "should_guess": "RACES",
+          "est_cost": 1.0
+        },
+        "~√X~√": {
+          "should_guess": "EARLS",
+          "est_cost": 1.0
+        },
+        "~√X√√": {
+          "should_guess": "HARES",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√XXX~": {
+      "should_guess": "TWIST",
+      "est_cost": 1.0
+    },
+    "X~~X√": {
+      "should_guess": "VENAL",
+      "est_cost": 2.4615384615384617,
+      "next": {
+        "√~X~~": {
+          "should_guess": "VALES",
+          "est_cost": 1.0
+        },
+        "√~X~X": {
+          "should_guess": "VASES",
+          "est_cost": 1.0
+        },
+        "X~√~X": {
+          "should_guess": "PITCH",
+          "est_cost": 2.0,
+          "next": {
+            "XXX~X": {
+              "should_guess": "CANES",
+              "est_cost": 1.0
+            },
+            "√XXXX": {
+              "should_guess": "PANES",
+              "est_cost": 1.0
+            },
+            "XXXXX": {
+              "should_guess": "WANES",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√~√~X": {
+          "should_guess": "VANES",
+          "est_cost": 1.0
+        },
+        "~~X~X": {
+          "should_guess": "CAVES",
+          "est_cost": 1.5,
+          "next": {
+            "X√√√√": {
+              "should_guess": "WAVES",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~X~X": {
+          "should_guess": "MAKES",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "~√X√√": {
+              "should_guess": "GAMES",
+              "est_cost": 1.0
+            },
+            "√√X√√": {
+              "should_guess": "MAZES",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~X~~": {
+          "should_guess": "ALOES",
+          "est_cost": 1.0
+        },
+        "X~X√X": {
+          "should_guess": "IDEAS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√√XXX": {
+      "should_guess": "TEMPO",
+      "est_cost": 1.0
+    },
+    "~X√X~": {
+      "should_guess": "SLANT",
+      "est_cost": 1.8,
+      "next": {
+        "√~√X~": {
+          "should_guess": "STALK",
+          "est_cost": 1.0
+        },
+        "√X√~~": {
+          "should_guess": "STAIN",
+          "est_cost": 1.0
+        },
+        "√X√X√": {
+          "should_guess": "SHAFT",
+          "est_cost": 1.0
+        },
+        "√X√X~": {
+          "should_guess": "STAFF",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XXX√√": {
+      "should_guess": "FOURS",
+      "est_cost": 2.0,
+      "next": {
+        "X√√√√": {
+          "should_guess": "POURS",
+          "est_cost": 1.5,
+          "next": {
+            "X√√√√": {
+              "should_guess": "YOURS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX~√√": {
+          "should_guess": "BURRS",
+          "est_cost": 1.0
+        },
+        "X√X√√": {
+          "should_guess": "MOORS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~X~√X": {
+      "should_guess": "ULTRA",
+      "est_cost": 1.0
+    },
+    "√~XXX": {
+      "should_guess": "TULLE",
+      "est_cost": 2.0,
+      "next": {
+        "√XXX√": {
+          "should_guess": "THEME",
+          "est_cost": 1.0
+        },
+        "√X√X√": {
+          "should_guess": "TILDE",
+          "est_cost": 1.0
+        },
+        "√XXX~": {
+          "should_guess": "TWEED",
+          "est_cost": 1.5,
+          "next": {
+            "√~X√√": {
+              "should_guess": "TOWED",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√XX√√": {
+          "should_guess": "TITLE",
+          "est_cost": 1.0
+        },
+        "√X√X~": {
+          "should_guess": "TILED",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√X~X√": {
+      "should_guess": "TALKS",
+      "est_cost": 1.0
+    },
+    "X√~XX": {
+      "should_guess": "VENAL",
+      "est_cost": 1.6666666666666667,
+      "next": {
+        "X√X√√": {
+          "should_guess": "MEDAL",
+          "est_cost": 1.0
+        },
+        "X√~√X": {
+          "should_guess": "BEGAN",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XX√√~": {
+      "should_guess": "SHARK",
+      "est_cost": 1.5,
+      "next": {
+        "√X√√X": {
+          "should_guess": "SNARL",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "√√XX√": {
+      "should_guess": "TENDS",
+      "est_cost": 1.5,
+      "next": {
+        "√√XX√": {
+          "should_guess": "TESTS",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "XXX√X": {
+      "should_guess": "HURRY",
+      "est_cost": 1.8333333333333333,
+      "next": {
+        "X√√√√": {
+          "should_guess": "CURRY",
+          "est_cost": 1.0
+        },
+        "~X√√~": {
+          "should_guess": "MYRRH",
+          "est_cost": 1.0
+        },
+        "~XX√X": {
+          "should_guess": "CHIRP",
+          "est_cost": 1.0
+        },
+        "XXX√√": {
+          "should_guess": "DOWRY",
+          "est_cost": 1.0
+        },
+        "XXX√X": {
+          "should_guess": "FJORD",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "~~√XX": {
+      "should_guess": "PLATE",
+      "est_cost": 1.6666666666666667,
+      "next": {
+        "XX√√√": {
+          "should_guess": "AGATE",
+          "est_cost": 1.0
+        },
+        "X√√√√": {
+          "should_guess": "ELATE",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X~~X~": {
+      "should_guess": "CASED",
+      "est_cost": 2.0,
+      "next": {
+        "X√√√√": {
+          "should_guess": "BASED",
+          "est_cost": 1.5,
+          "next": {
+            "X√√√√": {
+              "should_guess": "EASED",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "X~~√X": {
+          "should_guess": "ASHEN",
+          "est_cost": 1.0
+        },
+        "X~~~X": {
+          "should_guess": "AMUSE",
+          "est_cost": 1.0
+        },
+        "X√~√√": {
+          "should_guess": "SAVED",
+          "est_cost": 1.0
+        },
+        "X√~~X": {
+          "should_guess": "SALVE",
+          "est_cost": 1.0
+        }
+      }
+    }
+  }
+}

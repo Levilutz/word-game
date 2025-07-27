@@ -1,184 +1,228 @@
 {
-  "should_enter": "ONE",
+  "should_guess": "AND",
+  "est_cost": 3.04,
   "next": {
+    "√√X": {
+      "should_guess": "ANY",
+      "est_cost": 1.0
+    },
+    "√X√": {
+      "should_guess": "ADD",
+      "est_cost": 1.0
+    },
     "~XX": {
-      "should_enter": "TWO",
+      "should_guess": "WAS",
+      "est_cost": 2.142857142857143,
       "next": {
-        "X~√": {
-          "should_enter": "WHO"
-        },
-        "√X~": {
-          "should_enter": "TOP"
-        },
-        "XX~": {
-          "should_enter": "FOR",
-          "next": {
-            "X√X": {
-              "should_enter": "YOU"
-            }
-          }
-        },
-        "X~~": {
-          "should_enter": "HOW"
-        }
-      }
-    },
-    "X√~": {
-      "should_enter": "END"
-    },
-    "XX~": {
-      "should_enter": "SET",
-      "next": {
-        "√√X": {
-          "should_enter": "SEX"
-        },
         "X√X": {
-          "should_enter": "HER",
+          "should_guess": "MAY",
+          "est_cost": 1.6666666666666667,
           "next": {
-            "X√√": {
-              "should_enter": "PER"
+            "√√X": {
+              "should_guess": "MAP",
+              "est_cost": 1.0
             },
             "X√X": {
-              "should_enter": "WEB"
+              "should_guess": "CAR",
+              "est_cost": 1.0
             }
           }
         },
         "X√√": {
-          "should_enter": "GET"
+          "should_guess": "HAS",
+          "est_cost": 1.0
+        },
+        "~√X": {
+          "should_guess": "LAW",
+          "est_cost": 1.0
+        },
+        "√√X": {
+          "should_guess": "WAY",
+          "est_cost": 1.0
         }
       }
     },
     "~~X": {
-      "should_enter": "NOT",
-      "next": {
-        "√√X": {
-          "should_enter": "NOW"
-        }
-      }
-    },
-    "X~X": {
-      "should_enter": "CAN",
+      "should_guess": "JAN",
+      "est_cost": 1.5,
       "next": {
         "X√√": {
-          "should_enter": "JAN"
+          "should_guess": "CAN",
+          "est_cost": 1.0
         }
       }
+    },
+    "~X√": {
+      "should_guess": "HAD",
+      "est_cost": 1.0
     },
     "√XX": {
-      "should_enter": "OUR",
+      "should_guess": "ARE",
+      "est_cost": 1.6666666666666667,
       "next": {
         "√√X": {
-          "should_enter": "OUT"
+          "should_guess": "ART",
+          "est_cost": 1.0
         },
         "√XX": {
-          "should_enter": "OFF"
+          "should_guess": "ALL",
+          "est_cost": 1.0
         }
       }
     },
-    "XXX": {
-      "should_enter": "HAD",
+    "~X~": {
+      "should_guess": "DAY",
+      "est_cost": 1.0
+    },
+    "X√X": {
+      "should_guess": "ONE",
+      "est_cost": 1.0
+    },
+    "X~X": {
+      "should_guess": "NOT",
+      "est_cost": 1.75,
       "next": {
-        "√√X": {
-          "should_enter": "HAS"
-        },
-        "XX√": {
-          "should_enter": "DID",
-          "next": {
-            "√X√": {
-              "should_enter": "DVD"
-            }
-          }
+        "~~X": {
+          "should_guess": "OWN",
+          "est_cost": 1.0
         },
         "√XX": {
-          "should_enter": "HIS",
+          "should_guess": "NEW",
+          "est_cost": 1.0
+        },
+        "√√X": {
+          "should_guess": "NOW",
+          "est_cost": 1.0
+        }
+      }
+    },
+    "X√√": {
+      "should_guess": "END",
+      "est_cost": 1.0
+    },
+    "XXX": {
+      "should_guess": "OUT",
+      "est_cost": 2.52,
+      "next": {
+        "~X~": {
+          "should_guess": "TWO",
+          "est_cost": 1.5,
           "next": {
-            "√√X": {
-              "should_enter": "HIM"
+            "√X~": {
+              "should_guess": "TOP",
+              "est_cost": 1.0
             }
           }
         },
-        "X~√": {
-          "should_enter": "ADD"
-        },
-        "X√~": {
-          "should_enter": "DAY"
-        },
-        "X√X": {
-          "should_enter": "WAY",
+        "XX√": {
+          "should_guess": "GET",
+          "est_cost": 1.5,
           "next": {
-            "~√X": {
-              "should_enter": "LAW"
+            "X√√": {
+              "should_guess": "SET",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "XX~": {
+          "should_guess": "THE",
+          "est_cost": 1.5,
+          "next": {
+            "~XX": {
+              "should_guess": "ITS",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "~~X": {
+          "should_guess": "YOU",
+          "est_cost": 1.0
+        },
+        "√XX": {
+          "should_guess": "OFF",
+          "est_cost": 1.0
+        },
+        "~XX": {
+          "should_guess": "FOR",
+          "est_cost": 1.6666666666666667,
+          "next": {
+            "X~X": {
+              "should_guess": "WHO",
+              "est_cost": 1.0
             },
             "X√X": {
-              "should_enter": "MAP",
+              "should_guess": "HOW",
+              "est_cost": 1.0
+            }
+          }
+        },
+        "√√X": {
+          "should_guess": "OUR",
+          "est_cost": 1.0
+        },
+        "X√√": {
+          "should_guess": "BUT",
+          "est_cost": 1.0
+        },
+        "XXX": {
+          "should_guess": "SHE",
+          "est_cost": 2.0,
+          "next": {
+            "XXX": {
+              "should_guess": "BIG",
+              "est_cost": 1.0
+            },
+            "~~X": {
+              "should_guess": "HIS",
+              "est_cost": 1.0
+            },
+            "√X√": {
+              "should_guess": "SEE",
+              "est_cost": 1.0
+            },
+            "X~X": {
+              "should_guess": "HIM",
+              "est_cost": 1.0
+            },
+            "√X~": {
+              "should_guess": "SEX",
+              "est_cost": 1.0
+            },
+            "XX~": {
+              "should_guess": "WEB",
+              "est_cost": 1.5,
               "next": {
                 "X√X": {
-                  "should_enter": "CAR"
+                  "should_guess": "PER",
+                  "est_cost": 1.0
                 }
               }
             },
-            "X√√": {
-              "should_enter": "MAY"
-            },
-            "√√X": {
-              "should_enter": "WAS"
+            "X~~": {
+              "should_guess": "HER",
+              "est_cost": 1.0
             }
           }
         },
         "X~X": {
-          "should_enter": "ALL",
-          "next": {
-            "√XX": {
-              "should_enter": "ART"
-            }
-          }
+          "should_guess": "USE",
+          "est_cost": 1.0
         },
-        "XXX": {
-          "should_enter": "BUT",
-          "next": {
-            "√√X": {
-              "should_enter": "BUY"
-            },
-            "XX~": {
-              "should_enter": "ITS"
-            },
-            "√XX": {
-              "should_enter": "BIG"
-            }
-          }
-        }
-      }
-    },
-    "√~X": {
-      "should_enter": "OWN"
-    },
-    "X√X": {
-      "should_enter": "AND",
-      "next": {
-        "√√X": {
-          "should_enter": "ANY"
+        "X√X": {
+          "should_guess": "BUY",
+          "est_cost": 1.0
         }
       }
     },
     "XX√": {
-      "should_enter": "SHE",
+      "should_guess": "DID",
+      "est_cost": 1.5,
       "next": {
-        "~X√": {
-          "should_enter": "USE"
-        },
-        "XX√": {
-          "should_enter": "ARE"
-        },
-        "X√√": {
-          "should_enter": "THE"
-        },
         "√X√": {
-          "should_enter": "SEE"
+          "should_guess": "DVD",
+          "est_cost": 1.0
         }
       }
-    },
-    "X~~": {
-      "should_enter": "NEW"
     }
   }
 }

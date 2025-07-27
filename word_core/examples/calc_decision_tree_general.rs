@@ -128,15 +128,15 @@ fn main() {
         &all_hints,
         (0..possible_answers.len() as u16).into_iter().collect(),
         0,
-        5,
-        2.90,
-        None::<&MyDebugPrinter>,
-        // Some(&MyDebugPrinter {
-        //     allowed_guesses: &allowed_guesses,
-        //     possible_answers: &possible_answers,
-        //     max_print_depth: None,
-        //     prefix: "".to_string(),
-        // }),
+        6,
+        3.0402,
+        // None::<&MyDebugPrinter>,
+        Some(&MyDebugPrinter {
+            allowed_guesses: &allowed_guesses,
+            possible_answers: &possible_answers,
+            max_print_depth: Some(0),
+            prefix: "".to_string(),
+        }),
     )
     .expect("failed to compute top-level result");
     let readable_decision_tree = ReadableTreeNode::from_generalized_tree_node(

@@ -175,6 +175,32 @@ pub fn compute_decision_tree_aggressive(
                     map
                 });
 
+        if let Some(printer) = printer {
+            let distribution: HashMap<usize, usize> =
+                answers_by_hint
+                    .iter()
+                    .fold(HashMap::new(), |mut map, (_, answers)| {
+                        *map.entry(answers.len()).or_insert(0) += 1;
+                        map
+                    });
+            let mode_val = *distribution.values().max().unwrap();
+            let max_key = *distribution.keys().max().unwrap();
+            let distribution_flat: Vec<usize> = (0..=max_key)
+                .map(|ind| distribution.get(&ind).cloned().unwrap_or(0))
+                .collect();
+            let heights = [" ", "⡀", "⣀", "⣄", "⣤", "⣦", "⣶", "⣷", "⣿"];
+            let distribution_fmt: Vec<&str> = distribution_flat
+                .into_iter()
+                .map(|n_hints| heights[(8 * n_hints + mode_val - 1) / mode_val])
+                .collect();
+            println!(
+                "{}distribution: {}<{}",
+                printer.get_prefix(),
+                distribution_fmt.join(""),
+                max_key
+            );
+        }
+
         let correct_hint_present = answers_by_hint.contains_key(&0);
 
         // Convert into list of tuples, ordered by number of answers descending

@@ -1,0 +1,483 @@
+ABOUT > distribution:  ⣿⣀⣀⣀⡀⡀⡀ ⡀⡀⡀⡀  ⣀   ⡀ ⡀          ⡀⡀⡀                           ⡀        ⡀<71
+ABOVE > distribution:  ⣿⣄⣄⡀⡀⡀⣀⡀⡀⡀  ⡀   ⡀     ⡀        ⡀   ⡀  ⡀     ⡀ ⡀⡀     ⡀<54
+ABUSE > distribution:  ⣿⣄⡀⡀⣀⣀ ⡀⡀⡀ ⡀⡀ ⡀⡀   ⡀       ⡀     ⡀             ⡀ ⡀  ⡀<53
+ACTOR > distribution:  ⣿⣦⡀⣀⣀⣀⡀  ⡀⡀  ⡀  ⡀ ⡀⡀⡀   ⡀ ⡀     ⡀     ⡀<39
+ADAPT > distribution:  ⣿⣀⣀ ⣀⡀⡀⡀ ⡀⡀⡀  ⡀ ⡀⡀         ⡀  ⡀ ⡀           ⡀           ⡀                                                              ⡀<120
+ADMIT > distribution:  ⣿⣦⣄⣀⡀⡀⡀⡀  ⡀⡀ ⡀⡀⡀⡀ ⡀   ⡀         ⡀⡀                             ⡀                       ⡀<88
+ADOPT > distribution:  ⣿⣤⣄⣀⣀  ⡀ ⡀⡀⡀⡀⡀ ⡀⡀     ⡀    ⡀   ⡀   ⡀                             ⡀ ⡀<68
+ADULT > distribution:  ⣿⣤⣦⣄⣤ ⡀ ⣀ ⡀  ⡀⡀  ⡀ ⡀  ⡀⡀ ⡀                 ⡀   ⡀                          ⡀<75
+AFTER > distribution:  ⣿⣄⣀⣀⡀⡀⡀⣀⡀  ⡀⡀ ⡀ ⡀⡀  ⣀        ⡀   ⡀            ⡀<47
+AGAIN > distribution:  ⣿⣄⣀⡀⣀⣀⡀ ⡀⡀⡀ ⡀ ⡀                      ⡀           ⡀       ⡀                                                               ⡀<122
+AGENT > distribution:  ⣿⣤⡀⣀⡀⣀⡀⣀⡀     ⡀⡀ ⡀   ⡀        ⡀  ⡀    ⡀⡀             ⡀<54
+AGREE > distribution:  ⣿⣤⣄⡀⣀⣀⡀⡀ ⡀⡀⡀⡀⡀  ⡀⡀        ⡀  ⡀  ⡀ ⡀  ⡀                        ⡀<63
+AHEAD > distribution:  ⣿⣀⡀⡀⣀⣀  ⡀⣀⡀⡀⡀⡀⡀               ⡀      ⡀       ⡀                 ⡀                 ⡀<82
+ALBUM > distribution:  ⣿⣀⣀⡀⣀⡀ ⡀⡀⡀⡀  ⡀   ⡀        ⡀    ⡀      ⡀                                        ⡀                                                     ⡀<134
+ALIVE > distribution:  ⣿⣤⣤⡀⣀⣀⡀⡀    ⡀⡀⡀⡀⡀   ⡀  ⡀⡀⡀           ⡀  ⡀                     ⡀<63
+ALLOW > distribution:  ⣿⣤⣀⣄⣀⣀ ⡀⡀⡀⡀⡀ ⡀  ⡀    ⡀   ⡀                                            ⡀                       ⡀              ⡀<110
+ALONE > distribution:  ⣿⣤⣀⣀⡀⣀⣀ ⣀⡀ ⡀⡀   ⡀    ⡀ ⡀⡀⡀    ⡀⡀⡀<33
+ALONG > distribution:  ⣿⣤⣄⣄⡀⡀⡀⡀⣀⡀⡀⡀⡀  ⡀       ⡀  ⡀ ⡀       ⡀                                   ⡀ ⡀<75
+ALTER > distribution:  ⣿⣤⣀⣀⡀⡀⡀⡀⣀ ⡀⡀  ⡀ ⡀⡀⡀⡀⡀  ⡀     ⡀   ⡀<34
+AMONG > distribution:  ⣿⣄⣄⣄ ⡀ ⡀ ⡀⣀⡀⡀  ⡀  ⡀          ⡀             ⡀                                                    ⡀<97
+ANGER > distribution:  ⣿⣦⣄⣀⡀⣀⡀  ⡀⡀ ⡀⡀  ⡀ ⡀    ⡀  ⡀       ⡀      ⡀  ⡀<45
+ANGLE > distribution:  ⣿⣄⣀⡀⣀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀    ⡀⡀  ⡀           ⡀⡀⡀                        ⡀<63
+ANGRY > distribution:  ⣿⣄⣄⣦⡀⡀⣀⡀⡀ ⡀ ⡀  ⡀⡀           ⡀          ⡀                      ⡀   ⡀                          ⡀<94
+APART > distribution:  ⣿⣤⣀⣀⣀⣀⡀⡀   ⡀⡀ ⡀    ⡀   ⡀⡀⡀  ⡀  ⡀               ⡀                                            ⡀<93
+APPLE > distribution:  ⣿⣀⣀⡀⡀⡀⣀⡀⣀  ⡀  ⡀   ⡀  ⡀  ⡀                ⡀       ⡀   ⡀                                  ⡀<89
+APPLY > distribution:  ⣿⣤⣄⡀⡀⡀⣀ ⡀   ⡀     ⡀ ⡀⡀          ⡀      ⡀                                               ⡀                                                                               ⡀<168
+ARGUE > distribution:  ⣿⣤⣄⡀⡀⡀⡀⡀  ⡀⡀ ⡀ ⡀  ⡀⡀  ⡀⡀⡀⡀       ⡀⡀     ⡀<41
+ARISE > distribution:  ⣿⣤⣀⣤⣄⣀⡀⡀⣀⡀⡀⡀⡀⡀⡀⡀ ⡀ ⡀ ⡀     ⡀<28
+ARMED > distribution:  ⣿⣄⣤⡀⣀⡀⣀⡀   ⡀⡀⡀⡀⡀  ⡀⡀    ⡀     ⡀     ⡀               ⡀ ⡀<55
+ASIAN > distribution:  ⣿⣄⡀⡀⣀⡀⡀⡀ ⣀⡀   ⡀    ⡀        ⡀  ⡀ ⡀                   ⡀      ⡀                ⡀<78
+ASIDE > distribution:  ⣿⣀⣀⡀⣄⡀⣀ ⡀⡀ ⡀⡀ ⡀⡀⡀⡀⡀⡀          ⡀⡀       ⡀  ⡀<43
+ASSET > distribution:  ⣿⣄⣄⡀⣀⡀⡀⡀⣀⡀⡀ ⡀  ⣀ ⡀        ⡀⡀ ⡀      ⡀   ⡀      ⡀<48
+AVOID > distribution:  ⣿⣄⡀⡀⣀⡀⡀⣀  ⡀⡀⡀  ⡀                  ⡀            ⡀        ⡀   ⡀                                     ⡀<99
+AWARD > distribution:  ⣿⣄⣀⣀  ⣀⡀⡀⡀  ⡀⡀    ⡀        ⡀        ⡀   ⡀                            ⡀                                                          ⡀<129
+AWARE > distribution:  ⣿⣤⣀⣀⡀⡀⡀ ⡀⡀    ⣀⡀⡀  ⡀  ⡀    ⡀         ⡀⡀   ⡀                           ⡀<71
+AWFUL > distribution:  ⣿⡀⡀⣀⡀⣀⣀  ⡀   ⡀⡀   ⡀            ⡀          ⡀                                                  ⡀                         ⡀<120
+BADLY > distribution:  ⣿⣤⣀⣀⣀  ⡀ ⡀ ⡀     ⡀⡀ ⡀     ⡀        ⡀                             ⡀                                                                                             ⡀<160
+BASIC > distribution:  ⣿⣀⣄⣀⡀⡀⣀ ⡀   ⡀ ⡀    ⡀⡀ ⡀  ⡀                  ⡀     ⡀       ⡀                          ⡀<86
+BASIS > distribution:  ⣿⣄⣄⣄⣀ ⣀⡀⣀⡀      ⡀         ⡀ ⡀                     ⡀      ⡀                    ⡀                             ⡀<109
+BEACH > distribution:  ⣿⣶⣄⣀⣄⡀⡀⡀⡀   ⡀⡀       ⡀ ⡀           ⡀     ⡀           ⡀                    ⡀<75
+BEGIN > distribution:  ⣿⣦⣀⡀⡀⣀⡀ ⡀⡀      ⡀⡀   ⡀   ⡀      ⡀                                                             ⡀               ⡀<111
+BEING > distribution:  ⣿⣄⣀⡀⡀⣀⡀⡀ ⡀ ⡀   ⡀ ⡀   ⡀⡀    ⡀                                                                  ⡀               ⡀<111
+BELOW > distribution:  ⣿⣷⣄⣤  ⣀⣀⡀⡀   ⡀     ⡀        ⣀        ⡀            ⡀                          ⡀                     ⡀<100
+BENCH > distribution:  ⣿⣄⣄⡀⣀⡀⡀⡀ ⡀  ⡀  ⡀   ⡀⡀  ⡀  ⡀     ⡀                                            ⡀                       ⡀<102
+BIBLE > distribution:  ⣿⣶⣀⡀⣄⣀⣀⡀ ⡀   ⡀ ⡀    ⡀⡀    ⡀          ⡀                ⡀                   ⡀                         ⡀<101
+BIRTH > distribution:  ⣿⣄⣀⣀⡀⣀⣀⡀⡀ ⡀ ⡀⡀ ⡀      ⡀      ⡀ ⡀   ⡀                          ⡀                  ⡀<82
+BLACK > distribution:  ⣿⣦⣄  ⣤ ⣀⡀   ⡀ ⡀                 ⡀   ⡀⡀        ⡀                                                                                                              ⡀<158
+BLADE > distribution:  ⣿⣤⣄⡀⣀⡀⡀  ⣀⡀  ⡀ ⡀ ⡀  ⡀   ⡀                  ⡀ ⡀                                      ⡀<85
+BLAME > distribution:  ⣿⣄⣤⡀⣀⡀ ⡀⡀ ⡀⡀ ⡀ ⡀⡀⡀⡀          ⡀           ⡀         ⡀                                  ⡀<87
+BLIND > distribution:  ⣿⣀⣤⣀⡀ ⡀⡀⡀⡀   ⡀ ⡀⡀       ⡀⡀                     ⡀                                                                                                           ⡀<156
+BLOCK > distribution:  ⣿⣀⣄⣀⣀⡀ ⡀⡀ ⡀⡀  ⡀⡀    ⡀    ⡀                               ⡀⡀                                                                                                   ⡀<159
+BLOOD > distribution:  ⣿⣄⣀⣀⡀⡀⡀  ⡀⡀ ⡀ ⡀  ⡀     ⡀⡀                        ⡀        ⡀                                                                                                                     ⡀<177
+BOARD > distribution:  ⣿⣤⣀⡀⣀⣀⡀⡀ ⡀      ⡀⡀       ⡀⡀    ⡀    ⡀ ⡀                                          ⡀<82
+BRAIN > distribution:  ⣿⣦⣀⣀ ⡀ ⡀⡀⡀⡀ ⡀⡀ ⡀        ⡀ ⡀ ⡀       ⡀   ⡀     ⡀               ⡀<63
+BRAND > distribution:  ⣿⣄⣄⡀⡀⡀⡀⡀⡀⡀⡀ ⡀⡀     ⡀  ⡀    ⡀⡀    ⡀                   ⡀                                          ⡀<97
+BREAD > distribution:  ⣿⣀⣀⣀⣀⡀ ⡀⡀ ⡀   ⡀⡀     ⡀⡀    ⡀⡀  ⡀  ⡀                  ⡀   ⡀<58
+BREAK > distribution:  ⣿⣄⣀⣀⣀⡀ ⡀⡀ ⡀⡀  ⡀    ⡀  ⡀⡀      ⡀  ⡀⡀  ⡀                   ⡀ ⡀<60
+BRICK > distribution:  ⣿⣄⣄⡀⣄⡀ ⡀⡀     ⡀ ⡀ ⡀       ⡀   ⡀   ⡀                                                   ⡀                                     ⡀<125
+BRIEF > distribution:  ⣿⣤⣀⣀⡀⡀⡀  ⡀   ⡀  ⡀⡀ ⡀   ⡀⡀    ⡀         ⡀                 ⡀                      ⡀<81
+BRING > distribution:  ⣿⣄⣀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀   ⡀     ⡀ ⡀⡀  ⡀                                                   ⡀                                    ⡀<118
+BROAD > distribution:  ⣿⣦⡀⣀⣀⡀⡀⡀⡀   ⡀ ⡀⡀   ⡀      ⡀ ⡀  ⡀ ⡀                       ⡀                       ⡀<82
+BROWN > distribution:  ⣿⣄⡀⡀⡀⣀ ⣀⡀⡀⡀   ⡀   ⡀      ⡀  ⡀        ⡀                  ⡀                                                                       ⡀<129
+BRUSH > distribution:  ⣿⣄⣄ ⣀⡀⡀ ⡀⡀⡀⡀  ⡀⡀            ⡀             ⡀  ⡀                ⡀                     ⡀<85
+BUILD > distribution:  ⣿⣄⣀⣄⡀⡀   ⡀     ⡀            ⡀   ⡀⡀               ⡀                                                                                                         ⡀<156
+BUNCH > distribution:  ⣿⣤⣄⡀ ⡀⣀⡀ ⡀ ⣀      ⡀  ⡀                       ⡀     ⡀                                                                                                             ⡀<162
+BUYER > distribution:  ⣿⣤⣄⡀⣀⡀⡀⡀⣀ ⡀⡀          ⡀⡀⡀                   ⡀   ⡀                        ⡀               ⡀<90
+CABIN > distribution:  ⣿⣀⣤⡀⣀  ⡀⡀  ⣀⡀⡀         ⡀       ⡀           ⡀                          ⡀                            ⡀<100
+CABLE > distribution:  ⣿⣤⡀⡀⣀⡀⡀⡀⡀⡀⡀   ⡀⡀ ⡀⡀            ⡀   ⡀               ⡀                      ⡀<75
+CARRY > distribution:  ⣿⣤⡀⣀⣀⡀ ⡀⡀⡀⡀ ⣀    ⡀        ⡀      ⡀                    ⡀       ⡀                                               ⡀<111
+CATCH > distribution:  ⣿⣀⡀⣀⡀⣀⡀⡀ ⡀ ⡀⡀   ⡀         ⡀ ⡀  ⡀           ⡀                        ⡀                                   ⡀<105
+CAUSE > distribution:  ⣿⣦⣄⣄⣀⡀⡀⡀⡀⡀⡀⡀  ⡀⡀⡀⡀   ⡀⡀            ⡀      ⡀         ⡀<53
+CHAIN > distribution:  ⣿⣤⣄⡀⡀⡀⡀⡀⡀⣀⡀ ⡀      ⡀      ⡀  ⡀   ⡀                              ⡀⡀<66
+CHAIR > distribution:  ⣿⣄⣤⡀⡀⣀⡀⡀⡀⡀  ⡀⡀ ⡀⡀  ⡀          ⡀⡀         ⡀   ⡀<46
+CHART > distribution:  ⣿⣤⣀⣀⣀⡀⡀⡀⡀ ⡀ ⡀⡀⡀              ⡀      ⡀      ⡀            ⡀<57
+CHASE > distribution:  ⣿⣶⣤⡀⣄⣀⡀⡀⡀⡀ ⡀    ⡀ ⡀ ⡀      ⡀        ⡀   ⡀      ⡀<48
+CHEAP > distribution:  ⣿⣤⣦⣀ ⣀ ⣀⣀⡀⡀⡀⡀  ⡀        ⡀                   ⡀ ⡀    ⡀                  ⡀<71
+CHECK > distribution:  ⣿⣿⣀⣄⣀⡀ ⡀ ⣀  ⣄  ⣀         ⡀   ⡀                                                                                                ⡀          ⡀<138
+CHEEK > distribution:  ⣿⣿⣤⣤⡀⣀⡀⡀⡀⣀ ⡀⡀  ⡀⡀⡀           ⡀       ⡀                                              ⡀                                         ⡀<127
+CHEST > distribution:  ⣿⣶⣤⡀⣀⡀⡀⡀⡀⡀ ⡀⡀ ⡀      ⡀ ⡀                                   ⡀                     ⡀<82
+CHIEF > distribution:  ⣿⣄⣄⣄⡀⡀⡀⡀⡀⣀  ⡀ ⡀⡀⡀⡀         ⡀            ⡀                          ⡀              ⡀<83
+CHILD > distribution:  ⣿⣄⣀⡀⡀⣀ ⡀ ⡀⡀ ⡀  ⡀  ⡀   ⡀ ⡀                      ⡀                                                           ⡀<108
+CIVIL > distribution:  ⣿⣤⣄⡀⡀ ⡀⣀⣀⡀     ⡀⡀ ⡀ ⡀         ⡀        ⡀           ⡀                                                                                                                                  ⡀<183
+CLAIM > distribution:  ⣿⣄⣄⡀⣀⣀ ⡀⡀ ⡀ ⡀ ⡀     ⡀       ⡀  ⡀   ⡀              ⡀                                                ⡀<100
+CLASS > distribution:  ⣿⣄⣀⡀⡀⡀⡀⡀⡀ ⡀  ⡀ ⡀    ⡀      ⡀⡀ ⡀⡀             ⡀                                                                      ⡀<117
+CLEAN > distribution:  ⣿⣤⣄⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀⡀⡀ ⡀   ⡀      ⡀         ⡀         ⡀   ⡀<54
+CLEAR > distribution:  ⣿⣤⣀⣀⣀⡀⡀⡀ ⡀⡀⡀⡀  ⡀⡀⡀ ⡀  ⡀            ⡀⡀⡀<38
+CLIMB > distribution:  ⣿⣀⣀⡀⣀⣀  ⡀   ⡀⡀      ⡀     ⡀     ⡀               ⡀                                                                                                         ⡀<155
+CLOCK > distribution:  ⣿⣦⣄⣀⣀⡀⡀       ⡀⡀⡀     ⡀      ⡀                             ⡀   ⡀                                                                                                               ⡀<176
+CLOSE > distribution:  ⣿⣦⡀⣀⣀⣀⡀⡀⡀⡀ ⡀ ⡀⡀  ⡀⡀⡀    ⡀          ⡀        ⡀     ⡀<51
+CLOUD > distribution:  ⣿⣄⣀⣀⣀⡀ ⡀   ⡀⡀⡀   ⡀⡀   ⡀  ⡀        ⡀          ⡀                                                                              ⡀<125
+COACH > distribution:  ⣿⣄⣄⣄⣀ ⡀⡀⡀⡀  ⡀ ⡀⡀          ⡀    ⡀⡀           ⡀                              ⡀               ⡀<92
+COAST > distribution:  ⣿⣤⣤⣀⣀⡀⣀⡀⡀⡀ ⡀⡀     ⡀  ⡀  ⡀ ⡀              ⡀⡀<43
+COLOR > distribution:  ⣿⣤⣀⣀⣀ ⡀⣀⡀⡀ ⡀  ⡀ ⡀    ⡀⡀ ⡀                                   ⡀                   ⡀ ⡀<83
+COUCH > distribution:  ⣿⣄⣤⡀⣀   ⡀⡀⡀⡀⡀     ⡀     ⡀ ⡀           ⡀    ⡀                                                                                                                                    ⡀<177
+COULD > distribution:  ⣿⣤⣀⣀⡀⡀⡀ ⡀⡀⡀  ⡀ ⡀ ⡀⡀ ⡀    ⡀          ⡀                                                                                       ⡀<125
+COUNT > distribution:  ⣿⣀⣄⣄⡀⣀⡀ ⡀⡀⡀ ⡀  ⡀ ⡀ ⡀   ⡀⡀  ⡀                    ⡀                                                ⡀<98
+COURT > distribution:  ⣿⣦⣀⡀⣀⡀⡀⡀⡀ ⡀   ⡀ ⡀ ⡀   ⡀⡀     ⡀                   ⡀                      ⡀<73
+COVER > distribution:  ⣿⣦⣀⣄⣀⣀⡀⡀   ⡀ ⡀⡀⡀  ⡀⡀                 ⡀  ⡀            ⡀                 ⡀<72
+CRACK > distribution:  ⣿⣀⣀ ⡀⡀⡀ ⡀⡀   ⡀⡀          ⡀   ⡀⡀                           ⡀     ⡀                                                        ⡀<122
+CRAFT > distribution:  ⣿⣤⣄⡀⡀⣀⡀⡀⡀ ⡀    ⡀ ⡀    ⡀⡀ ⡀    ⡀      ⡀                        ⡀<63
+CRASH > distribution:  ⣿⣤⣄⣀⡀⡀⣀⡀ ⡀ ⣀ ⡀    ⡀    ⡀⡀ ⡀    ⡀       ⡀           ⡀<52
+CRAZY > distribution:  ⣿⣤⣀⣄ ⣀⣀⣀  ⣀ ⣀ ⡀          ⡀⡀⡀ ⡀                      ⡀   ⡀                                                   ⡀<109
+CREAM > distribution:  ⣿⣄⣤⣄⡀⡀⡀⡀⡀⡀   ⡀⡀ ⡀   ⡀   ⡀  ⡀  ⡀ ⡀           ⡀ ⡀<47
+CRIME > distribution:  ⣿⣤⣄⣀⣀⣀ ⣀⡀⡀⡀⡀⡀  ⡀ ⡀  ⡀        ⡀    ⡀ ⡀    ⡀ ⡀<44
+CROSS > distribution:  ⣿⣶⣶⣦⣄⣀  ⣄   ⡀⡀⡀        ⡀    ⡀     ⡀ ⡀      ⡀        ⡀                                    ⡀<90
+CROWD > distribution:  ⣿⣦⣄⣄⣄⣀⡀⡀⡀⣀      ⡀⣀   ⡀     ⡀⡀⡀                           ⡀                                                      ⡀<113
+CYCLE > distribution:  ⣿⣄⣀⣀⡀⣀⡀ ⣀ ⣀    ⣀⡀    ⡀  ⡀   ⡀                                 ⡀        ⡀                                          ⡀<115
+DAILY > distribution:  ⣿⣤⣤⣄⡀⡀  ⡀ ⡀ ⡀ ⡀ ⡀   ⡀      ⡀    ⡀     ⡀                    ⡀                                            ⡀<105
+DANCE > distribution:  ⣿⣶⣄⣦⣀⡀⣀⡀⡀⣀  ⡀ ⡀⡀⡀⡀     ⡀ ⡀         ⡀       ⡀              ⡀<59
+DEATH > distribution:  ⣿⣤⡀⣀⣀⡀ ⡀ ⡀⣀ ⡀ ⡀⡀ ⡀       ⡀  ⡀    ⡀  ⡀                 ⡀<55
+DELAY > distribution:  ⣿⣀⣀⡀⡀⡀⡀⡀⡀ ⡀⡀  ⡀  ⡀     ⡀             ⡀  ⡀                                ⡀        ⡀<83
+DEPTH > distribution:  ⣿⣤⣀⣀⣀  ⡀ ⡀⡀⡀  ⡀ ⡀⡀⡀ ⡀ ⡀          ⡀      ⡀                         ⡀                ⡀<84
+DIRTY > distribution:  ⣿⣄⣀⣀⡀ ⡀  ⡀⡀⡀⡀⡀⡀ ⡀              ⡀  ⡀         ⡀           ⡀                                ⡀<90
+DOUBT > distribution:  ⣿⣦⣄⣄⣄⣀⣀⡀  ⡀ ⡀     ⡀ ⣀   ⡀         ⡀  ⡀                    ⡀                                                           ⡀<119
+DOZEN > distribution:  ⣿⣄⣦⣄⣀⣀⣀⣀⡀⡀ ⡀   ⣀⡀ ⡀      ⡀     ⣀                                                   ⡀                        ⡀<109
+DRAFT > distribution:  ⣿⣄⣄⡀⣀⡀⡀⡀   ⡀   ⡀   ⡀  ⡀ ⡀⡀    ⡀ ⡀   ⡀                                 ⡀<71
+DRAMA > distribution:  ⣿⣄⣤⡀⣀ ⡀⡀  ⡀  ⡀⡀      ⡀    ⡀⡀   ⡀                   ⡀        ⡀                                                              ⡀<124
+DREAM > distribution:  ⣿⣦⣄⣀⡀⡀⡀⡀   ⡀⡀     ⡀  ⡀  ⡀     ⡀⡀      ⡀            ⡀⡀<53
+DRESS > distribution:  ⣿⣤⣤⣀⣤ ⡀⣀  ⡀⣀ ⡀⡀ ⡀   ⡀⡀    ⡀    ⡀              ⡀                ⡀              ⡀<79
+DRINK > distribution:  ⣿⣤⣤⣄⡀⡀⡀⣀ ⡀ ⡀ ⡀  ⡀  ⡀ ⡀⡀    ⡀                                                       ⡀                            ⡀<113
+DRIVE > distribution:  ⣿⣄⣀⡀⣄⡀⡀⡀   ⡀   ⡀ ⡀ ⡀      ⡀       ⡀   ⡀      ⡀ ⡀         ⡀<58
+EAGER > distribution:  ⣿⣄⣀⣄⣀⡀⣀⡀ ⡀⡀    ⡀⡀⡀   ⡀ ⡀        ⡀   ⡀   ⡀      ⡀              ⡀<63
+EARLY > distribution:  ⣿⣄⣄⡀⡀⡀⡀⡀ ⡀⡀  ⡀⡀⡀ ⡀    ⡀⡀   ⡀      ⡀   ⡀       ⡀    ⡀<52
+EARTH > distribution:  ⣿⣤⣀⣀⡀⣀⡀⡀⡀  ⡀⡀⡀ ⡀⡀ ⡀     ⡀  ⡀ ⡀                  ⡀<49
+EIGHT > distribution:  ⣿⣀⣦⣤⣀ ⣀ ⣀⡀ ⡀ ⡀ ⡀⡀  ⡀   ⡀  ⡀⡀                             ⡀                                  ⡀<93
+ELECT > distribution:  ⣿⣷⣄⣄⡀⣀⡀⡀⡀⡀⡀⡀        ⡀    ⡀  ⡀     ⡀⡀                       ⡀      ⡀<67
+ELITE > distribution:  ⣿⣷⣦⣤⣀  ⣄⡀ ⣀⣀ ⡀ ⡀⡀⡀ ⣀            ⡀   ⡀      ⡀          ⡀<55
+EMPTY > distribution:  ⣿⣄⡀⣄⡀ ⡀⡀⡀⡀⡀ ⡀⡀       ⡀                   ⡀                    ⡀                     ⡀                                  ⡀<120
+ENEMY > distribution:  ⣿⣤⡀⣀⡀⡀⡀ ⡀⡀ ⡀  ⡀ ⡀   ⡀ ⡀                   ⡀                                                                       ⡀                   ⡀<135
+ENJOY > distribution:  ⣿⣤ ⣀ ⡀⡀ ⣀     ⣀ ⡀      ⡀    ⡀     ⡀              ⡀                                   ⡀                                                       ⡀<142
+ENTER > distribution:  ⣿⣤⣀⡀⡀⡀⡀  ⡀ ⡀⡀⡀⡀    ⡀          ⡀⡀ ⡀       ⡀⡀                       ⡀<67
+ENTRY > distribution:  ⣿⣀⣄⣀⡀⡀⡀  ⡀ ⡀⡀⡀   ⡀⡀   ⡀  ⡀        ⡀   ⡀     ⡀                               ⡀<77
+EQUAL > distribution:  ⣿⣀⣦⣤⡀⡀ ⡀ ⡀⣀⡀⡀ ⡀       ⡀ ⡀⡀                    ⡀           ⡀    ⡀                    ⡀<85
+ERROR > distribution:  ⣶⣿⣄⡀ ⡀⣀⣀⡀⡀⣀⡀  ⡀    ⡀      ⡀ ⡀⡀               ⡀                               ⡀                                   ⡀<114
+ESSAY > distribution:  ⣿⣄⣄⣀⡀⡀ ⡀⡀⡀ ⡀  ⡀     ⡀       ⡀            ⡀     ⡀        ⡀                        ⡀ ⡀<84
+EVENT > distribution:  ⣿⣄⣀⣀⣀ ⡀  ⡀     ⡀⡀ ⡀ ⡀ ⡀          ⡀  ⡀         ⡀                                    ⡀<84
+EVERY > distribution:  ⣿⣤⣄⣄⡀⡀⡀⡀  ⣀⡀⡀⡀   ⡀                           ⡀                         ⡀               ⡀                        ⡀<113
+EXACT > distribution:  ⣿⣤⣀⣦⡀⣀⣀⣀⡀⣀⡀⡀   ⡀  ⡀       ⡀⡀⡀  ⡀   ⡀   ⡀                                          ⡀<83
+EXIST > distribution:  ⣿⣦⣶⣀⣄⣄⣀⡀   ⣄⡀⡀⣀⡀ ⡀⡀    ⡀ ⡀⡀                                      ⡀                    ⡀<87
+EXTRA > distribution:  ⣿⣦⣄⣀⣀ ⣀ ⡀⡀  ⡀  ⡀⡀⡀   ⣀   ⡀    ⡀  ⡀⡀   ⡀     ⡀                   ⡀<65
+FAITH > distribution:  ⣿⣤⣄⣀⡀⡀⡀⡀⡀⡀ ⡀  ⡀ ⡀⡀      ⡀⡀  ⡀ ⡀                                 ⡀           ⡀<77
+FALSE > distribution:  ⣿⣦⣀⣀⣀⡀⡀⣀⡀⡀ ⡀ ⡀ ⡀  ⡀   ⡀ ⡀          ⡀    ⡀                    ⡀<62
+FAULT > distribution:  ⣿⣶⣄⡀⣀⡀⡀⡀⡀⡀⡀   ⡀⡀⡀⡀ ⡀  ⡀⡀                    ⡀           ⡀                 ⡀<75
+FAVOR > distribution:  ⣿⣷⣄⡀⣀⡀⣀⣀⡀   ⡀            ⡀ ⡀       ⡀           ⡀ ⡀         ⡀                     ⡀<82
+FENCE > distribution:  ⣿⣤⣀⣀⣀⡀⡀⡀⣀  ⡀   ⡀      ⡀⡀                  ⡀         ⡀           ⡀                                         ⡀<107
+FEWER > distribution:  ⣷⣿⣦⣀⡀⡀⡀⣀⡀ ⡀   ⣀ ⡀                   ⡀                             ⡀                  ⡀                     ⡀<108
+FIBER > distribution:  ⣿⣄⣄⡀⡀⡀⡀⡀ ⡀  ⡀ ⡀    ⡀  ⡀     ⡀           ⡀      ⡀         ⡀                      ⡀<81
+FIELD > distribution:  ⣿⣦⣤⣄⣀⡀⡀   ⡀⡀⡀      ⡀   ⡀  ⡀    ⡀   ⡀                                           ⡀ ⡀<82
+FIFTH > distribution:  ⣿⣀⣀⡀⡀ ⣀⡀  ⡀⡀     ⡀   ⡀       ⡀                       ⡀        ⡀                                                                                                       ⡀<167
+FIFTY > distribution:  ⣿⣦⣀⣀⡀ ⡀  ⡀ ⡀  ⡀ ⡀    ⡀      ⡀                              ⡀                     ⡀                                                                                                 ⡀<180
+FIGHT > distribution:  ⣿⣀⣀⣀⡀ ⣀⡀ ⡀ ⡀    ⡀⡀    ⡀   ⡀           ⡀   ⡀  ⡀                                                                                               ⡀<142
+FINAL > distribution:  ⣿⣤⣄⣀⣀⡀⡀⡀⡀⡀⡀  ⡀⡀⡀       ⡀   ⡀    ⡀                                        ⡀             ⡀<88
+FIRST > distribution:  ⣿⣤⣀⣀⡀⡀⡀⡀⡀⡀ ⡀⡀⡀ ⡀     ⡀ ⡀  ⡀⡀                               ⡀              ⡀<75
+FLAME > distribution:  ⣿⣤⣄⡀⣀⡀ ⡀⡀⡀ ⡀⡀⡀⡀ ⡀ ⡀    ⡀     ⡀         ⡀         ⡀                              ⡀<81
+FLESH > distribution:  ⣿⣤⣄⣀⡀⣀⡀⣀ ⡀ ⡀ ⡀     ⡀⡀ ⡀ ⡀     ⡀                                      ⡀  ⡀<73
+FLOAT > distribution:  ⣿⣤⣀⡀⡀⡀⡀⡀ ⡀⡀ ⡀ ⡀ ⡀ ⡀   ⡀       ⡀   ⡀                    ⡀  ⡀<59
+FLOOR > distribution:  ⣿⣶⣀⡀⡀⡀⡀⡀⡀⡀    ⡀ ⡀ ⡀ ⡀           ⡀                    ⡀                                   ⡀                ⡀<107
+FOCUS > distribution:  ⣿⣀⣄⣄⣀⣀⡀  ⣀ ⡀     ⡀        ⡀         ⡀      ⡀             ⡀                                                                               ⡀<138
+FORCE > distribution:  ⣿⣀⣀⣀⣀⣀⡀⡀ ⡀ ⡀   ⡀⡀⡀⡀             ⡀   ⡀    ⡀ ⡀  ⡀<47
+FORTH > distribution:  ⣿⣦⣀⡀⣀⡀⣀ ⡀⡀    ⡀  ⡀⡀   ⡀     ⡀     ⡀                     ⡀                                ⡀<90
+FOUND > distribution:  ⣿⣶⣀⣀ ⡀⣀⡀⡀ ⡀⣀   ⡀  ⡀  ⡀    ⡀  ⡀       ⡀                                                                                                                                   ⡀<170
+FRAME > distribution:  ⣿⣤⣀⣄⡀⣀⡀ ⡀ ⡀ ⡀⡀ ⡀⡀ ⡀ ⡀    ⡀⡀         ⡀⡀                   ⡀<58
+FRESH > distribution:  ⣿⣶⣄⣀⣀⣀⡀⡀⡀⡀  ⡀ ⡀⡀⡀⡀      ⡀⡀  ⡀        ⡀                ⡀ ⡀<57
+FRONT > distribution:  ⣿⣤⣀⣀⣀⡀⡀⡀⡀ ⡀  ⡀ ⡀ ⡀   ⡀  ⡀      ⡀ ⡀                                                    ⡀<87
+FRUIT > distribution:  ⣿⣄⣀⣄⡀⡀ ⡀ ⡀⡀⡀  ⡀⡀       ⡀⡀      ⡀                ⡀                                        ⡀<90
+FULLY > distribution:  ⣿⣀⣀⡀⡀⡀⡀  ⡀ ⡀⡀    ⡀  ⡀                ⡀                  ⡀                                                                                                                                                                                   ⡀<237
+FUNNY > distribution:  ⣿⣶⡀⡀⡀⣀   ⡀ ⡀    ⣀    ⡀        ⡀⡀     ⡀                                                                                                                                                                                                                      ⡀<253
+GHOST > distribution:  ⣿⣤⣄⡀⡀⡀⣀⣀⣀⡀⡀⡀⡀ ⡀ ⡀⡀              ⡀ ⡀         ⡀                                                      ⡀<100
+GIANT > distribution:  ⣿⣤⣀⡀⡀⡀⣀⡀⡀⡀⡀⡀ ⡀    ⡀   ⡀    ⡀    ⡀   ⡀           ⡀                        ⡀<74
+GIVEN > distribution:  ⣿⣤⣤⣀⣀⣀⡀⣀⡀       ⡀ ⡀    ⡀         ⡀   ⡀                                                            ⡀     ⡀<105
+GLASS > distribution:  ⣿⣀⣄⣀⡀ ⡀⣀⡀ ⡀  ⡀⡀ ⡀           ⡀    ⡀ ⡀⡀          ⡀                                                                             ⡀<126
+GLOVE > distribution:  ⣿⣿⣀⣀⡀⣤⣀ ⡀⡀⡀ ⣀       ⡀ ⡀   ⡀                   ⡀   ⡀           ⡀         ⡀<73
+GRADE > distribution:  ⣿⣤⣤⣀⡀⡀⡀⡀⡀ ⡀⡀⡀ ⡀⡀        ⡀⡀⡀     ⡀      ⡀        ⡀<49
+GRAIN > distribution:  ⣿⣤⣀⣄ ⡀⡀⡀⡀⡀ ⡀ ⡀ ⡀       ⡀ ⡀    ⡀    ⡀       ⡀ ⡀             ⡀<60
+GRAND > distribution:  ⣿⣄⣀⣀⡀⡀  ⡀⡀⡀ ⡀         ⡀  ⡀ ⡀              ⡀          ⡀                                 ⡀<88
+GRANT > distribution:  ⣿⣄⣀⡀⡀⡀⡀⡀⡀⡀  ⡀⡀    ⡀⡀⡀⡀       ⡀ ⡀  ⡀                        ⡀<60
+GRASS > distribution:  ⣿⣦⣀⣀⡀⣀  ⡀⡀⡀⡀ ⡀      ⡀   ⡀ ⡀           ⡀           ⡀                                         ⡀<93
+GRAVE > distribution:  ⣿⣶⣄⡀⣀⣀⡀ ⡀ ⡀⡀⡀⡀ ⡀⡀ ⡀ ⡀       ⡀   ⡀   ⡀⡀                      ⡀<61
+GREAT > distribution:  ⣿⣦⣤⣀⣀⡀⣀⡀⡀⡀⡀⡀⡀⡀ ⡀  ⡀     ⡀      ⡀   ⡀       ⡀<44
+GREEN > distribution:  ⣿⣶⣀⣄ ⣀ ⣀    ⣀       ⡀⡀   ⡀                      ⡀                      ⡀         ⡀<82
+GROUP > distribution:  ⣿⣤⣄⣀⣀ ⣀⡀       ⡀ ⡀⡀   ⡀⡀   ⡀   ⡀  ⡀                 ⡀                                                                   ⡀<121
+GUARD > distribution:  ⣿⣤⣀⣄⡀⡀⡀⡀ ⣀⡀⡀ ⡀⡀⡀          ⡀     ⡀        ⡀                 ⡀                                  ⡀<95
+GUESS > distribution:  ⣿⣄⡀⣀⡀⡀   ⡀ ⡀⡀⡀           ⡀  ⣀                                                                                 ⡀   ⡀<115
+GUEST > distribution:  ⣿⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀⡀  ⡀ ⡀   ⡀       ⡀    ⡀                     ⡀                      ⡀<81
+GUIDE > distribution:  ⣿⣦⣀⣀⣀⡀⡀⡀⡀ ⡀   ⡀   ⡀ ⡀  ⡀      ⡀                          ⡀           ⡀                ⡀<87
+HABIT > distribution:  ⣿⣤⣀⡀⣀⡀⣀ ⡀⣀⡀ ⡀    ⡀⡀⡀ ⡀ ⡀          ⡀                    ⡀                          ⡀<83
+HAPPY > distribution:  ⣿⣀⣄⡀⡀⣄  ⡀      ⣀      ⡀      ⡀                                     ⡀                                        ⡀                                    ⡀<146
+HEART > distribution:  ⣿⣶⣄⣄⣀⣀⡀⡀⡀⡀⡀⡀⡀    ⡀⡀     ⡀  ⡀            ⡀<41
+HEAVY > distribution:  ⣿⣶⣤⣤⡀⣀ ⣀ ⡀⣀       ⡀      ⡀       ⡀ ⡀       ⡀     ⡀                ⡀     ⡀<73
+HELLO > distribution:  ⣿⣤⣤⡀⡀ ⡀⡀ ⡀    ⡀ ⡀  ⡀⡀  ⡀  ⡀    ⡀                  ⡀       ⡀                                  ⡀<94
+HONEY > distribution:  ⣿⣀⡀⡀⡀ ⡀⡀⡀⡀⡀  ⡀⡀ ⡀   ⡀      ⡀⡀⡀                        ⡀                                  ⡀<90
+HONOR > distribution:  ⣿⣀⣀⡀ ⡀⣀⡀ ⡀  ⡀ ⡀ ⡀⡀ ⡀       ⡀               ⡀                         ⡀                                       ⡀<110
+HORSE > distribution:  ⣿⣦⣤⣀⡀⡀ ⡀    ⡀  ⡀⡀⡀ ⡀ ⡀  ⡀   ⡀⡀⡀       ⡀<39
+HOTEL > distribution:  ⣿⣤⣄⣀⡀⡀⡀⡀⡀⡀⡀ ⡀ ⡀⡀ ⡀  ⡀ ⡀⡀    ⡀⡀ ⡀                     ⡀<54
+HOUSE > distribution:  ⣿⣤⣄⣀⣀⡀⡀  ⡀⡀ ⡀ ⡀⡀⡀⡀     ⡀     ⡀           ⡀      ⡀           ⡀<61
+HUMAN > distribution:  ⣿⣄⣀⡀  ⡀⡀ ⣀   ⣀    ⡀⡀⡀⡀        ⡀                  ⡀                              ⡀        ⡀<90
+HUMOR > distribution:  ⣿⣄⣄⡀⡀⣀⡀ ⡀⡀ ⡀ ⡀⡀  ⡀⡀            ⡀              ⡀                    ⡀                               ⡀<100
+IDEAL > distribution:  ⣿⣤⣄⣄⣀ ⡀⣀⡀ ⡀   ⡀⡀  ⡀   ⡀   ⡀   ⡀    ⡀     ⡀    ⡀      ⡀<54
+IMAGE > distribution:  ⣿⣄⣄⣀⣀⣀⡀⡀⡀ ⡀  ⡀ ⡀    ⡀ ⡀   ⡀ ⡀ ⡀      ⡀                ⡀      ⡀<62
+IMPLY > distribution:  ⣿⣶⣀⣀⣀⡀⣀ ⡀⡀   ⡀⡀⡀   ⡀       ⡀                          ⡀                    ⡀                                                                                        ⡀<165
+INDEX > distribution:  ⣿⣶⣀ ⣀ ⡀⡀⣀  ⡀     ⡀⡀⡀⡀    ⡀         ⡀       ⡀                                                   ⡀      ⡀<103
+INNER > distribution:  ⣿⣀⣤⣀⡀⡀  ⡀⡀ ⡀ ⡀⡀⡀      ⡀⡀          ⡀    ⡀        ⡀      ⡀                   ⡀<76
+IRAQI > distribution:  ⣿⣄⣤⣄⣀    ⣀   ⣀⣀⣤     ⣀        ⣀     ⣀                   ⣀⣀  ⣀                                   ⣀<97
+IRISH > distribution:  ⣿⣀⣀⡀⣀⡀⡀⡀⡀⡀   ⡀⡀ ⡀  ⡀   ⡀             ⡀⡀                         ⡀                  ⡀<84
+ISSUE > distribution:  ⣿⣤⣄⣀⡀ ⣀⡀⡀  ⡀  ⡀   ⣀ ⡀        ⡀   ⡀  ⡀                   ⡀           ⡀               ⡀<85
+JOINT > distribution:  ⣿⣤⣀⡀⡀⣀  ⡀ ⡀⡀⡀⡀⡀     ⡀⡀  ⡀ ⡀⡀    ⡀        ⡀                                                                    ⡀<111
+JUDGE > distribution:  ⣿⣀⣤⣀⡀  ⡀ ⣀ ⡀     ⡀  ⡀ ⡀    ⡀                                                      ⡀         ⡀                          ⡀<120
+JUICE > distribution:  ⣿⣄⣀⣀⡀⡀⣀⣀   ⡀ ⡀   ⡀  ⡀           ⡀     ⡀               ⡀           ⡀                        ⡀<92
+KNIFE > distribution:  ⣿⣦⣀⣀⣀⣀⡀⡀⣀⣀⣀       ⡀   ⡀⡀        ⡀                             ⡀             ⡀                ⡀<94
+KNOCK > distribution:  ⣿⣀⣀⣄ ⣄ ⡀ ⣄           ⡀⡀⡀     ⡀           ⡀         ⡀                                                                                                                                                       ⡀<204
+LABEL > distribution:  ⣿⣦⣀⣀⣄ ⡀ ⣀   ⡀⡀ ⡀    ⡀              ⡀      ⡀                         ⡀                          ⡀<96
+LABOR > distribution:  ⣿⣦⣄⣄⡀⣀⡀ ⡀ ⡀ ⡀⡀            ⡀⡀    ⡀   ⡀    ⡀⡀                ⡀<60
+LARGE > distribution:  ⣿⣀⣄⡀ ⡀⡀  ⡀⡀⡀⡀⡀ ⡀  ⡀   ⡀⡀  ⡀⡀   ⡀        ⡀<41
+LATER > distribution:  ⣿⣤⣀⡀⡀ ⡀ ⡀⡀⡀ ⡀ ⡀ ⡀⡀⡀⡀⡀  ⡀     ⡀   ⡀<34
+LATIN > distribution:  ⣿⣀⣄⣄⣀⡀⡀⡀  ⡀ ⡀         ⡀⡀⡀⡀⡀              ⡀ ⡀     ⡀<50
+LAUGH > distribution:  ⣿⣄⣄⡀⡀⣀⡀⡀⡀    ⡀⡀ ⡀⡀   ⡀        ⡀  ⡀  ⡀                    ⡀                                      ⡀<97
+LAYER > distribution:  ⣿⣦⣀⣀⡀⡀   ⡀  ⡀   ⡀⡀⡀⡀   ⡀               ⡀ ⡀    ⡀<47
+LEARN > distribution:  ⣿⣦⣤⣀⡀⡀⡀⡀⡀⡀⡀ ⡀⡀  ⡀⡀      ⡀     ⡀ ⡀⡀<34
+LEAST > distribution:  ⣿⣿⣦⣀⣄ ⡀⡀⡀⡀ ⡀  ⡀⡀  ⡀⡀     ⡀   ⡀           ⡀<42
+LEAVE > distribution:  ⣿⣤⣀⣀⡀⡀⣀⣀⡀  ⡀⡀   ⡀⡀   ⡀⡀        ⡀⡀ ⡀ ⡀                                                               ⡀<101
+LEGAL > distribution:  ⣿⣦⣄ ⡀⡀⣀⡀ ⣀⡀ ⡀    ⡀ ⡀               ⡀                ⡀                                ⡀  ⡀<89
+LEMON > distribution:  ⣿⣀⣄⣀⣀⡀⡀⡀ ⡀   ⡀⡀ ⡀⡀   ⡀ ⡀           ⡀     ⡀                  ⡀                        ⡀<86
+LEVEL > distribution:  ⣿⣶⣤⣀⣀ ⣀ ⡀⡀   ⡀              ⡀  ⡀⡀                                                             ⡀                                                                        ⡀<168
+LIGHT > distribution:  ⣿⣀⣀⡀⣀⣀⣀⡀⡀ ⡀⡀⡀⡀       ⡀    ⡀      ⡀⡀ ⡀                ⡀                                     ⡀<92
+LIMIT > distribution:  ⣿⣄⣀⡀⡀⡀⡀⣀⡀⡀ ⡀ ⡀⡀              ⡀  ⡀                       ⡀⡀                                                                      ⡀<129
+LOCAL > distribution:  ⣿⣤⣀⣀ ⡀⡀⡀⡀ ⡀ ⡀      ⡀  ⡀   ⡀          ⡀⡀                                    ⡀                    ⡀<97
+LOOSE > distribution:  ⣿⣶⣀⣀⣀⣤⣄ ⡀⡀ ⣀ ⡀ ⡀  ⣀  ⡀ ⡀   ⡀     ⡀                           ⡀   ⡀<66
+LOVER > distribution:  ⣿⣤⣀⣀⡀⡀⡀⡀⡀⡀ ⡀ ⡀ ⡀⡀      ⡀  ⡀        ⡀ ⡀   ⡀    ⡀             ⡀<61
+LOWER > distribution:  ⣿⣤⣤⣄⡀⡀⡀⡀⡀⡀  ⡀ ⡀⡀     ⡀     ⡀        ⡀  ⡀      ⡀           ⡀<59
+LUCKY > distribution:  ⣿⣤⣀⡀ ⡀ ⣀⡀ ⡀  ⣀ ⡀   ⡀            ⡀              ⡀                ⡀                                                                                                                             ⡀<191
+LUNCH > distribution:  ⣿⣄⣄⡀ ⣀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀⡀                    ⡀         ⡀        ⡀                                                     ⡀<111
+MAJOR > distribution:  ⣿⣦⣀ ⣀⣀⡀⣄  ⡀⡀ ⡀              ⡀⡀            ⡀  ⡀   ⡀        ⡀                             ⡀<89
+MAKER > distribution:  ⣿⣷⣤⡀⣤⡀⡀  ⡀⡀    ⡀  ⣀ ⡀   ⣀   ⡀         ⡀ ⡀              ⡀   ⡀<60
+MARRY > distribution:  ⣿⣤⣄⡀⣀ ⡀⡀ ⡀⡀ ⡀     ⡀       ⡀            ⡀                  ⡀         ⡀                                                                  ⡀<136
+MATCH > distribution:  ⣿⣦⣀⣀⣀⣀⡀ ⡀ ⡀ ⡀  ⡀     ⡀    ⡀  ⡀        ⡀                ⡀                                    ⡀<93
+MAYBE > distribution:  ⣿⣄⣄⣀⡀⡀⣀⡀ ⡀⡀ ⡀              ⡀  ⡀                    ⡀ ⡀       ⡀                               ⡀<94
+MAYOR > distribution:  ⣿⣄⣄⣀⣀⣀ ⣀  ⡀ ⡀           ⡀ ⡀          ⡀    ⡀    ⡀      ⡀                          ⡀<82
+MEDIA > distribution:  ⣿⣦⣄⡀⣀⡀⡀⡀⡀  ⡀ ⣀              ⡀    ⡀          ⡀          ⡀       ⡀   ⡀<68
+METAL > distribution:  ⣿⣶⣀⣄⡀  ⡀ ⡀ ⡀⡀  ⡀  ⡀ ⡀    ⡀ ⡀           ⡀            ⡀   ⡀<57
+METER > distribution:  ⣿⣦⣀⡀⣀⡀ ⡀ ⡀⡀     ⡀   ⡀   ⡀         ⡀      ⡀       ⡀     ⡀         ⡀<66
+MIGHT > distribution:  ⣿⡀⣤⡀⡀⣀⣀⡀⡀   ⡀⡀  ⡀      ⡀ ⡀            ⡀⡀⡀                                                                                             ⡀<135
+MINOR > distribution:  ⣿⣤⣄⣀⡀⣀⣀⡀  ⡀  ⡀⡀⡀  ⡀      ⡀      ⡀      ⡀            ⡀                                  ⡀<88
+MODEL > distribution:  ⣿⣶⣀⣄⣄⣀⡀⡀⡀  ⡀ ⡀ ⡀        ⡀  ⡀     ⡀                                       ⡀    ⡀<79
+MONEY > distribution:  ⣿⣄⣀⡀ ⡀⡀⡀⡀  ⡀⡀ ⡀⡀        ⡀⡀   ⡀    ⡀                                       ⡀                              ⡀<106
+MONTH > distribution:  ⣿⣄⡀⣀⣀ ⡀⡀⡀⡀⡀  ⡀  ⡀ ⡀ ⡀ ⡀     ⡀    ⡀                    ⡀                                                  ⡀<106
+MORAL > distribution:  ⣿⣤⣀⣀⡀⡀⡀⡀⡀⡀⡀       ⡀  ⡀ ⡀  ⡀             ⡀ ⡀ ⡀             ⡀<59
+MOTOR > distribution:  ⣿⣄⡀⣀⣀ ⡀⡀ ⡀⡀⡀     ⡀⡀                   ⡀                ⡀  ⡀                                                     ⡀<113
+MOUNT > distribution:  ⣿⣀⣀⣀⣀⣀⡀⡀⡀⡀⡀    ⡀   ⡀         ⡀                        ⡀                                                       ⡀<111
+MOUSE > distribution:  ⣿⣤⣤⣀⡀⣀⣄  ⡀⡀⡀  ⡀⡀⡀  ⡀ ⡀     ⡀           ⡀                         ⡀   ⡀<70
+MOUTH > distribution:  ⣿⣄⣀⣀⡀⣀ ⡀⡀   ⡀   ⡀  ⡀  ⡀⡀          ⡀                      ⡀                                                            ⡀<119
+MOVIE > distribution:  ⣿⣦⣄⡀⣀⡀⡀  ⡀ ⡀ ⡀   ⡀      ⡀         ⡀ ⡀   ⡀       ⡀      ⡀                    ⡀<77
+MUSIC > distribution:  ⣿⣶⣄⣄⡀⡀ ⡀⡀ ⡀⣀⣀⡀  ⡀        ⡀              ⡀              ⡀ ⡀                                                                 ⡀<124
+NAKED > distribution:  ⣿⣷⣶⣄⡀⡀⣄ ⡀ ⣀ ⡀⡀ ⡀⡀ ⡀ ⡀      ⡀        ⡀          ⡀                  ⡀   ⡀<71
+NERVE > distribution:  ⣿⣀⣀⣀⡀⡀  ⡀⡀⡀⡀    ⡀⡀  ⡀      ⡀   ⡀    ⡀               ⡀        ⡀                         ⡀<88
+NEVER > distribution:  ⣿⣀⣀⡀⡀⡀⡀⡀   ⡀ ⡀⡀ ⡀                  ⡀⡀                            ⡀       ⡀             ⡀<88
+NEWLY > distribution:  ⣿⣶⣀⡀⡀⣀⡀ ⡀ ⡀⡀ ⡀       ⡀        ⡀⡀      ⡀                                                             ⡀   ⡀<105
+NIGHT > distribution:  ⣿⣤⣤⣄⣤⣀⣄  ⣀⡀  ⡀        ⡀ ⡀     ⡀   ⡀ ⡀   ⡀                                                                               ⡀<121
+NOISE > distribution:  ⣿⣄⡀⣀⣀⣀⡀⡀⡀⡀⡀⡀⡀ ⡀⡀⡀    ⡀ ⡀⡀ ⡀     ⡀                ⡀<50
+NORTH > distribution:  ⣿⣤⡀⣄⣀⡀⡀⣀ ⡀⡀ ⡀⡀   ⡀      ⡀ ⡀  ⡀                 ⡀                       ⡀<72
+NOVEL > distribution:  ⣿⣄⣀⣀⣀⡀⡀ ⣀   ⡀  ⡀     ⡀ ⡀⡀   ⡀  ⡀                                 ⡀                 ⡀<84
+NURSE > distribution:  ⣿⣄⣀⣄⣀⡀⡀⡀⡀⡀ ⡀ ⡀⡀ ⡀  ⡀⡀     ⡀  ⡀   ⡀     ⡀   ⡀<44
+OCCUR > distribution:  ⣿⣦⣀⣄⡀ ⡀⡀⡀    ⡀ ⣀   ⣀     ⡀          ⡀      ⡀                                  ⡀                                               ⡀<127
+OCEAN > distribution:  ⣿⣄⣄⣀⡀⣀⡀ ⡀⡀⡀ ⣀ ⡀⡀       ⡀  ⡀     ⡀ ⡀    ⡀                 ⡀<58
+OFFER > distribution:  ⣿⣤⣤⡀⡀⣀⣀   ⡀     ⡀⡀    ⡀    ⡀                 ⡀⡀⡀                 ⡀                               ⡀<98
+OFTEN > distribution:  ⣿⣀⣄⣀⡀⣀⡀⡀⡀⡀ ⡀   ⡀ ⡀ ⡀     ⡀        ⡀   ⡀      ⡀                                   ⡀<82
+ONION > distribution:  ⣿⡀⣀⡀⡀⡀⡀⡀⡀⡀         ⡀    ⡀                   ⡀ ⡀                           ⡀                                                                                                    ⡀<176
+ORDER > distribution:  ⣿⣤⣄⡀⡀⡀⡀⡀ ⡀ ⡀ ⡀⡀⡀ ⡀    ⡀⡀⡀           ⡀                             ⡀                     ⡀<89
+OTHER > distribution:  ⣿⣄⣀⡀⣀⡀ ⡀⡀ ⡀ ⡀⡀⡀ ⡀⡀⡀ ⡀⡀       ⡀                           ⡀<58
+OUGHT > distribution:  ⣿⣀⡀⣀⣀⡀⡀⡀⡀ ⡀ ⡀⡀⡀⡀     ⡀⡀        ⡀             ⡀          ⡀                                                            ⡀<118
+OWNER > distribution:  ⣿⣦⣄⣀⣀⡀⡀   ⣀ ⡀⡀ ⡀   ⡀           ⡀       ⡀             ⡀                          ⡀<81
+PAINT > distribution:  ⣿⣄⣀⣀⡀⡀⡀⡀⡀ ⡀ ⡀  ⡀ ⡀  ⡀⡀ ⡀         ⡀                        ⡀      ⡀<66
+PANEL > distribution:  ⣿⣄⣀⣄⣀⣀⡀ ⡀ ⡀  ⡀  ⡀⡀  ⡀⡀    ⡀            ⡀   ⡀                  ⡀<63
+PAPER > distribution:  ⣿⣶⣀⣤⣤ ⡀  ⡀   ⡀    ⣀  ⡀⡀    ⡀    ⡀   ⡀ ⡀                         ⡀ ⡀<67
+PARTY > distribution:  ⣿⣄⣤⡀⣀ ⡀⡀⡀⡀   ⡀     ⡀ ⡀            ⡀    ⡀    ⡀                                    ⡀<82
+PATCH > distribution:  ⣿⣦⣄⡀⡀⡀⡀⡀⡀ ⡀⡀   ⡀ ⡀    ⡀   ⡀⡀       ⡀                           ⡀                      ⡀<87
+PAUSE > distribution:  ⣿⣤⣀⣀⣀⡀⡀⡀⡀⡀  ⡀ ⡀⡀⡀  ⡀   ⡀       ⡀         ⡀    ⡀       ⡀<55
+PEACE > distribution:  ⣿⣄⣀⣄⡀⣀ ⡀⡀    ⡀ ⡀⡀       ⡀ ⡀       ⡀      ⡀⡀                                       ⡀<83
+PHASE > distribution:  ⣿⣤⣄⣄⣀⣀⣄   ⡀ ⡀⡀   ⡀  ⡀  ⡀⡀    ⡀     ⡀         ⡀ ⡀<48
+PHONE > distribution:  ⣿⣄⣀⣀⡀⡀⡀⣀ ⣀⣀⡀ ⡀ ⡀ ⡀          ⡀                         ⡀⡀    ⡀<61
+PHOTO > distribution:  ⣿⣤⣀⣀⡀⡀⡀⡀  ⡀⡀⡀⡀⡀  ⡀ ⡀                           ⡀                   ⡀                                                                               ⡀<148
+PIANO > distribution:  ⣿⣀⣄⣀⣄⡀ ⡀⡀⡀  ⡀ ⡀⡀       ⡀              ⡀  ⡀      ⡀        ⡀           ⡀<70
+PIECE > distribution:  ⣿⣤⣀⣀⡀⣄ ⣀⡀       ⡀⡀⣀                 ⡀         ⡀    ⡀                                         ⡀<94
+PILOT > distribution:  ⣿⣤⣀⣀⣀⣀⣀⡀ ⡀⡀ ⡀ ⡀  ⡀⡀   ⡀          ⡀   ⡀⡀ ⡀                                ⡀<74
+PITCH > distribution:  ⣿⣦⣄⡀⡀⡀⣀⡀⡀⡀⡀⡀⡀⡀⡀     ⡀   ⡀             ⡀      ⡀                                                                             ⡀<124
+PLACE > distribution:  ⣿⣤⣀⣀⡀⡀⡀ ⡀ ⡀⡀⡀   ⡀  ⡀⡀           ⡀              ⡀                    ⡀<69
+PLANE > distribution:  ⣿⣤⣄⡀⣀⣀⡀ ⡀⡀ ⡀ ⡀⡀⡀ ⡀ ⡀⡀          ⡀⡀                             ⡀<63
+PLANT > distribution:  ⣿⣦⡀⣀⣀⡀⡀⡀⡀ ⣀ ⡀          ⡀⡀   ⡀ ⡀⡀            ⡀            ⡀<58
+PLATE > distribution:  ⣿⣤⡀⣀⣀⡀⡀ ⣀  ⡀⡀⡀⡀ ⡀⡀⡀        ⡀      ⡀ ⡀ ⡀<39
+POINT > distribution:  ⣿⣦⣄⡀⡀⣀⡀ ⡀⡀⡀ ⡀⡀⡀  ⡀ ⡀   ⡀⡀⡀  ⡀       ⡀                                                      ⡀<92
+PORCH > distribution:  ⣿⣄⣄⣀⣀⣀⡀⡀⡀⡀⡀⡀⡀ ⡀  ⡀ ⡀⡀     ⡀                                              ⡀                      ⡀<97
+POUND > distribution:  ⣿⣦⣀⣀⡀⡀⡀⡀⡀⡀ ⣀ ⡀ ⡀  ⡀⡀     ⡀     ⡀  ⡀                                                                                                                               ⡀<163
+POWER > distribution:  ⣿⣤⣤⣄⡀⡀⡀⡀⡀  ⡀⡀  ⡀ ⡀    ⡀                 ⡀   ⡀                   ⡀                  ⡀<84
+PRESS > distribution:  ⣿⣦⣄⣀⡀⣀ ⡀⡀ ⡀ ⡀⡀       ⡀  ⡀   ⡀       ⡀        ⡀                     ⡀              ⡀<83
+PRICE > distribution:  ⣿⣶⣀⣄⣀⣀⡀⡀⡀  ⡀⡀⡀⡀⡀    ⡀           ⡀⡀ ⡀    ⡀   ⡀<45
+PRIDE > distribution:  ⣿⣦⣤⣀⣀⣄⡀⡀    ⡀⡀ ⡀⡀⡀     ⡀          ⡀       ⡀ ⡀       ⡀<53
+PRIME > distribution:  ⣿⣶⣄⣄⣄⡀⡀⡀⡀⡀     ⡀ ⡀⡀  ⡀         ⡀ ⡀      ⡀   ⡀            ⡀<58
+PRINT > distribution:  ⣿⣤⣄⣄⡀⣀⡀⡀⡀⡀⡀    ⡀ ⡀⡀  ⡀⡀        ⡀                  ⡀                      ⡀<74
+PRIOR > distribution:  ⣿⣤⣀⡀⡀⣀⡀ ⡀⡀ ⡀ ⡀  ⡀  ⡀          ⡀  ⡀  ⡀⡀                     ⡀                                      ⡀<99
+PROOF > distribution:  ⣿⣄⣀⡀⣀⡀⡀    ⡀   ⡀     ⡀  ⡀             ⡀      ⡀               ⡀                                                                                           ⡀<154
+PROUD > distribution:  ⣿⣤⡀⣄⡀ ⡀⡀  ⡀⡀⡀       ⡀ ⡀     ⡀ ⡀                       ⡀                                                                 ⡀<121
+PROVE > distribution:  ⣿⣤⣤⣀⡀⡀⡀⡀⡀ ⡀⡀  ⡀   ⡀       ⡀ ⡀ ⡀               ⡀ ⡀                ⡀<66
+QUICK > distribution:  ⣿⣤⣄⣄⡀⡀⡀⡀⡀    ⡀     ⡀      ⡀            ⡀ ⡀              ⡀                                                                                                                                                     ⡀<207
+QUIET > distribution:  ⣿⣄⡀ ⡀⡀  ⣀⣀⡀ ⡀⡀⡀ ⡀⡀ ⡀  ⡀⡀   ⡀     ⡀                  ⡀                                     ⡀<91
+QUITE > distribution:  ⣿⣄⣀⣄ ⡀⡀ ⡀⡀⡀  ⣀⡀  ⡀    ⡀⡀       ⡀ ⡀                 ⡀⡀                   ⡀<73
+QUOTE > distribution:  ⣿⣄⣄⣄⡀⣄⡀⣀⡀ ⣄ ⡀⣀⡀   ⡀    ⡀      ⡀              ⡀   ⡀      ⡀           ⡀<69
+RADIO > distribution:  ⣿⣤⣄⣀⡀⣀⣀⡀ ⡀⡀⡀⡀   ⡀  ⡀    ⡀         ⡀ ⡀     ⡀⡀   ⡀<48
+RAISE > distribution:  ⣿⣤⣤⣄⣀⡀⣀⣀⣀ ⡀⡀⡀⡀    ⡀⡀ ⡀  ⡀  ⡀<28
+RANGE > distribution:  ⣿⣤⣄⣄⡀ ⣀⡀ ⡀⡀⡀⡀⡀  ⡀    ⡀⡀⡀   ⡀  ⡀         ⡀   ⡀<45
+RAPID > distribution:  ⣿⣤⣄⣀⣀⡀⡀⡀ ⡀   ⡀⡀⡀                   ⡀         ⡀  ⡀        ⡀                 ⡀<76
+RATIO > distribution:  ⣿⣤⣄⣄⡀⡀ ⡀⡀⡀  ⡀⡀ ⡀⡀⡀  ⡀      ⡀⡀ ⡀  ⡀   ⡀<38
+REACH > distribution:  ⣿⣤⣀⣀⡀⡀⣀ ⡀⡀  ⡀⡀  ⡀⡀   ⡀  ⡀⡀  ⡀⡀ ⡀            ⡀<45
+REACT > distribution:  ⣿⣷⣄⣀⣀⡀⡀⡀⡀⡀⡀ ⡀⡀⡀ ⡀⡀⡀⡀⡀     ⡀              ⡀<42
+READY > distribution:  ⣿⣦⡀⡀⣀⡀⡀⡀⡀  ⡀⡀ ⡀ ⡀⡀ ⡀     ⡀ ⡀      ⡀     ⡀            ⡀      ⡀<61
+REFER > distribution:  ⣿⣶⣶⣀⡀⣀⡀⣀   ⡀ ⡀⡀  ⡀ ⡀               ⡀                            ⡀                          ⡀                      ⡀<115
+RELAX > distribution:  ⣿⣤⣤⣀⡀⣀⡀ ⡀      ⡀⡀ ⡀   ⡀  ⡀⡀     ⡀         ⡀    ⡀⡀  ⡀<52
+REPLY > distribution:  ⣿⣀⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀             ⡀⡀                            ⡀  ⡀⡀  ⡀<65
+RIFLE > distribution:  ⣿⣤⣀⣀⡀⡀⣀⡀⡀   ⡀  ⡀ ⡀ ⡀  ⡀         ⡀    ⡀  ⡀              ⡀<56
+RIGHT > distribution:  ⣿⣦⣀⡀⡀⡀⣀⡀⡀⡀⡀ ⡀   ⡀ ⡀ ⡀   ⡀    ⡀ ⡀                                 ⡀                   ⡀<86
+RIVER > distribution:  ⣿⣀⣀⡀⡀ ⡀⡀   ⡀ ⡀ ⡀  ⡀  ⡀⡀          ⡀  ⡀              ⡀                      ⡀            ⡀<88
+ROUGH > distribution:  ⣿⣤⣀⣀⡀ ⡀⡀⡀⣀⡀ ⡀⡀⡀⡀ ⡀     ⡀⡀    ⡀                                           ⡀                             ⡀<104
+ROUND > distribution:  ⣿⣶⣄⡀⡀⣀⡀⡀⣀ ⡀⡀⣀    ⡀ ⡀ ⡀                                                ⡀                                       ⡀<111
+ROUTE > distribution:  ⣿⣤⣄⣄⣀⣄ ⡀⡀⡀⡀ ⡀ ⡀⡀ ⡀ ⡀   ⡀ ⡀    ⡀      ⡀⡀<39
+RURAL > distribution:  ⣿⣤⣀⣄⣀  ⣀  ⡀⡀⡀   ⡀    ⡀      ⡀      ⡀          ⡀   ⡀     ⡀                   ⡀<77
+SALAD > distribution:  ⣿⣄⣀⡀⡀⡀⡀⡀⡀⡀ ⡀⡀      ⡀  ⡀    ⡀  ⡀   ⡀   ⡀                                                                                     ⡀<125
+SALES > distribution:  ⣿⣄⣀⣀⣀⡀⣀   ⡀⡀  ⡀ ⡀⡀ ⡀          ⡀ ⡀    ⡀    ⡀                           ⡀<71
+SAUCE > distribution:  ⣿⣄⣦⣄⡀⣀⡀⡀⣀ ⡀⡀  ⡀⡀ ⡀   ⡀⡀            ⡀      ⡀         ⡀<53
+SCALE > distribution:  ⣿⣶⣀⡀⣀⣀⣀⣀⡀ ⡀  ⡀ ⡀⡀⡀ ⡀  ⡀                   ⡀          ⡀<54
+SCENE > distribution:  ⣿⣦⣤⡀⣀⣀⡀  ⡀  ⡀  ⡀  ⡀       ⡀ ⡀       ⡀          ⡀                                  ⡀<83
+SCOPE > distribution:  ⣿⣷⣀⣀⣤⡀ ⡀⡀⣀⡀⡀⡀ ⡀  ⡀  ⡀    ⡀          ⡀⡀                   ⡀     ⡀<64
+SCORE > distribution:  ⣿⣦⣄⣄⡀⡀⡀⡀⡀⡀ ⡀⡀⡀ ⡀ ⡀⡀  ⡀⡀⡀    ⡀      ⡀ ⡀<38
+SEIZE > distribution:  ⣿⣤⡀⣄⣄⣄  ⣄  ⡀⡀  ⣀   ⣀   ⣀         ⡀     ⡀             ⡀                                                      ⡀<109
+SENSE > distribution:  ⣿⣄⣀⣀⣀⡀⣀⡀     ⡀⡀  ⡀   ⡀         ⡀            ⡀ ⡀   ⡀                                                                      ⡀<122
+SERVE > distribution:  ⣿⣦⣦⣀⡀⡀⣀  ⡀⡀  ⡀⡀⡀⡀⡀  ⡀    ⡀  ⡀   ⡀                           ⡀                                 ⡀<95
+SEVEN > distribution:  ⣿⣤⣀⡀⡀⡀ ⡀⡀  ⡀⡀   ⡀⡀     ⡀ ⡀ ⡀   ⡀      ⡀                    ⡀                                                         ⡀<118
+SHADE > distribution:  ⣿⣶⣀⣀⣀⡀⣀⣀⡀⡀ ⡀⡀⡀ ⡀⡀       ⡀ ⡀   ⡀        ⡀  ⡀<43
+SHAKE > distribution:  ⣿⣶⣦⣀ ⣤ ⣀⣀  ⡀ ⡀⡀      ⡀    ⡀⡀⡀           ⡀        ⡀<50
+SHALL > distribution:  ⣿⣄⣀⣀⣀⡀⡀ ⡀⣀⡀ ⡀ ⡀⡀⡀⡀⡀       ⡀   ⡀⡀             ⡀                                                    ⡀<99
+SHAPE > distribution:  ⣿⣄⣄⣄⣀⣀⣀⡀⡀ ⡀⡀⡀⡀      ⡀  ⡀⡀    ⡀     ⡀         ⡀ ⡀<48
+SHARE > distribution:  ⣿⣄⣀⣀⡀⡀⡀⡀⡀⡀ ⡀ ⡀  ⡀ ⡀  ⡀ ⡀⡀⡀     ⡀<32
+SHARP > distribution:  ⣿⣄⣄⣀⣀ ⡀⡀ ⡀⡀⡀⡀       ⡀⡀ ⡀         ⡀      ⡀        ⡀             ⡀<64
+SHEET > distribution:  ⣿⣤⣤⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀  ⡀ ⡀    ⡀   ⡀                          ⡀                       ⡀<80
+SHELF > distribution:  ⣿⣄⣤⣄⡀⡀⡀⡀ ⡀⡀⡀⡀⡀⡀⡀⡀         ⡀  ⡀                                       ⡀  ⡀<73
+SHELL > distribution:  ⣿⣤⣄⣄⡀⡀⡀⡀ ⡀⡀⡀⡀⡀ ⡀⡀ ⡀   ⡀          ⡀                                              ⡀⡀<82
+SHIFT > distribution:  ⣿⣦⣀⣀⣀⡀⡀⡀ ⡀   ⡀  ⡀⡀⡀ ⡀    ⡀⡀                                                                                              ⡀<122
+SHINE > distribution:  ⣿⣤⣀⣀⣀⣀⡀⡀⡀⡀⡀  ⡀⡀⡀⡀  ⡀        ⡀                  ⡀          ⡀<59
+SHIRT > distribution:  ⣿⣤⣀⣄⡀⡀⡀⡀ ⡀ ⡀⡀⡀    ⡀⡀                                         ⡀ ⡀<64
+SHOCK > distribution:  ⣿⣷⣄⣄⡀⡀⡀  ⡀⡀⡀ ⡀⡀     ⡀      ⡀       ⡀              ⡀                                                                                         ⡀<141
+SHOOT > distribution:  ⣿⣄⣀⡀⣀⡀⡀⡀⡀⣀ ⡀⡀ ⡀ ⡀    ⡀    ⡀    ⡀  ⡀                                                                                       ⡀<123
+SHORE > distribution:  ⣿⣦⣤⣀ ⡀⡀⣀ ⡀⡀   ⡀  ⡀  ⡀   ⡀  ⡀ ⡀⡀     ⡀<37
+SHORT > distribution:  ⣿⣤⡀⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀     ⡀ ⡀                              ⡀      ⡀<61
+SHOUT > distribution:  ⣿⣄⣄⣄⡀⡀⡀⡀⡀⡀ ⡀⡀  ⡀⡀⡀     ⡀      ⡀     ⡀                                                                 ⡀<103
+SHRUG > distribution:  ⣿⣤⣀⡀⣀⣀⡀ ⡀⡀⣀⡀    ⡀⡀  ⡀ ⡀              ⡀                                                    ⡀⡀<92
+SIGHT > distribution:  ⣿⣄⣀⣀⡀⣀⡀ ⡀⡀ ⡀⡀ ⡀ ⡀  ⡀  ⡀ ⡀⡀  ⡀   ⡀                                                                                 ⡀<115
+SINCE > distribution:  ⣿⣤⣄⣀⣀⡀⡀⡀ ⡀ ⡀⡀⡀⡀⡀⡀⡀ ⡀⡀      ⡀                       ⡀  ⡀<55
+SKILL > distribution:  ⣿⣤⡀⣶⣀⣤⣤  ⡀⡀      ⡀           ⡀ ⡀  ⡀      ⡀⡀                                                                                                                 ⡀<157
+SLAVE > distribution:  ⣿⣤⣀⡀⡀⡀⡀⣀⡀⡀⡀   ⡀    ⡀⡀ ⡀  ⡀ ⡀           ⡀                              ⡀<71
+SLEEP > distribution:  ⣿⣄⣄⡀⡀⡀⡀⡀   ⡀⡀ ⡀  ⡀⡀   ⡀⡀    ⡀⡀                 ⡀                                                         ⡀<106
+SLICE > distribution:  ⣿⣤⣀⣀⡀⡀⡀⡀⡀ ⡀⡀⡀⡀   ⡀ ⡀  ⡀⡀                         ⡀       ⡀<58
+SLIDE > distribution:  ⣿⣦⣄⡀⡀⡀⡀⡀⡀⡀⡀  ⡀ ⡀⡀⡀  ⡀  ⡀                         ⡀           ⡀<62
+SMALL > distribution:  ⣿⣀⣄⡀⡀⡀ ⡀⡀⡀  ⡀⡀ ⡀⡀        ⡀          ⡀  ⡀  ⡀                                                                                        ⡀<132
+SMART > distribution:  ⣿⣶⣦⣄⣄⡀⣀⡀⣀⡀ ⡀ ⡀     ⡀⡀⡀        ⡀             ⡀              ⡀<60
+SMELL > distribution:  ⣿⣤⣀⣄⡀ ⡀⡀⡀⡀⡀  ⡀⡀ ⡀⡀ ⡀ ⡀  ⡀                                                            ⡀                        ⡀<111
+SMILE > distribution:  ⣿⣶⣄⣀⡀ ⡀⡀⣀⡀ ⡀⡀    ⣀⡀⡀ ⡀   ⡀                           ⡀            ⡀<67
+SMOKE > distribution:  ⣿⣄⣄⡀⣀ ⣀  ⡀⡀  ⣀   ⡀⡀ ⡀                       ⡀⡀                        ⡀ ⡀<73
+SOLAR > distribution:  ⣿⣄⣀⣀⡀⡀⣀⡀⡀⣀⡀⡀    ⡀    ⡀⡀  ⡀⡀ ⡀        ⡀⡀<39
+SOLID > distribution:  ⣿⣤⣤⣀⣀⡀⡀⡀⡀⡀⡀⡀ ⡀      ⡀    ⡀  ⡀           ⡀  ⡀                              ⡀<75
+SOLVE > distribution:  ⣷⣿⣀⣀⣀⣀ ⣀ ⡀  ⡀ ⡀⡀ ⡀⡀       ⡀⡀  ⡀                        ⡀         ⡀<66
+SORRY > distribution:  ⣿⣤⣄⣄ ⣀⣀  ⡀⡀⡀ ⡀        ⡀  ⡀⡀  ⡀              ⡀                          ⡀                                      ⡀<111
+SOUND > distribution:  ⣿⣶⣄⣄⡀⣀⣀⡀⡀⡀ ⡀⡀     ⡀  ⡀   ⡀  ⡀            ⡀                                                                                ⡀<123
+SOUTH > distribution:  ⣿⣶⡀⣀⣀⣀⡀⡀⡀   ⡀  ⡀ ⡀⡀    ⡀           ⡀     ⡀                                                            ⡀<103
+SPACE > distribution:  ⣿⣤⣤⣀⣀⡀⣀⡀⡀⡀⡀⡀⡀  ⡀ ⡀    ⡀    ⡀       ⡀               ⡀   ⡀<56
+SPEAK > distribution:  ⣿⣦⡀⡀⡀⡀⣀ ⣀⡀⡀⡀⡀⡀⡀ ⡀                             ⡀    ⡀                ⡀   ⡀<73
+SPEED > distribution:  ⣿⣦⣄⡀⣀⡀⡀ ⡀⡀⡀      ⡀ ⡀⡀⡀   ⡀  ⡀                                    ⡀                                                   ⡀<118
+SPEND > distribution:  ⣷⣿⡀⣀⡀⡀ ⡀ ⡀  ⡀⡀⡀    ⡀⡀ ⡀⡀⡀                                                     ⡀   ⡀<83
+SPLIT > distribution:  ⣿⣀⣄⣄⡀⣀⣀⡀⡀ ⡀⡀⡀⡀ ⡀⡀⡀⡀      ⡀              ⡀      ⡀                                     ⡀<86
+SPORT > distribution:  ⣿⣤⣄⣀⡀⡀ ⡀⡀⡀⡀⡀   ⡀⡀    ⡀⡀ ⡀                       ⡀                    ⡀<70
+STAFF > distribution:  ⣿⣄⣄⡀⡀⡀⣀ ⡀⣀⣄      ⡀⡀        ⡀⡀   ⡀                              ⡀  ⡀                                   ⡀<103
+STAGE > distribution:  ⣿⣦⣤⣄⣀ ⡀⣄⣀⡀ ⡀ ⡀⡀     ⡀⡀  ⡀           ⡀   ⡀ ⡀<43
+STAIR > distribution:  ⣿⣷⣤⣀⣤⡀⡀⣀⡀⣀⡀  ⡀⣀  ⡀⡀ ⡀  ⡀     ⡀         ⡀<40
+STAKE > distribution:  ⣿⣦⣄⣄⣀⣀⡀ ⣀⡀ ⡀⡀  ⡀    ⡀⡀ ⡀    ⡀           ⡀⡀ ⡀<44
+STAND > distribution:  ⣿⣤⣤⣀⡀⣀⣀ ⡀⣀⣀⡀      ⣀     ⡀⡀          ⡀              ⡀       ⡀<60
+STARE > distribution:  ⣿⣶⣀⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀⡀⡀  ⡀    ⡀ ⡀⡀<28
+START > distribution:  ⣿⣄⣤⣄⣀ ⡀⡀⡀⣀⡀  ⡀ ⡀     ⡀ ⡀  ⡀         ⡀           ⡀                 ⡀<67
+STATE > distribution:  ⣿⣄⣄⣀⣀⡀⣀⣀⡀ ⡀⡀⡀⡀   ⡀      ⡀   ⡀  ⡀             ⡀ ⡀<48
+STEAL > distribution:  ⣿⣦⣀⣤⡀⡀⣀⡀ ⡀⡀  ⡀ ⡀⡀ ⡀   ⡀    ⡀ ⡀          ⡀  ⡀<44
+STEEL > distribution:  ⣿⣄⣤⣀⣀⡀⡀⡀⡀ ⡀⡀⡀  ⡀   ⡀   ⡀  ⡀⡀      ⡀                          ⡀  ⡀<65
+STICK > distribution:  ⣿⣤⡀⡀⡀⡀⡀⡀ ⡀  ⡀⡀⡀⡀⡀   ⡀    ⡀ ⡀                                 ⡀                                                         ⡀<120
+STILL > distribution:  ⣿⣤⣄⣄⡀⣀ ⡀  ⡀  ⡀ ⡀   ⡀⡀⡀⡀  ⡀      ⡀                                 ⡀                               ⡀<99
+STOCK > distribution:  ⣿⣦⡀⣄⣀⡀⡀⡀  ⡀ ⡀⡀  ⡀⡀    ⡀    ⡀              ⡀                           ⡀                              ⡀<102
+STONE > distribution:  ⣿⣄⣤⣀⡀⣀⡀⡀ ⡀⣀ ⡀⡀⡀ ⡀   ⡀⡀       ⡀  ⡀   ⡀   ⡀<41
+STORE > distribution:  ⣿⣶⣄⡀⣀⡀⡀⣀ ⡀⡀ ⡀⡀⡀⡀⡀       ⡀ ⡀⡀⡀<29
+STORM > distribution:  ⣿⣷⣄ ⣀⡀⡀⡀⣀ ⡀⡀ ⡀  ⡀  ⡀ ⡀    ⡀      ⡀      ⡀      ⡀                    ⡀<69
+STORY > distribution:  ⣿⣶⣄⣀⣀⡀  ⡀⡀⡀⡀⡀ ⡀ ⡀     ⡀⡀     ⡀ ⡀             ⡀   ⡀              ⡀<65
+STRIP > distribution:  ⣿⣀⣀⣀⣀⣀⡀⡀⡀⡀ ⡀   ⡀  ⡀ ⡀     ⡀   ⡀⡀                          ⡀           ⡀<71
+STUDY > distribution:  ⣿⡀⣀⣀ ⣀⡀ ⡀⡀⡀ ⡀  ⡀⡀     ⡀      ⡀    ⡀                                                     ⡀                                 ⡀<123
+STUFF > distribution:  ⣿⣄⣄ ⡀⡀⡀⡀⡀⡀ ⣀⡀    ⡀    ⡀ ⡀               ⡀                                                    ⡀                                                                      ⡀<165
+STYLE > distribution:  ⣿⣦⣄⣀⣄⡀⡀⡀⡀ ⡀⡀  ⡀⡀⡀    ⡀ ⡀    ⡀             ⡀         ⡀      ⡀<60
+SUGAR > distribution:  ⣿⣄⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀         ⡀      ⡀⡀    ⡀          ⡀               ⡀<66
+SUPER > distribution:  ⣿⣀⣀⡀⣀⣀⡀⡀⡀⡀⡀   ⡀⡀     ⡀⡀ ⡀         ⡀       ⡀        ⡀    ⡀<57
+SWEAR > distribution:  ⣿⣄⣀⣄⣀⣀⣀⣀⡀⡀⡀ ⡀ ⡀⡀⡀⡀     ⡀⡀  ⡀   ⡀     ⡀             ⡀<52
+SWEEP > distribution:  ⣿⣤⣀⡀ ⡀⡀⡀   ⡀⡀   ⡀  ⡀⡀⡀⡀      ⡀   ⡀                                 ⡀                                                                 ⡀<134
+SWEET > distribution:  ⣿⣦⣄⡀⣀ ⡀⡀ ⡀ ⡀⡀ ⡀ ⡀⡀         ⡀     ⡀       ⡀                ⡀                       ⡀<83
+SWING > distribution:  ⣿⣀⣦⣀⣄ ⣀ ⡀⡀    ⡀⡀⡀        ⡀   ⡀ ⡀   ⡀             ⡀                                                                                             ⡀<144
+TABLE > distribution:  ⣿⣄⣄⣀⣀⣀⡀⣀⡀  ⡀ ⡀⡀⡀⡀     ⡀           ⡀⡀ ⡀    ⡀<43
+TASTE > distribution:  ⣿⣤⡀⡀⣀⣀ ⡀⡀ ⣀⡀⡀⡀⡀  ⡀⡀⡀ ⡀  ⡀        ⡀           ⡀ ⡀<48
+TEACH > distribution:  ⣿⣄⣀⡀⣀⡀⡀⡀⡀⡀⡀ ⡀⡀⡀   ⡀   ⡀     ⡀    ⡀ ⡀                   ⡀<56
+TERMS > distribution:  ⣿⣿⣤⣄⣀⣄⡀⣀ ⣀⡀⣀⡀⡀⡀⡀              ⡀  ⣀ ⡀     ⡀   ⡀<46
+THANK > distribution:  ⣿⣤⣀⣄⣀⡀⡀⣀ ⡀ ⡀⡀⡀ ⡀ ⡀ ⡀     ⡀⡀      ⡀                          ⡀                       ⡀<85
+THEIR > distribution:  ⣿⣶⣄⣀⡀⡀⣀⡀⣀ ⡀⡀⡀⡀ ⡀  ⡀⡀        ⡀ ⡀                     ⡀<53
+THEME > distribution:  ⣿⣶⡀⣀⣄⣄⣀⣀   ⣄⡀⣀    ⡀                      ⡀   ⡀       ⡀                                 ⡀<88
+THERE > distribution:  ⣿⣦⣀⣄⣀⡀⡀⡀⣀⡀   ⡀  ⡀⡀   ⡀  ⡀     ⡀        ⡀     ⡀      ⡀<53
+THESE > distribution:  ⣿⣶⣄⣀⣀⣀⡀⡀ ⡀⣀ ⡀⡀ ⡀ ⡀  ⡀            ⡀     ⡀    ⡀                                  ⡀<80
+THICK > distribution:  ⣿⣷⣀⣀⣀⡀⡀⡀ ⡀ ⡀ ⡀ ⡀      ⡀ ⡀    ⡀                        ⡀                                                                                   ⡀<139
+THING > distribution:  ⣿⣀⣀⣄⡀⡀⣀   ⡀ ⡀⡀⡀    ⡀  ⡀⡀ ⡀                       ⡀                                                                      ⡀<121
+THINK > distribution:  ⣿⣀⣀⣀⡀⣀ ⡀⡀⡀⡀⡀⡀  ⡀⡀   ⡀   ⡀   ⡀                     ⡀                                                                          ⡀<126
+THIRD > distribution:  ⣿⣄⣀⣄⡀⡀⡀ ⣄⡀⡀⡀ ⡀⡀⡀ ⡀            ⡀                           ⡀                ⡀<76
+THOSE > distribution:  ⣿⣦⣤⣀⣀⣀⡀⡀ ⡀⡀⡀⡀⡀ ⡀⡀  ⡀     ⡀           ⡀⡀      ⡀<46
+THREE > distribution:  ⣿⣄⣀⣀⣀⡀⡀⡀⡀⡀⡀⡀   ⡀⡀⡀ ⡀          ⡀        ⡀     ⡀      ⡀<53
+THROW > distribution:  ⣿⣶⣦⣀⣀⣀  ⣀⡀  ⡀ ⡀⡀  ⡀              ⡀     ⡀                  ⡀                                   ⡀<95
+TIGHT > distribution:  ⣿⣄⣄⣀  ⣄⡀⣀⡀⡀  ⡀  ⡀⡀      ⡀       ⡀        ⡀     ⡀                                                                                                             ⡀<158
+TIRED > distribution:  ⣿⣄⡀⣀⣀⡀ ⡀⡀ ⡀⡀⡀⡀ ⡀ ⡀  ⡀ ⡀  ⡀   ⡀                                ⡀<63
+TITLE > distribution:  ⣿⣦⣀⣀⡀⡀⣀⣀   ⡀⡀ ⡀⡀ ⡀  ⡀ ⡀⡀            ⡀   ⡀         ⡀   ⡀<55
+TODAY > distribution:  ⣿⣄⣀⣀⡀⡀ ⡀⡀⡀ ⡀⡀ ⡀⡀⡀   ⡀          ⡀    ⡀⡀                           ⡀ ⡀<68
+TOOTH > distribution:  ⣿⣀⣀⡀⡀⡀⡀⡀⡀⡀  ⡀⡀⡀    ⡀ ⡀   ⡀       ⡀                     ⡀                                                                                                                   ⡀<172
+TOPIC > distribution:  ⣿⣶⣀⣀⣀⡀⡀⣀⡀⡀⡀⡀⡀⡀⡀        ⡀  ⡀⡀⡀        ⡀⡀                                                     ⡀<93
+TOTAL > distribution:  ⣿⣤⣀⣀⣀⣀⡀⡀⡀ ⡀ ⡀⡀⡀⡀      ⡀   ⡀⡀   ⡀                           ⡀    ⡀<65
+TOUCH > distribution:  ⣿⣦⣄⣄⣀⡀⡀ ⡀⡀⡀⡀⡀  ⡀   ⡀⡀          ⡀                    ⡀                                                          ⡀<112
+TOUGH > distribution:  ⣿⣀⣀⣀⣀⡀⡀⡀⡀ ⡀ ⡀  ⡀  ⡀⡀   ⡀⡀           ⡀               ⡀                                                                ⡀<118
+TOWER > distribution:  ⣿⣤⣄⡀⡀⣀⣀ ⡀⣀⡀⡀ ⡀ ⡀    ⡀   ⡀      ⡀⡀  ⡀                                   ⡀<72
+TRACE > distribution:  ⣿⣦⣀⣄⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀  ⡀⡀   ⡀      ⡀ ⡀<31
+TRACK > distribution:  ⣿⣄⡀⡀⡀⡀⡀⣀ ⡀⡀ ⡀  ⡀   ⡀⡀ ⡀            ⡀  ⡀       ⡀                   ⡀<67
+TRADE > distribution:  ⣿⣦⣄⣀⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀  ⡀    ⡀    ⡀  ⡀⡀<31
+TRAIL > distribution:  ⣿⣶⣀ ⣀⡀⡀⡀⡀⡀⡀⡀ ⡀⡀⡀⡀   ⡀ ⡀ ⡀     ⡀  ⡀<34
+TRAIN > distribution:  ⣿⣄⣀⣀⡀⡀⡀⡀⡀⡀ ⡀⡀   ⡀  ⡀ ⡀⡀     ⡀⡀       ⡀<38
+TREAT > distribution:  ⣿⣤⣀⣄⡀⣀⡀⡀⡀⡀⡀ ⡀⡀⡀⡀⡀ ⡀    ⡀⡀        ⡀   ⡀            ⡀<51
+TREND > distribution:  ⣿⣤⣀⣀⡀⡀⡀⡀⡀⡀ ⡀⡀⡀   ⡀⡀ ⡀  ⡀      ⡀    ⡀                   ⡀<56
+TRIAL > distribution:  ⣿⣤⣄⡀⣄⣀⡀⡀⡀ ⡀⡀⡀ ⡀⡀ ⡀ ⡀  ⡀⡀⡀     ⡀  ⡀<34
+TRIBE > distribution:  ⣿⣦⣀⡀⣀⣀⡀⡀⡀⡀ ⡀⡀ ⡀ ⡀⡀       ⡀⡀      ⡀  ⡀ ⡀<39
+TRICK > distribution:  ⣿⣄⣀⡀⡀⣀⡀⡀⡀ ⡀⡀    ⡀⡀⡀      ⡀⡀                ⡀             ⡀                          ⡀<85
+TROOP > distribution:  ⣿⣄⡀⡀⡀⡀⡀⡀⡀  ⡀ ⡀⡀⡀  ⡀ ⡀    ⡀     ⡀        ⡀           ⡀                                                       ⡀<109
+TRUCK > distribution:  ⣿⣦⣀⡀⡀⣀⡀⣀⡀ ⡀⡀⡀      ⡀           ⡀ ⡀                  ⡀  ⡀                                        ⡀<97
+TRULY > distribution:  ⣿⣦⡀⡀⡀⡀⣀⡀⡀⡀⣀ ⡀  ⡀⡀             ⡀        ⡀ ⡀   ⡀ ⡀               ⡀<64
+TRUST > distribution:  ⣿⣄⣄⣀⣀⡀⡀⡀⡀⡀⡀⡀    ⡀  ⡀⡀             ⡀  ⡀              ⡀                                        ⡀<94
+TRUTH > distribution:  ⣿⣶⣀⣀⣄⣀⣀  ⡀  ⡀⡀   ⡀    ⡀  ⡀          ⡀  ⡀              ⡀                                                       ⡀<111
+TWICE > distribution:  ⣿⣤⣀⣀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀          ⡀⡀         ⡀     ⡀        ⡀       ⡀<59
+UNCLE > distribution:  ⣿⣄⡀⣀⡀⡀⡀⡀⣀ ⡀⡀ ⡀ ⡀ ⡀   ⡀⡀    ⡀  ⡀            ⡀        ⡀          ⡀<64
+UNDER > distribution:  ⣿⣶⣄⣀  ⣀⡀⡀⡀⡀⡀⡀⡀    ⡀ ⡀                  ⡀⡀            ⡀                    ⡀<75
+UNION > distribution:  ⣿⡀⡀⣀⡀⡀⡀⡀⡀⡀  ⡀  ⡀     ⡀ ⡀     ⡀        ⡀   ⡀               ⡀                                                                                    ⡀<144
+UNTIL > distribution:  ⣿⣤⣀⡀⡀⡀⡀⡀ ⡀⡀ ⡀    ⡀    ⡀⡀⡀                    ⡀          ⡀                       ⡀<81
+UPPER > distribution:  ⣿⣀⣄⡀⡀⡀⡀  ⡀  ⡀⡀⡀      ⡀  ⡀          ⡀          ⡀        ⡀                  ⡀                    ⡀<96
+URBAN > distribution:  ⣿⣄⣀⡀⡀⡀⡀⡀⣀     ⡀ ⡀ ⡀      ⡀  ⡀         ⡀        ⡀   ⡀                              ⡀<83
+USUAL > distribution:  ⣿⣦⣤⡀⣄⡀⡀ ⣄  ⣀  ⡀   ⡀      ⡀  ⡀ ⡀                 ⡀                                 ⡀                          ⡀<110
+VALUE > distribution:  ⣿⣄⣀⣀⡀⣀⣀ ⡀⡀  ⡀  ⡀  ⡀ ⡀     ⡀    ⡀⡀         ⡀   ⡀               ⡀<63
+VIDEO > distribution:  ⣿⣀⣀⡀⡀⡀ ⡀ ⡀⡀   ⡀⡀       ⡀⡀    ⡀           ⡀        ⡀             ⡀                         ⡀<91
+VIRUS > distribution:  ⣿⣀⣀⣀⡀ ⡀⡀   ⡀⡀  ⡀⡀⡀⡀      ⡀ ⡀      ⡀               ⡀                        ⡀    ⡀<81
+VISIT > distribution:  ⣿⣤⣀⡀⡀ ⡀ ⡀ ⡀⡀⡀⡀     ⡀    ⡀    ⡀                       ⡀       ⡀                                                                                   ⡀<146
+VITAL > distribution:  ⣿⣄⣀⣀⡀⣀⡀⡀ ⡀  ⡀ ⡀⡀     ⡀   ⡀  ⡀  ⡀               ⡀  ⡀                     ⡀<73
+VOICE > distribution:  ⣿⣄⣀⡀⣤⣀⣀⡀ ⣀⡀     ⡀ ⡀          ⡀ ⡀       ⡀     ⡀                          ⡀<73
+VOTER > distribution:  ⣿⣤⣀⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀         ⡀⡀⡀ ⡀⡀       ⡀                               ⡀<70
+WASTE > distribution:  ⣿⣄⡀⡀⡀⣀ ⡀  ⡀⡀⡀⡀   ⡀⡀ ⡀⡀       ⡀ ⡀     ⡀ ⡀<40
+WATCH > distribution:  ⣿⣀⣀⡀⣄⡀ ⡀⡀⡀ ⡀⡀    ⡀        ⡀    ⡀        ⡀                     ⡀                          ⡀<90
+WATER > distribution:  ⣿⣄⡀⣄ ⡀⡀⡀ ⡀⡀ ⡀⡀ ⡀ ⡀⡀⡀  ⡀      ⡀     ⡀  ⡀      ⡀<46
+WEIGH > distribution:  ⣿⣄⣤⡀⡀⣀⡀⡀  ⡀ ⡀  ⡀  ⡀⡀⡀⡀   ⡀        ⡀                                               ⡀                     ⡀<105
+WHEEL > distribution:  ⣿⣤⣀⡀⣀⡀⡀  ⡀ ⡀ ⡀⡀  ⡀        ⡀       ⡀ ⡀                           ⡀                                      ⡀<104
+WHERE > distribution:  ⣿⣄⣄⡀⡀⡀ ⡀ ⡀ ⡀⡀⡀      ⡀      ⡀⡀                           ⡀⡀                      ⡀<81
+WHICH > distribution:  ⣿⣦ ⡀⡀⣀ ⡀⣀   ⣀ ⡀ ⡀ ⡀     ⡀    ⡀     ⡀             ⡀                                                                                                                                          ⡀<189
+WHILE > distribution:  ⣿⣤⣀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀⡀ ⡀     ⡀ ⡀⡀⡀            ⡀              ⡀         ⡀<64
+WHITE > distribution:  ⣿⣄⡀⡀⡀⣀⡀⣀⡀ ⡀ ⡀   ⡀⡀⡀    ⡀           ⡀            ⡀      ⡀⡀<57
+WHOLE > distribution:  ⣿⣦⣀⣀⡀⡀⡀⣀  ⣀⣀  ⡀⡀    ⣀         ⡀              ⡀         ⡀⡀<57
+WHOSE > distribution:  ⣿⣄⣀⣀⣄⡀ ⡀⡀⡀  ⡀⡀⡀  ⡀⡀⡀ ⡀          ⡀            ⡀                ⡀<63
+WOMAN > distribution:  ⣿⣄⣦⣀⣀ ⡀⡀⡀  ⡀⡀⡀  ⡀   ⡀       ⡀ ⡀      ⡀                                                           ⡀⡀<99
+WORKS > distribution:  ⣿⣄⣷ ⣀⡀⣀⡀⣀ ⡀ ⡀  ⡀     ⡀  ⡀   ⡀                              ⡀                   ⡀                            ⡀<109
+WORLD > distribution:  ⣿⣤⣄⡀⡀⡀ ⡀⡀ ⡀⡀  ⡀      ⡀⡀⡀                    ⡀                               ⡀              ⡀<92
+WORRY > distribution:  ⣿⣿⣦⣀⡀⣀⡀  ⡀   ⣀⡀    ⡀             ⡀  ⡀                                            ⡀                                                                                       ⡀<170
+WORTH > distribution:  ⣿⣶⣄⣀⣀⡀⣀⡀⡀⡀      ⡀⡀⡀ ⡀          ⡀   ⡀                      ⡀                                   ⡀<95
+WOULD > distribution:  ⣿⣄⣀⣀ ⡀⡀⡀ ⡀⡀ ⡀ ⡀    ⡀ ⡀                 ⡀     ⡀                                                                                                           ⡀<154
+WOUND > distribution:  ⣿⣦⣄⡀ ⡀⣄  ⡀⡀⡀  ⡀    ⡀  ⡀        ⡀     ⡀                                                                                                                                        ⡀<175
+WRITE > distribution:  ⣿⣤⣄⡀⣀⡀ ⡀⡀⡀⡀⡀⡀⡀⡀  ⡀   ⡀  ⡀  ⡀      ⡀ ⡀     ⡀<43
+WRONG > distribution:  ⣿⣦⣄⣄⡀⣀ ⣀   ⡀  ⡀     ⡀⡀  ⡀ ⡀           ⡀             ⡀                                                                             ⡀<131
+YIELD > distribution:  ⣿⣤⣦ ⣀⡀⡀⡀⡀⡀⡀  ⡀⡀      ⡀   ⡀⡀     ⡀     ⡀                                   ⡀     ⡀<81
+YOUNG > distribution:  ⣿⣿⣤⣀⡀ ⣤⣀⡀ ⡀  ⣀⡀   ⡀   ⣀       ⡀               ⡀                                                                                                                                       ⡀<183
+YOURS > distribution:  ⣿⣀⣄⣄⣀⣀⡀  ⣀ ⡀⡀ ⡀⡀      ⡀ ⡀                               ⡀                ⡀                 ⡀<92
+YOUTH > distribution:  ⣿⣷⡀⣀⡀⣤ ⡀⡀   ⡀     ⡀  ⣀  ⡀             ⡀                      ⡀                                                         ⡀<120

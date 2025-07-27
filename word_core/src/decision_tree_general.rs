@@ -228,6 +228,16 @@ pub fn compute_decision_tree_aggressive(
             next: HashMap::new(),
         };
 
+        // Reorder hints to be ascending on number of possible answers, with 1s & 2s in the back
+        let first_ind_at_least_3 = hints_answers
+            .iter()
+            .enumerate()
+            .find(|(_, (_, answers))| answers.len() >= 3)
+            .map(|(ind, _)| ind);
+        if let Some(split_ind) = first_ind_at_least_3 {
+            hints_answers.rotate_left(split_ind);
+        }
+
         // Add up estimated cost across all possibilities, weighted by likelihood
         for (hint, hint_possible_answers) in hints_answers.into_iter() {
             // If we happened to guess correctly, there is no additional cost

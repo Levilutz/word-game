@@ -126,7 +126,54 @@ pub fn compute_decision_tree_aggressive(
     let mut best: Option<TreeNode> = None;
     let mut guess_max_est_cost = max_cost;
 
-    'guess_loop: for guess_ind in 0..hints.len() as u16 {
+    // We can filter more aggressively if we happen to see the best possible guess sooner
+    // The best possible guess _tends_ to have an "even" distribution of hints. i.e. no
+    // single hint downstream of that guess gives a huge of the answers.
+    // To improve how early we see the best possible guess, we can thus order guesses by
+    // the frequency of their most common subsequent hint.
+    // We can also take this as an opportunity to filter out "useless" guesses, as they
+    // will have all answers under a single hint.
+    let mut guess_order: Vec<(u16, usize)> = (0..hints.len())
+        .map(|guess_ind| {
+            let guess_hints = &hints[guess_ind];
+            let num_answers_by_hint: HashMap<u8, usize> =
+                possible_answers
+                    .iter()
+                    .fold(HashMap::new(), |mut map, &answer_ind| {
+                        let hint = guess_hints[answer_ind as usize];
+                        *map.entry(hint).or_insert(0) += 1;
+                        map
+                    });
+            let most_answers_for_any_hint = *num_answers_by_hint.values().max().unwrap();
+            (guess_ind as u16, most_answers_for_any_hint)
+        })
+        .filter(|(_, most_answers_for_any_hint)| {
+            *most_answers_for_any_hint != possible_answers.len()
+        })
+        .collect();
+    guess_order.sort_unstable_by(
+        |(_, a_most_answers_possible), (_, b_most_answers_possible)| {
+            a_most_answers_possible.cmp(b_most_answers_possible)
+        },
+    );
+    let guess_order: Vec<u16> = guess_order
+        .into_iter()
+        .map(|(guess_ind, _)| guess_ind)
+        .collect();
+
+    if let Some(printer) = printer {
+        println!(
+            "{}first guesses will be {}",
+            printer.get_prefix(),
+            guess_order[..5]
+                .iter()
+                .map(|guess_ind| printer.fmt_guess(*guess_ind))
+                .collect::<Vec<String>>()
+                .join(", ")
+        );
+    }
+
+    'guess_loop: for guess_ind in guess_order {
         let guess_hints = &hints[guess_ind as usize];
 
         let printer_owned = printer

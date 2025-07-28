@@ -27,7 +27,7 @@ pub fn compute_decision_tree_aggressive(
     possible_answers: HashSet<u16>,
     depth: u8,
     max_depth: u8,
-    max_cost: f64,
+    mut max_cost: f64,
     printer: Option<&impl DebugPrinter>,
 ) -> Option<TreeNode> {
     // Set the printer to `None` if we're past the configured depth
@@ -51,6 +51,12 @@ pub fn compute_decision_tree_aggressive(
             println!("{}depth limit reached", printer.get_prefix());
         }
         return None;
+    }
+
+    // Cap max cost at remaining depth
+    let remaining_depth = (max_depth - depth) as f64;
+    if max_cost > remaining_depth {
+        max_cost = remaining_depth + 0.01;
     }
 
     // Don't continue if we've already hit cost limit

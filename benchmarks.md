@@ -20,10 +20,10 @@ Lowest depth that achieves best est cost is bold for each word list.
 | 483-very-common             | 5         | 2.8944     | 3.116s       | [b7ba3d1](https://github.com/Levilutz/word-game/commit/b7ba3d1cafaaa377acfd612a8bb2227ec7956df2) |
 | 483-very-common             | 6         | 2.8944     | 3.085s       | [b7ba3d1](https://github.com/Levilutz/word-game/commit/b7ba3d1cafaaa377acfd612a8bb2227ec7956df2) |
 | <u>695-some-common</u>      |
-| **695-some-common**         | **4**     | **3.0302** | **31.234ss** | [b7ba3d1](https://github.com/Levilutz/word-game/commit/b7ba3d1cafaaa377acfd612a8bb2227ec7956df2) |
-| 695-some-common             | 5         | 3.0302     | 25.381s      | [b7ba3d1](https://github.com/Levilutz/word-game/commit/b7ba3d1cafaaa377acfd612a8bb2227ec7956df2) |
-| 695-some-common             | 6         | 3.0302     | 25.559s      | [b7ba3d1](https://github.com/Levilutz/word-game/commit/b7ba3d1cafaaa377acfd612a8bb2227ec7956df2) |
+| **695-some-common**         | **4**     | **3.0302** | **31.265s**  | [7db7d6c](https://github.com/Levilutz/word-game/commit/7db7d6cea7ccb7b09335c65eafc2e9aa5c9e1721) |
+| 695-some-common             | 5         | 3.0302     | 25.351s      | [7db7d6c](https://github.com/Levilutz/word-game/commit/7db7d6cea7ccb7b09335c65eafc2e9aa5c9e1721) |
+| 695-some-common             | 6         | 3.0302     | 25.179s      | [7db7d6c](https://github.com/Levilutz/word-game/commit/7db7d6cea7ccb7b09335c65eafc2e9aa5c9e1721) |
 | <u>1000-some-common</u>     |
-| 1000-some-common            | 4         | 3.1490     | 1119.701s    | [b7ba3d1](https://github.com/Levilutz/word-game/commit/b7ba3d1cafaaa377acfd612a8bb2227ec7956df2) |
-| **1000-some-common**        | **5**     | **3.1440** | **183.888s** | [b7ba3d1](https://github.com/Levilutz/word-game/commit/b7ba3d1cafaaa377acfd612a8bb2227ec7956df2) |
-| 1000-some-common            | 6         | 3.1440     | 183.323s     | [b7ba3d1](https://github.com/Levilutz/word-game/commit/b7ba3d1cafaaa377acfd612a8bb2227ec7956df2) |
+| 1000-some-common            | 4         | 3.1490     | 1093.059s    | [7db7d6c](https://github.com/Levilutz/word-game/commit/7db7d6cea7ccb7b09335c65eafc2e9aa5c9e1721) |
+| **1000-some-common**        | **5**     | **3.1440** | **187.673s** | [7db7d6c](https://github.com/Levilutz/word-game/commit/7db7d6cea7ccb7b09335c65eafc2e9aa5c9e1721) |
+| 1000-some-common            | 6         | 3.1440     | 182.943s     | [7db7d6c](https://github.com/Levilutz/word-game/commit/7db7d6cea7ccb7b09335c65eafc2e9aa5c9e1721) |
